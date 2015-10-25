@@ -11,17 +11,17 @@
     <legend>Mitglieder anlegen:</legend>
 
 
-    <label for="memberType">Mietgliedsart:</label>
+    <label for="memberType">Mitgliedsart:</label>
     <select id="memberType"
             name="memberType"
             type="checkbox"
             ng-model="MemberRequest.memberType">
-        <option value="">--Wälen Sie--</option>
-        <option value="VM">Vollmietglied (20€)</option>
-        <option value="FA">Familienmietglied (-3€)</option>
+        <option value="">--Bitte wählen--</option>
+        <option value="VM">Vollmitglied (20€)</option>
+        <option value="FA">Familienmitglied (-3€)</option>
         <option value="EM">Ermäßigt (23€)</option>
         <option value="JM">Jugendlicher (15€)</option>
-        <option value="FM">Fördermietgleid (10€)</option><br>
+        <option value="FM">Fördermitgleid (10€)</option><br>
 
     <label for="name">Vorname:</label>
     <input id="name"
@@ -35,19 +35,19 @@
            type="text"
            ng-model="MemberRequest.surname"/><br>
 
-    <label for="city">City:</label>
+    <label for="city">Wohnort:</label>
     <input id="city"
            name="city"
            type="text"
            ng-model="MemberRequest.city"/><br>
 
-    <label for="addresse">Addresse:</label>
+    <label for="addresse">Adresse:</label>
     <input id="addresse"
            name="addresse"
            type="text"
            ng-model="MemberRequest.addresse"/><br>
 
-    <label for="zipcode">Zipcode::</label>
+    <label for="zipcode">PLZ:</label>
     <input id="zipcode"
            name="zipcode"
            type="text"
@@ -73,7 +73,7 @@
            ng-show="Member.memberType === 'FA'"
            ng-model="MemberRequest.family_members"/><br>
 
-        <label for="IBAN">IBAN:</label>
+        <label for="IBAN">IBAN-Kontonr.:</label>
         <input id="IBAN"
                name="IBAN"
                type="text"

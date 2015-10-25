@@ -2,23 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Mietglieder:</title>
+    <title>Mitgliederliste</title>
 </head>
 <body>
 
-<h1>Mietglieder:</h1>
+<h1>Mitglieder:</h1>
 
     <table>
     <tr>
+        <th>Vorname</th>
         <th>Name</th>
-        <th>Surname</th>
-        <th>City</th>
-        <th>Address</th>
-        <th>Zipcode</th>
-        <th>Birthday</th>
-        <th>Entry date</th>
-        <th>Family members?</th>
-        <th>IBAN</th>
+        <th>Wohnort</th>
+        <th>Adresse</th>
+        <th>PLZ</th>
+        <th>Geburtsdatum</th>
+        <th>Eintrittsdatum</th>
+        <th>Familienmitglied</th>
+        <th>IBAN-Kontonr.</th>
     </tr>
     <tr ng-repeat="member in model.members">
         <td>{{member.name}}</td>
