@@ -8,14 +8,14 @@
 
 <fieldset>
 
-    <legend>Mietglieder anlegen:</legend>
+    <legend>Mitglieder anlegen:</legend>
 
 
     <label for="memberType">Mietgliedsart:</label>
     <select id="memberType"
             name="memberType"
             type="checkbox"
-            ng-model="Member.memberType">
+            ng-model="MemberRequest.memberType">
         <option value="">--Wälen Sie--</option>
         <option value="VM">Vollmietglied (20€)</option>
         <option value="FA">Familienmietglied (-3€)</option>
@@ -27,43 +27,43 @@
     <input id="name"
            name="name"
            type="text"
-           ng-model="Member.name"/><br>
+           ng-model="MemberRequest.name"/><br>
 
     <label for="surname">Nachname:</label>
     <input id="surname"
            name="surname"
            type="text"
-           ng-model="Member.surname"/><br>
+           ng-model="MemberRequest.surname"/><br>
 
     <label for="city">City:</label>
     <input id="city"
            name="city"
            type="text"
-           ng-model="Member.city"/><br>
+           ng-model="MemberRequest.city"/><br>
 
     <label for="addresse">Addresse:</label>
     <input id="addresse"
            name="addresse"
            type="text"
-           ng-model="Member.addresse"/><br>
+           ng-model="MemberRequest.addresse"/><br>
 
     <label for="zipcode">Zipcode::</label>
     <input id="zipcode"
            name="zipcode"
            type="text"
-           ng-model="Member.zipcode"/><br>
+           ng-model="MemberRequest.zipcode"/><br>
 
     <label for="birthday">Geburtsdatum:</label>
     <input id="birthday"
            name="birthday"
            type="date"
-           ng-model="Member.birthday"/><br>
+           ng-model="MemberRequest.birthday"/><br>
 
     <label for="entry_date">Eintrittsdatum:</label>
     <input id="entry_date"
            name="entry_date"
            type="date"
-           ng-model="Member.entry_date"/><br>
+           ng-model="MemberRequest.entry_date"/><br>
 
     <label  ng-show="Member.memberType === 'FA'"
             for="family_members">Familienmitglieder:</label>
@@ -71,13 +71,13 @@
            name="family_members"
            type="text"
            ng-show="Member.memberType === 'FA'"
-           ng-model="Member.family_members"/><br>
+           ng-model="MemberRequest.family_members"/><br>
 
         <label for="IBAN">IBAN:</label>
         <input id="IBAN"
                name="IBAN"
                type="text"
-               ng-model="Member.IBAN"/><br>
+               ng-model="MemberRequest.IBAN"/><br>
 
     </select><br>
 

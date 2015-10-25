@@ -29,7 +29,6 @@ public class Payments implements  Serializable{
 
 
         //***************************************************************************************
-
         //ID:
         @Id
         @GeneratedValue(strategy = GenerationType.AUTO)
@@ -87,8 +86,8 @@ public class Payments implements  Serializable{
 
         //*******************************************************
         //Member
-        @ManyToOne(fetch = FetchType.LAZY)
-        @JoinColumn(name = "id", nullable = false)
+        @ManyToOne(fetch = FetchType.EAGER)
+        @JoinColumn(name = "Member", nullable = false)
         public Member getMember(){
             return this.member;
 

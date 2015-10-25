@@ -11,7 +11,7 @@ public class MemberDAO {
     private EntityManager entityManager;
 
 
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings("JpaQlInspection")
     public List<Member> findAll() {
         return entityManager.createQuery("select m from Member m").getResultList();
 

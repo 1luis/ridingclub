@@ -44,36 +44,7 @@ app.controller("MemberController", ["$scope", 'memberService', function($scope, 
 
 }]);
 
-app.controller('RoomController', ['$scope', 'roomService', function ($scope, roomService) {
 
-    // Setup scope model
-    $scope.model = {
-        rooms: []
-    };
-
-    // Load rooms from REST API
-    roomService.listRooms()
-        .success(function (data) {
-            $scope.model.rooms = data;
-        })
-        .error(function () {
-            alert('Error occured while loading');
-        });
-
-}]);
-
-
-app.service('roomService', ['$http', function ($http) {
-
-    /**
-     * Return all rooms.
-     * @returns {HttpPromise}
-     */
-    this.listRooms = function () {
-        return $http.get('rest/rooms');
-    }
-
-}]);
 
 app.service('memberService', ['$http', function ($http) {
     this.listMembers = function(){
@@ -82,11 +53,43 @@ app.service('memberService', ['$http', function ($http) {
 }]);
 
 
-app.controller('NewMemberController' , ['$scope', function ($scope){
-    $scope.mensaje = 'hola';
+app.controller('NewMemberController' , ['$scope', 'newMemberService' ,function ($scope, newMemberService){
+
+
+    function MemberRequest($scope) {
+        $scope.MemberRequest = {
+            name: "Marc",
+            surname: "Reiniking",
+            city: "Elmshorn",
+            address: "Bla bla bla 12",
+            zipcode: "12343",
+            birthday: "2010-10-10",
+            entry_date: "2011-12-10",
+            IBAN: "DE1234567",
+            family_members: false,
+            memberType: "FM"
+        }
+
+    }
+
+    console.log($scope.MemberRequest);
+
+    newMemberService.saveMember($scope.MemberRequest)
+        .success()
+        .error(function () {
+            alert('Error ocurred while loading members list')
+        });
+
+
 }]);
 
 
+
+app.service('newMemberService', ['$http', function ($http) {
+    this.saveMember = function(){
+        return $http.put('rest/members');
+    }
+}]);
 
 
 

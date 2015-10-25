@@ -2,6 +2,7 @@ package de.nordakademie.iaa.RidingClub.service;
 
 import de.nordakademie.iaa.RidingClub.dao.MemberDAO;
 import de.nordakademie.iaa.RidingClub.model.Member;
+import de.nordakademie.iaa.RidingClub.model.MemberRequest;
 
 import javax.inject.Inject;
 import java.util.List;
@@ -12,8 +13,11 @@ public class MemberServiceImpl implements MemberService{
     private MemberDAO memberDAO;
 
     @Override
-    public void saveMember(Member member) throws EntityAlreadyPresentException {
-        memberDAO.save(member);
+    public void saveMember(MemberRequest memberRequest) throws EntityAlreadyPresentException {
+        Member newMember = new Member();
+        newMember.setName(memberRequest.getName());
+
+        memberDAO.save(newMember);
     }
 
     @Override

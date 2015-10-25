@@ -4,8 +4,11 @@ package de.nordakademie.iaa.RidingClub.model;
  * Created by luisiglesias on 21/10/15.
  */
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -28,7 +31,7 @@ public class Member implements  Serializable{
 
     private Long zipcode;
 
-    private String birthday;
+    private Date birthday;
 
     private String entry_date;
 
@@ -36,7 +39,7 @@ public class Member implements  Serializable{
 
     private  String IBAN;
 
-    private Set<Payments> Payments = new HashSet<Payments>(0);
+    private Set<Payments> Payments;
 
     //***************************************************************************************
 
@@ -108,12 +111,14 @@ public class Member implements  Serializable{
 
     //*******************************************************
     // Birthday of the member:
+    @Temporal(TemporalType.DATE)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @Column(nullable = false)
-    public String getBirthday() {
+    public Date getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(String birthday) {
+    public void setBirthday(Date birthday) {
         this.birthday = birthday;
     }
 
@@ -153,7 +158,7 @@ public class Member implements  Serializable{
 
     //*************************************************************
     //One to many
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "Member")
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "member")
     public Set<Payments> getPayments(){
         return this.Payments;
     }

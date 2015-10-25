@@ -14,7 +14,7 @@
     <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource"
           destroy-method="close">
         <property name="driverClassName" value="org.h2.Driver"/>
-        <property name="url" value="jdbc:h2:~/IdeaProjects/AngularReitvereinManagement/db/nak"/>
+        <property name="url" value="jdbc:h2:~/Desktop/Mac-IAA/IAA_RidingClub/db/nak"/>
         <property name="username" value="sa"/>
         <property name="password" value=""/>
     </bean>

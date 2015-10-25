@@ -15,7 +15,7 @@ public class PaymentsDAO {
         private EntityManager entityManager;
 
 
-        @SuppressWarnings("unchecked")
+        @SuppressWarnings("JpaQlInspection")
         public List<Payments> findAll() {
             return entityManager.createQuery("select p from Payments p").getResultList();
 

@@ -1,6 +1,7 @@
 package de.nordakademie.iaa.RidingClub.controller;
 
 import de.nordakademie.iaa.RidingClub.model.Member;
+import de.nordakademie.iaa.RidingClub.model.MemberRequest;
 import de.nordakademie.iaa.RidingClub.service.MemberService;
 import org.springframework.web.bind.annotation.*;
 import javax.inject.Inject;
@@ -17,7 +18,8 @@ public class MemberController {
     }
 
     @RequestMapping(value = "/members", method = RequestMethod.PUT)
-    public void saveRoom(@RequestBody Member member) throws Exception {
+    public void saveMember(@RequestBody MemberRequest member) throws Exception {
+    //public void saveRoom(@RequestBody Member member) throws Exception {
         memberService.saveMember(member);
     }
 
