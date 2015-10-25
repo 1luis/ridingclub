@@ -58,12 +58,12 @@
     </aop:config>
 
     <!-- DAOs -->
-    <bean id="roomDAO" class="de.nordakademie.iaa.RidingClub.dao.RoomDAO"/>
+    <bean id="paymentsDAO" class="de.nordakademie.iaa.RidingClub.dao.PaymentsDAO"/>
     <bean id="memberDAO" class="de.nordakademie.iaa.RidingClub.dao.MemberDAO"/>
 
 
     <!-- Services -->
-    <bean id="roomService" class="de.nordakademie.iaa.RidingClub.service.RoomServiceImpl"/>
+    <bean id="paymentsService" class="de.nordakademie.iaa.RidingClub.service.PaymentsServiceImpl"/>
     <bean id="memberService" class="de.nordakademie.iaa.RidingClub.service.MemberServiceImpl"/>
     
 

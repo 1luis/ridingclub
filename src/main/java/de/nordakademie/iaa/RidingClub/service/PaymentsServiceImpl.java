@@ -6,36 +6,36 @@ import java.util.List;
 import javax.inject.Inject;
 
 
-public class PaymentsServiceImpl {
+public class PaymentsServiceImpl implements PaymentsService {
 
     private PaymentsDAO paymentsDAO;
 
     @Override
-    public void saveRoom(Payments payments) throws EntityAlreadyPresentException {
-        paymentsDAO.save(payments);
+    public void savePayment(Payments payments) throws EntityAlreadyPresentException {
+
     }
 
     @Override
-    public List<Payments> listRooms() {
+    public List<Payments> listPayments() {
         return paymentsDAO.findAll();
     }
 
     @Override
-    public Payments loadRoom(Long id) {
+    public Payments loadPayments(Long id) {
         return paymentsDAO.load(id);
     }
 
     @Override
     public void deletePayments(Long id) throws EntityNotFoundException {
         Payments payments = loadPayments(id);
-        if (room == null) {
+        if (payments == null) {
             throw new EntityNotFoundException();
         }
-        paymentsDAO.delete(payment);
+        paymentsDAO.delete(payments);
     }
 
     @Inject
-    public void setRoomDAO(paymentsDAO paymentDAO) {
+    public void setRoomDAO(PaymentsDAO paymentDAO) {
         this.paymentsDAO = paymentDAO;
     }
 }
