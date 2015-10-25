@@ -63,7 +63,7 @@ app.controller('NewMemberController' , ['$scope', 'newMemberService' ,function (
             city: "Elmshorn",
             address: "Bla bla bla 12",
             zipcode: "12343",
-            birthday: "2010-10-10",
+            birthday: "2010-10-11",
             entry_date: "2011-12-10",
             IBAN: "DE1234567",
             family_members: false,
