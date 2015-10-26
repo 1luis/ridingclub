@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<fieldset>
+
+    <legend>Mitglieder löschen:</legend>
+
+
+
+        <label for="name">Vorname:</label>
+        <input id="name"
+               name="name"
+               type="text"
+               ng-model="todelete.name"/><br>
+
+        <label for="surname">Nachname:</label>
+        <input id="surname"
+               name="surname"
+               type="text"
+               ng-model="todelete.surname"/><br>
+
+
+
+    {{todelete.name}}
+    {{todelete.surname}}
+
+    <button ng-click="delete()">Delete</button>
+
+
+</fieldset>
+
+
+</body>
+</html>

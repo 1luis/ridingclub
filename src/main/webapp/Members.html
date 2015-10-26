@@ -8,17 +8,10 @@
 
 <h1>Mitglieder:</h1>
 
-    <table>
+
+    <table border>
     <tr>
-        <th>Vorname</th>
-        <th>Name</th>
-        <th>Wohnort</th>
-        <th>Adresse</th>
-        <th>PLZ</th>
-        <th>Geburtsdatum</th>
-        <th>Eintrittsdatum</th>
-        <th>Familienmitglied</th>
-        <th>IBAN-Kontonr.</th>
+        <th>Vorname</th> <th>Name</th> <th>Wohnort</th> <th>Adresse</th> <th>PLZ</th> <th>Geburtsdatum</th> <th>Eintrittsdatum</th> <th>Familienmitglied</th> <th>IBAN-Kontonr.</th>
     </tr>
     <tr ng-repeat="member in model.members">
         <td>{{member.name}}</td>
@@ -29,7 +22,7 @@
         <td>{{member.birthday}}</td>
         <td>{{member.entry_date}}</td>
         <td>{{member.family_members}}</td>
-        <td>{{member.IBAN}}</td>
+        <td>{{member.iban}}</td>
 
     </tr>
 </table>

@@ -11,14 +11,14 @@ app.config(['$routeProvider',function($routeProvider) {
         controller: "MemberController"
     });
 
-    $routeProvider.when('/Rooms',{
-        templateUrl: "Rooms.html",
-        controller: "RoomController"
-    });
-
     $routeProvider.when('/createMember',{
         templateUrl: "createMember.html",
         controller: "NewMemberController"
+    });
+
+    $routeProvider.when('/deleteMember',{
+        templateUrl: "deleteMember.html",
+        controller: "delMemberController"
     });
 
     $routeProvider.otherwise({
@@ -28,11 +28,16 @@ app.config(['$routeProvider',function($routeProvider) {
 
 }]);
 
+//*******************************************************************************************************
+//*Dieses Kontroller zeigt alle Mietglieder:
+//*******************************************************************************************************
+
 app.controller("MemberController", ["$scope", 'memberService', function($scope, memberService) {
 
     $scope.model = {
         members: []
     };
+
 
     memberService.listMembers()
         .success(function (data) {
@@ -42,8 +47,8 @@ app.controller("MemberController", ["$scope", 'memberService', function($scope, 
             alert('Error ocurred while loading members list')
         });
 
-}]);
 
+}]);
 
 
 app.service('memberService', ['$http', function ($http) {
@@ -51,6 +56,10 @@ app.service('memberService', ['$http', function ($http) {
         return $http.get('rest/members');
     }
 }]);
+
+//*******************************************************************************************************
+//*Dieses Kontroller fügt ein neues Mitglieder:
+//*******************************************************************************************************
 
 
 app.controller('NewMemberController' , ['$scope', 'newMemberService' ,function ($scope, newMemberService){
@@ -72,7 +81,6 @@ app.controller('NewMemberController' , ['$scope', 'newMemberService' ,function (
 
     }
 
-    console.log($scope.MemberRequest);
 
     newMemberService.saveMember($scope.MemberRequest)
         .success()
@@ -83,14 +91,32 @@ app.controller('NewMemberController' , ['$scope', 'newMemberService' ,function (
 
 }]);
 
-
-
 app.service('newMemberService', ['$http', function ($http) {
     this.saveMember = function(){
         return $http.put('rest/members');
     }
 }]);
 
+//*******************************************************************************************************
+//*Dieses Kontroller löscht ein Mitglieder:
+//*******************************************************************************************************
+
+app.controller("delMemberController", ["$scope",'memberService', function($scope, $memberservice) {
 
 
+    $scope.todelete = {
+        name: "",
+        surname: "",
+    };
+
+    $scope.delete = function() {
+
+
+        $scope.todelete.name = "caddca";
+        $scope.todelete.surname = "caddcfffffa";
+    }
+
+
+
+}]);
 
