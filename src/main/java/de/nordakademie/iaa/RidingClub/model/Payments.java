@@ -17,7 +17,7 @@ public class Payments implements  Serializable{
 
         private Long id;
 
-        private String memberType;
+        private MemberType memberType;
 
         private int year;
 
@@ -43,11 +43,11 @@ public class Payments implements  Serializable{
         //*******************************************************
         // Member Type:
         @Column(nullable = false)
-        public String getMemberType() {
+        public MemberType getMemberType() {
             return memberType;
         }
 
-        public void setMemberType(String memberType) {
+        public void setMemberType(MemberType memberType) {
             this.memberType = memberType;
         }
 

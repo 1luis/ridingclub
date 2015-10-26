@@ -40,6 +40,7 @@ public class Member implements  Serializable{
     private  String IBAN;
 
     private Set<Payments> Payments;
+    //erstellt nun eine Menge von Zahlungen
 
     //***************************************************************************************
 
@@ -112,7 +113,7 @@ public class Member implements  Serializable{
     //*******************************************************
     // Birthday of the member:
     @Temporal(TemporalType.DATE)
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
     @Column(nullable = false)
     public Date getBirthday() {
         return birthday;

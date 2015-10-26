@@ -25,7 +25,7 @@ public class MemberRequest {
 
     private String IBAN;
 
-    private String memberType;
+    private MemberType memberType;
 
 
     public String getName() {
@@ -100,11 +100,11 @@ public class MemberRequest {
         this.IBAN = IBAN;
     }
 
-    public String getMemberType() {
+    public MemberType getMemberType() {
         return memberType;
     }
 
-    public void setMemberType(String memberType) {
+    public void setMemberType(MemberType memberType) {
         this.memberType = memberType;
     }
 
