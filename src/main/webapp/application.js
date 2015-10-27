@@ -29,7 +29,7 @@ app.config(['$routeProvider',function($routeProvider) {
 }]);
 
 //*******************************************************************************************************
-//*Dieses Kontroller zeigt alle Mietglieder:
+//*Shows all members in a list
 //*******************************************************************************************************
 
 app.controller("MemberController", ["$scope", 'memberService', function($scope, memberService) {
@@ -58,7 +58,7 @@ app.service('memberService', ['$http', function ($http) {
 }]);
 
 //*******************************************************************************************************
-//*Dieses Kontroller fügt ein neues Mitglieder:
+//*Adds a new member
 //*******************************************************************************************************
 
 
@@ -67,20 +67,19 @@ app.controller('NewMemberController' , ['$scope', 'newMemberService' ,function (
 
     function MemberRequest($scope) {
         $scope.MemberRequest = {
-            name: "Marc",
-            surname: "Reiniking",
-            city: "Elmshorn",
-            address: "Bla bla bla 12",
-            zipcode: "12343",
-            birthday: "2010-10-11",
+            name: "Testname",
+            surname: "Testsurname",
+            city: "Testcity",
+            address: "Testadress",
+            zipcode: "Testzipcode",
+            birthday: "01-02-1904",
             entry_date: "2011-12-10",
-            IBAN: "DE1234567",
+            IBAN: "DE1234567890",
             family_members: false,
-            memberType: "FM"
+            memberType: "Jugendmitglied"
         }
 
     }
-
 
     newMemberService.saveMember($scope.MemberRequest)
         .success()
@@ -90,15 +89,16 @@ app.controller('NewMemberController' , ['$scope', 'newMemberService' ,function (
 
 
 }]);
-
+//TODO: Die Payload war hier leer, jetzt um 'MeberRequest' erg�nzt, immernoch Fehler 415
 app.service('newMemberService', ['$http', function ($http) {
-    this.saveMember = function(){
-        return $http.put('rest/members');
+    this.saveMember = function(MemberRequest)
+    {
+        return $http.put('rest/members', MemberRequest);
     }
 }]);
 
 //*******************************************************************************************************
-//*Dieses Kontroller löscht ein Mitglieder:
+//*Deletes an existing member
 //*******************************************************************************************************
 
 app.controller("delMemberController", ["$scope",'memberService', function($scope, $memberservice) {
@@ -106,7 +106,7 @@ app.controller("delMemberController", ["$scope",'memberService', function($scope
 
     $scope.todelete = {
         name: "",
-        surname: "",
+        surname: ""
     };
 
     $scope.delete = function() {

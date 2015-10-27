@@ -16,9 +16,9 @@ public class MemberController {
     public List<Member> listMembers() {
         return memberService.listMembers();
     }
-
+// @RequestBody durch @ModelAttribute ersetzt, damit kein "Content-Type: application/json" im RequestHeader gesetzt werden muss
     @RequestMapping(value = "/members", method = RequestMethod.PUT)
-    public void saveMember(@RequestBody MemberRequest member) throws Exception {
+    public void saveMember(@ModelAttribute MemberRequest member) throws Exception {
     //public void saveRoom(@RequestBody Member member) throws Exception {
         memberService.saveMember(member);
     }
