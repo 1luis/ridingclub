@@ -28,6 +28,8 @@ public class PaymentsDAO {
 
 
         public void save(Payments payments) {
+
+            //Wenn neu-> gespeichert sonst aktualisiert
             if (payments.getId() == null) {
                 entityManager.persist(payments);
             } else {

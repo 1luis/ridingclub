@@ -23,6 +23,13 @@ public class MemberController {
         memberService.deleteMember(id);
     }
 
+    @RequestMapping(value = "/member" , method = RequestMethod.PUT)
+    public void saveMember(@ModelAttribute Member member) throws Exception{
+        memberService.saveMember(member);
+    }
+
+
+
 }
 
 

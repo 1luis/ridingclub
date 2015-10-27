@@ -27,7 +27,7 @@ public class Member implements  Serializable{
 
     private String address;
 
-    private Long zipcode;
+    private String zipcode;
 
     private Date birthday;
 
@@ -37,8 +37,8 @@ public class Member implements  Serializable{
 
     private  String IBAN;
 
-    //private Set<Payments> Payments;
-    //erstellt nun eine Menge von Zahlungen
+    private MemberType memberType;
+
 
     //***************************************************************************************
 
@@ -100,11 +100,11 @@ public class Member implements  Serializable{
     //*******************************************************
     // Zipcode of the address:
     @Column(nullable = false)
-    public Long getZipcode() {
+    public String getZipcode() {
         return zipcode;
     }
 
-    public void setZipcode(Long zipcode) {
+    public void setZipcode(String zipcode) {
         this.zipcode = zipcode;
     }
 
@@ -154,16 +154,15 @@ public class Member implements  Serializable{
         this.IBAN = IBAN;
     }
 
-
-    //*************************************************************
-/*    //One to many
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "member")
-    public Set<Payments> getPayments(){
-        return this.Payments;
+    //*******************************************************
+    // Member Type:
+    @ManyToOne(optional = false)
+    public MemberType getMemberType() {
+        return memberType;
     }
 
-    public void setPayments(Set<Payments> Payments){
-        this.Payments = Payments;
-    }*/
+    public void setMemberType(MemberType memberType) {
+        this.memberType = memberType;
+    }
 
 }

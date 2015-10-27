@@ -38,4 +38,6 @@ public class MemberType implements Serializable{
         this.amount = amount;
     }
 
+
+
 }

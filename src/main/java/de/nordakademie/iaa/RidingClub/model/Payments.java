@@ -12,8 +12,6 @@ public class Payments implements  Serializable{
 
         private Long id;
 
-        private MemberType memberType;
-
         private int year;
 
         private Boolean status;
@@ -31,17 +29,6 @@ public class Payments implements  Serializable{
 
         public void setId(Long id) {
             this.id = id;
-        }
-
-        //*******************************************************
-        // Member Type:
-        @Column(nullable = false)
-        public MemberType getMemberType() {
-            return memberType;
-        }
-
-        public void setMemberType(MemberType memberType) {
-            this.memberType = memberType;
         }
 
         //*******************************************************
@@ -68,8 +55,6 @@ public class Payments implements  Serializable{
 
         //*******************************************************
         //Member
-        //@ManyToOne(fetch = FetchType.EAGER)
-        //@JoinColumn(name = "Member", nullable = false)
         @ManyToOne(optional = false)
         public Member getMember(){
             return this.member;

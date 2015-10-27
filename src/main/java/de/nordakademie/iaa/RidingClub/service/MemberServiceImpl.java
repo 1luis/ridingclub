@@ -22,12 +22,16 @@ public class MemberServiceImpl implements MemberService{
 
         Payments payments = new Payments ();
 
+
         // Wenn ein neuer Member angelegt wird
        if (member.getId() == null){
            payments = new Payments();
            payments.setMember(member);
            payments.setStatus(false);
+           //payments.setYear(member.getEntryDate().getYear());
+           payments.setYear(2015);
        }
+
         memberDAO.save(member);
         paymentsService.savePayment(payments);
     }

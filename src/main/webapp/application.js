@@ -62,31 +62,33 @@ app.service('memberService', ['$http', function ($http) {
 //*******************************************************************************************************
 
 
-app.controller('NewMemberController' , ['$scope','$log', '$http' ,function ($scope, $log ,$http){
+app.controller('NewMemberController' , ['$scope', '$http' ,function ($scope ,$http){
 
 
-    function MemberRequest($scope) {
-        $scope.Model.Member = {
-            name: "Testname",
-            surname: "Testsurname",
-            city: "Testcity",
-            address: "Testadress",
-            zipcode: "Testzipcode",
-            birthday: "01-02-1904",
-            entry_date: "2011-12-10",
-            iban: "DE1234567890",
-            family_members: false
+        $scope.model ={
+            members: {
+                name: "Testname",
+                surname: "Testsurname",
+                city: "Testcity",
+                address: "Testadress",
+                zipcode: "28250",
+                birthday: "01-02-1904",
+                entryDate: "2011-12-10",
+                iban: "DE1234567890",
+                familyMembers: false,
+                memberType:{
+                    name:"Vollmitglied",
+                    amount: 25
+                }
+            }
 
-        }
-
-    }
-
+};
 
 
     var config={
         method:"PUT",
-        url:"http://localhost:8080/rest/members",
-        data: $scope.MemberRequest
+        url:"http://localhost:8080/rest/member",
+        data: $scope.Member
     };
 
     var response=$http(config);
@@ -99,20 +101,8 @@ app.controller('NewMemberController' , ['$scope','$log', '$http' ,function ($sco
         alert("Ha fallado la petición. Estado HTTP:"+status);
     });
 
-/*    newMemberService.saveMember($scope.MemberRequest)
-        .success()
-        .error(function () {
-            alert('Error ocurred while loading members list')
-        });*/
 
 
-}]);
-//TODO: Die Payload war hier leer, jetzt um 'MeberRequest' erg�nzt, immernoch Fehler 415
-app.service('newMemberService', ['$http', function ($http) {
-    this.saveMember = function(MemberRequest)
-    {
-        return $http.put('rest/members', MemberRequest);
-    }
 }]);
 
 //*******************************************************************************************************
