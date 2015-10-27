@@ -18,7 +18,6 @@ public class MemberDAO {
     }
 
 
-
     public Member load(Long id) {
         return entityManager.find(Member.class, id);
     }

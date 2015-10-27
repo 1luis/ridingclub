@@ -1,7 +1,14 @@
 package de.nordakademie.iaa.RidingClub.service;
 
-/**
- * Created by luisiglesias on 27/10/15.
- */
+import de.nordakademie.iaa.RidingClub.model.MemberType;
+import java.util.List;
+
+
 public interface MemberTypeService {
+
+    MemberType loadMemberType(String name);
+
 }
+
+
+

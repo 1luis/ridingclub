@@ -22,7 +22,6 @@ public class PaymentsDAO {
         }
 
 
-
         public Payments load(Long id) {
             return entityManager.find(Payments.class, id);
         }

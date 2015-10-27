@@ -3,25 +3,18 @@ package de.nordakademie.iaa.RidingClub.model;
 import javax.persistence.*;
 import java.io.Serializable;
 
-/**
- * Created by luisiglesias on 23/10/15.
- */
-
-
 @Entity
 @Table(name = "Payments")
 public class Payments implements  Serializable{
 
 
-       // private static final long serialVersionUID = 6925248180274039273L;
+        private static final long serialVersionUID = 6925248180274039273L;
 
         private Long id;
 
         private MemberType memberType;
 
         private int year;
-
-        private float amount;
 
         private Boolean status;
 
@@ -63,17 +56,6 @@ public class Payments implements  Serializable{
         }
 
         //*******************************************************
-        // Amount:
-        @Column(nullable = false)
-        public float getAmount() {
-            return amount;
-        }
-
-        public void setAmount(float amount) {
-            this.amount = amount;
-        }
-
-        //*******************************************************
         // Status:
         @Column(nullable = false)
         public Boolean getStatus() {
@@ -86,8 +68,9 @@ public class Payments implements  Serializable{
 
         //*******************************************************
         //Member
-        @ManyToOne(fetch = FetchType.EAGER)
-        @JoinColumn(name = "Member", nullable = false)
+        //@ManyToOne(fetch = FetchType.EAGER)
+        //@JoinColumn(name = "Member", nullable = false)
+        @ManyToOne(optional = false)
         public Member getMember(){
             return this.member;
 

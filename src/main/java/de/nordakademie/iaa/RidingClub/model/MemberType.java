@@ -1,8 +1,41 @@
 package de.nordakademie.iaa.RidingClub.model;
 
-/**
- * Created by 13115 on 26.10.2015.
- */
-public enum MemberType {
-    Vollmitlied, Familienmitglied, Jugendmitglied, Foerdermitglied, Ermaessigt
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import java.io.Serializable;
+
+
+@Entity
+@Table(name = "MemberType")
+public class MemberType implements Serializable{
+
+    private static final long serialVersionUID = 6925248180274039273L;
+
+    @Id
+    @Column(nullable = false)
+    private String name;
+
+    @Column(nullable = false)
+    private int amount;
+
+
+    public String getMemberTypes() {
+        return name;
+    }
+
+    public void setMemberTypes(String memberTypes) {
+        name = memberTypes;
+    }
+
+    public int getAmount() {
+        return amount;
+    }
+
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
+
 }

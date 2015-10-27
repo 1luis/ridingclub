@@ -9,10 +9,12 @@ import javax.inject.Inject;
 public class PaymentsServiceImpl implements PaymentsService {
 
     private PaymentsDAO paymentsDAO;
+    @Inject
+    private MemberService memberService;
 
     @Override
     public void savePayment(Payments payments) throws EntityAlreadyPresentException {
-
+    memberService.saveMember(payments.getMember());
     }
 
     @Override

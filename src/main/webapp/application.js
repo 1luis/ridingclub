@@ -62,11 +62,11 @@ app.service('memberService', ['$http', function ($http) {
 //*******************************************************************************************************
 
 
-app.controller('NewMemberController' , ['$scope', 'newMemberService' ,function ($scope, newMemberService){
+app.controller('NewMemberController' , ['$scope','$log', '$http' ,function ($scope, $log ,$http){
 
 
     function MemberRequest($scope) {
-        $scope.MemberRequest = {
+        $scope.Model.Member = {
             name: "Testname",
             surname: "Testsurname",
             city: "Testcity",
@@ -74,22 +74,40 @@ app.controller('NewMemberController' , ['$scope', 'newMemberService' ,function (
             zipcode: "Testzipcode",
             birthday: "01-02-1904",
             entry_date: "2011-12-10",
-            IBAN: "DE1234567890",
-            family_members: false,
-            memberType: "Jugendmitglied"
+            iban: "DE1234567890",
+            family_members: false
+
         }
 
     }
 
-    newMemberService.saveMember($scope.MemberRequest)
+
+
+    var config={
+        method:"PUT",
+        url:"http://localhost:8080/rest/members",
+        data: $scope.MemberRequest
+    };
+
+    var response=$http(config);
+
+    response.success(function(data, status, headers, config) {
+        alert("Se ha añadido marc:"+status);
+    });
+
+    response.error(function(data, status, headers, config) {
+        alert("Ha fallado la petición. Estado HTTP:"+status);
+    });
+
+/*    newMemberService.saveMember($scope.MemberRequest)
         .success()
         .error(function () {
             alert('Error ocurred while loading members list')
-        });
+        });*/
 
 
 }]);
-//TODO: Die Payload war hier leer, jetzt um 'MeberRequest' erg�nzt, immernoch Fehler 415
+//TODO: Die Payload war hier leer, jetzt um 'MeberRequest' erg�nzt, immernoch Fehler 415
 app.service('newMemberService', ['$http', function ($http) {
     this.saveMember = function(MemberRequest)
     {
@@ -101,7 +119,7 @@ app.service('newMemberService', ['$http', function ($http) {
 //*Deletes an existing member
 //*******************************************************************************************************
 
-app.controller("delMemberController", ["$scope",'memberService', function($scope, $memberservice) {
+app.controller("delMemberController", ["$scope",'$log','$http', function($scope, $log, $http) {
 
 
     $scope.todelete = {
@@ -110,11 +128,26 @@ app.controller("delMemberController", ["$scope",'memberService', function($scope
     };
 
     $scope.delete = function() {
-
-
         $scope.todelete.name = "caddca";
         $scope.todelete.surname = "caddcfffffa";
-    }
+    };
+
+
+        var config={
+            method:"DELETE",
+            url:"http://localhost:8080/rest/member/"
+        };
+
+        var response=$http(config);
+
+        response.success(function(data, status, headers, config) {
+            alert("Se ha borrado el 2:"+status);
+        });
+
+        response.error(function(data, status, headers, config) {
+            alert("Ha fallado la petición. Estado HTTP:"+status);
+        });
+
 
 
 

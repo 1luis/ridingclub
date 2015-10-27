@@ -9,15 +9,13 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
 
 
 @Entity
 @Table(name = "Member", uniqueConstraints = @UniqueConstraint(columnNames = {"IBAN"}))
 public class Member implements  Serializable{
 
-   // private static final long serialVersionUID = 6925248180274039273L;
+    private static final long serialVersionUID = 6925248180274039273L;
 
     private Long id;
 
@@ -33,13 +31,13 @@ public class Member implements  Serializable{
 
     private Date birthday;
 
-    private String entry_date;
+    private Date entryDate;
 
-    private Boolean familiy_members;
+    private Boolean familyMembers;
 
     private  String IBAN;
 
-    private Set<Payments> Payments;
+    //private Set<Payments> Payments;
     //erstellt nun eine Menge von Zahlungen
 
     //***************************************************************************************
@@ -126,23 +124,23 @@ public class Member implements  Serializable{
     //**************************************************************************
     // Entry date of the member:
     @Column(nullable = false)
-    public String getEntry_date() {
-        return entry_date;
+    public Date getEntryDate() {
+        return entryDate;
     }
 
-    public void setEntry_date(String entry_date) {
-        this.entry_date = entry_date;
+    public void setEntryDate(Date entryDate) {
+        this.entryDate = entryDate;
     }
 
     //***********************************************************************************************
     // Family members?
     @Column(nullable = false)
-    public Boolean getFamily_members() {
-        return familiy_members;
+    public Boolean getFamilyMembers() {
+        return familyMembers;
     }
 
-    public void setFamily_members(Boolean familiy_members) {
-        this.familiy_members = familiy_members;
+    public void setFamilyMembers(Boolean familyMembers) {
+        this.familyMembers = familyMembers;
     }
 
     //***********************************************************************************************
@@ -158,7 +156,7 @@ public class Member implements  Serializable{
 
 
     //*************************************************************
-    //One to many
+/*    //One to many
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "member")
     public Set<Payments> getPayments(){
         return this.Payments;
@@ -166,6 +164,6 @@ public class Member implements  Serializable{
 
     public void setPayments(Set<Payments> Payments){
         this.Payments = Payments;
-    }
+    }*/
 
 }
