@@ -42,7 +42,7 @@ public class Payments implements  Serializable{
 
         //*******************************************************
         // Member Type:
-        @Column(nullable = false)
+        //@Column(nullable = false)
         public String getMemberType() {
             return memberType;
         }
@@ -53,7 +53,7 @@ public class Payments implements  Serializable{
 
         //*******************************************************
         // Year:
-        @Column(nullable = false)
+        //@Column(nullable = false)
         public int getYear() {
             return year;
         }
@@ -75,7 +75,7 @@ public class Payments implements  Serializable{
 
         //*******************************************************
         // Status:
-        @Column(nullable = false)
+        //@Column(nullable = false)
         public Boolean getStatus() {
             return status;
         }
