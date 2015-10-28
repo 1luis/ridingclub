@@ -8,7 +8,7 @@ import javax.inject.Inject;
 import java.util.List;
 
 
-public class MemberServiceImpl implements MemberService{
+public class MemberServiceImpl implements MemberService {
 
     @Inject
     private MemberDAO memberDAO;
@@ -18,21 +18,37 @@ public class MemberServiceImpl implements MemberService{
     @Override
     public void saveMember(Member member) throws EntityAlreadyPresentException {
 
-        //Payments payments = new Payments ();
+        Payments payments = new Payments();
 
 
         // Wenn ein neuer Member angelegt wird
-       if (member.getId() == null){
-           //payments = new Payments();
-           //payments.setStatus(false);
-           //payments.setYear(member.getEntryDate().getYear());
-           //payments.setYear(2015);
-           memberDAO.save(member);
-       }
+        if (member.getId() == null) {
             memberDAO.save(member);
 
-        //paymentsService.savePayment(payments);
+        }
 
+        payments.setMemberType(member.getMemberType());
+
+        switch (member.getMemberType()) {
+
+            case "Vollmitglied":
+                payments.setAmount(25);
+                break;
+
+            case "Ermaessigt":
+                payments.setAmount(23);
+                break;
+
+            case "Jugendmitglied":
+                payments.setAmount(15);
+                break;
+            case "Foerdermitglied":
+                payments.setAmount(10);
+                break;
+        }
+
+        payments.setMember(member);
+        paymentsService.savePayment(payments);
 
     }
 

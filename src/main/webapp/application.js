@@ -65,38 +65,47 @@ app.service('memberService', ['$http', function ($http) {
 app.controller('NewMemberController' , ['$scope',"$log", '$http' ,function ($scope, $log ,$http){
 
 
-    $scope.model = {
-        members: {
-            name: "jsjs",
-            surname: "fff"
-
-        }
+    $scope.member = {
+        name: "",
+        surname: "",
+        city: "",
+        zipcode: "",
+        memberType:""
     };
-
-
-
 
     //inicializo un objeto en los datos de formulario
-    var member = {
-            name: "jsjs",
-            surname: "fff",
-    };
+/*    var member = {
+            name: "delavariable",
+            surname: "delavariable",
+            city: "ciudad",
+            zipcode: "28250",
+            memberType: "Vollmitglied"
+    };*/
+
+
+
+    $scope.anlegen = function(){
+        $scope.member.name = "tonto2";
+
 
     var config={
         method:"PUT",
         url:"rest/member",
-        data: member
+        data: $scope.member
     };
 
     var response=$http(config);
 
     response.success(function(data, status, headers, config) {
-        alert("Se ha borrado el 2:"+status);
+        alert("Mitglieder erfolgreich angelegt:"+status);
     });
 
     response.error(function(data, status, headers, config) {
-        alert("Ha fallado la petición. Estado HTTP:"+status);
+        alert("Fehler bei Mitgliedererfassung:"+status);
     });
+
+    };
+
 
 }]);
 
@@ -132,9 +141,6 @@ app.controller("delMemberController", ["$scope",'$log','$http', function($scope,
         response.error(function(data, status, headers, config) {
             alert("Ha fallado la petición. Estado HTTP:"+status);
         });
-
-
-
 
 }]);
 

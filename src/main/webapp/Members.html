@@ -11,11 +11,14 @@
 
     <table border>
     <tr>
-        <th>Vorname</th> <th>Name</th>
+        <th>Vorname</th> <th>Name</th> <th>Standort</th> <th>Adresse</th> <th>PLZ</th>
     </tr>
     <tr ng-repeat="member in model.members">
         <td>{{member.name}}</td>
         <td>{{member.surname}}</td>
+        <td>{{member.city}}</td>
+        <td>{{member.address}}</td>
+        <td>{{member.zipcode}}</td>
 
     </tr>
 </table>

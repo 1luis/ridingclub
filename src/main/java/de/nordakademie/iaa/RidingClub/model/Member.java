@@ -20,7 +20,13 @@ public class Member implements  Serializable{
 
     private String surname;
 
-    private Set<Payments> payments;
+    private String city;
+
+    private String address;
+
+    private String zipcode;
+
+    private String memberType;
 
 
     @Id
@@ -55,15 +61,36 @@ public class Member implements  Serializable{
         this.surname = surname;
     }
 
-    //One to many
-    //@OneToMany(mappedBy="member",cascade= CascadeType.ALL)
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "member")
-    public Set<Payments> getPayments() {
-        return payments;
+    public String getMemberType() {
+        return memberType;
     }
 
-    public void setPayments(Set<Payments> payments) {
-        this.payments = payments;
+    public void setMemberType(String memberType) {
+        this.memberType = memberType;
+    }
+
+    public String getZipcode() {
+        return zipcode;
+    }
+
+    public void setZipcode(String zipcode) {
+        this.zipcode = zipcode;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
     }
 
 }

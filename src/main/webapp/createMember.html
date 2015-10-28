@@ -10,22 +10,41 @@
 
     <legend>Mitglieder anlegen:</legend>
 
+    <label for="memberType">MemberType:</label>
+    <input id="memberType"
+           name="memberType"
+           type="text"
+           ng-model="member.memberType"/><br>
+
     <label for="name">Vorname:</label>
     <input id="name"
            name="name"
            type="text"
-           ng-model="model.members.name"/><br>
+           ng-model="member.name"/><br>
 
     <label for="surname">Nachname:</label>
     <input id="surname"
            name="surname"
            type="text"
-           ng-model="model.members.surname"/><br>
+           ng-model="member.surname"/><br>
 
+    <label for="city">City:</label>
+    <input id="city"
+           name="city"
+           type="text"
+           ng-model="member.city"/><br>
+
+    <label for="zipcode">Zipcode:</label>
+    <input id="zipcode"
+           name="zipcode"
+           type="text"
+           ng-model="model.member.zipcode"/><br>
 
 
         {{model.members.name}}
         {{model.members.surname}}
+        {{model.members.city}}
+        {{model.members.zipcode}}
 
 
     </select><br>

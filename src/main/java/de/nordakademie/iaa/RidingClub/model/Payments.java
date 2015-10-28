@@ -12,8 +12,9 @@ public class Payments implements Serializable {
 
     private Long id_payment;
 
-    private String type;
+    private String memberType;
 
+    private int amount;
 
     private Member member;
 
@@ -28,14 +29,21 @@ public class Payments implements Serializable {
     }
 
 
-    public String getType() {
-        return type;
+    public String getMemberType() {
+        return memberType;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setMemberType(String type) {
+        this.memberType = type;
     }
 
+    public int getAmount() {
+        return amount;
+    }
+
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
 
 
     //*******************************************************
