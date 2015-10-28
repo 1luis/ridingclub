@@ -2,19 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f6486d2-a8b4-4f57-a721-0df9e8e32540" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/dao/MemberTypeDAO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/model/MemberType.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/MemberTypeService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/MemberTypeServiceImpl.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/model/Member.java" afterPath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/model/Member.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/MemberServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/MemberServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/Members.html" afterPath="$PROJECT_DIR$/src/main/webapp/Members.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/model/Payments.java" afterPath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/model/Payments.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/dao/PaymentsDAO.java" afterPath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/dao/PaymentsDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/PaymentsServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/PaymentsServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/application.js" afterPath="$PROJECT_DIR$/src/main/webapp/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/createMember.html" afterPath="$PROJECT_DIR$/src/main/webapp/createMember.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/import.sql" afterPath="$PROJECT_DIR$/src/main/resources/import.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="roommgmt-orm.iws" />
@@ -939,7 +926,7 @@
       <workItem from="1445802895490" duration="1448000" />
       <workItem from="1445878413533" duration="6685000" />
       <workItem from="1445941510293" duration="31445000" />
-      <workItem from="1446037021617" duration="4272000" />
+      <workItem from="1446037021617" duration="4373000" />
     </task>
     <task id="LOCAL-00001" summary="initial repo">
       <created>1445782478887</created>
@@ -1025,11 +1012,17 @@
       <option name="project" value="LOCAL" />
       <updated>1446031469674</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="kopie">
+      <created>1446042380976</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1446042380976</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57199000" />
+    <option name="totallyTimeSpent" value="57300000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="23" width="1280" height="726" extended-state="6" />
@@ -1088,7 +1081,8 @@
     <MESSAGE value="http request, funktioniert aber nicht" />
     <MESSAGE value="eefefefefw" />
     <MESSAGE value="asnlksanknkacnklcasnklsac" />
-    <option name="LAST_COMMIT_MESSAGE" value="asnlksanknkacnklcasnklsac" />
+    <MESSAGE value="kopie" />
+    <option name="LAST_COMMIT_MESSAGE" value="kopie" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1224,7 +1218,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="149" column="0" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
           <folding>
-            <element signature="e#4631#4632#0" expanded="true" />
+            <element signature="e#4631#4632#0" expanded="false" />
           </folding>
         </state>
       </provider>
