@@ -852,7 +852,7 @@
       <workItem from="1445796014755" duration="1476000" />
       <workItem from="1445802895490" duration="1448000" />
       <workItem from="1445878413533" duration="6685000" />
-      <workItem from="1445941510293" duration="29741000" />
+      <workItem from="1445941510293" duration="29756000" />
     </task>
     <task id="LOCAL-00001" summary="initial repo">
       <created>1445782478887</created>
@@ -914,11 +914,17 @@
       <option name="project" value="LOCAL" />
       <updated>1446031345729</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="eefefefefw">
+      <created>1446031369209</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1446031369209</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51223000" />
+    <option name="totallyTimeSpent" value="51238000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="726" extended-state="6" />
@@ -974,7 +980,8 @@
     <MESSAGE value="debugging empty Member??? wieso???????????" />
     <MESSAGE value="weiterhin funktioniert die PUT-Methode nicht" />
     <MESSAGE value="http request, funktioniert aber nicht" />
-    <option name="LAST_COMMIT_MESSAGE" value="http request, funktioniert aber nicht" />
+    <MESSAGE value="eefefefefw" />
+    <option name="LAST_COMMIT_MESSAGE" value="eefefefefw" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
