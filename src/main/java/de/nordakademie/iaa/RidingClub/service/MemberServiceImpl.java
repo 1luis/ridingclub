@@ -2,38 +2,37 @@ package de.nordakademie.iaa.RidingClub.service;
 
 import de.nordakademie.iaa.RidingClub.dao.MemberDAO;
 import de.nordakademie.iaa.RidingClub.model.Member;
-import de.nordakademie.iaa.RidingClub.model.MemberType;
 import de.nordakademie.iaa.RidingClub.model.Payments;
 
 import javax.inject.Inject;
-import javax.persistence.Column;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 
 public class MemberServiceImpl implements MemberService{
 
+    @Inject
     private MemberDAO memberDAO;
+    @Inject
     private PaymentsService paymentsService;
 
     @Override
     public void saveMember(Member member) throws EntityAlreadyPresentException {
 
-        Payments payments = new Payments ();
+        //Payments payments = new Payments ();
 
 
         // Wenn ein neuer Member angelegt wird
        if (member.getId() == null){
-           payments = new Payments();
-           payments.setMember(member);
-           payments.setStatus(false);
+           //payments = new Payments();
+           //payments.setStatus(false);
            //payments.setYear(member.getEntryDate().getYear());
-           payments.setYear(2015);
+           //payments.setYear(2015);
+           memberDAO.save(member);
        }
+            memberDAO.save(member);
 
-        paymentsService.savePayment(payments);
-        memberDAO.save(member);
+        //paymentsService.savePayment(payments);
+
 
     }
 
@@ -55,12 +54,6 @@ public class MemberServiceImpl implements MemberService{
         }
         memberDAO.delete(member);
     }
-
-    @Inject
-    public void setMemberDAO(MemberDAO memberDAO) {
-        this.memberDAO = memberDAO;
-    }
-
 
 }
 

@@ -15,8 +15,6 @@ public class PaymentsServiceImpl implements PaymentsService {
     @Override
     public void savePayment(Payments payments) throws EntityAlreadyPresentException {
 
-
-
         paymentsDAO.save(payments);
     }
 

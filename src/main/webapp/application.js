@@ -68,39 +68,18 @@ app.controller('NewMemberController' , ['$scope',"$log", '$http' ,function ($sco
     $scope.model = {
         members: {
             name: "jsjs",
-            surname: "fff",
-            city: "fff",
-            address: "fff",
-            zipcode: "fff",
-            birthday: "fff",
-            entryDate: "fff",
-            iban: "ffff",
-            familyMembers: false,
-            memberType: {
-                name: "VM",
-                amount: 25
-            }
+            surname: "fff"
+
         }
     };
 
 
-    var member=this;
+
 
     //inicializo un objeto en los datos de formulario
-    member = {
+    var member = {
             name: "jsjs",
             surname: "fff",
-            city: "fff",
-            address: "fff",
-            zipcode: "fff",
-            birthday: "11-11-2010",
-            entryDate: "11-11-2010",
-            iban: "ffff",
-            familyMembers: false,
-            memberType: {
-                name: "Vollmitglied",
-                amount: 25
-            }
     };
 
     var config={
@@ -118,45 +97,6 @@ app.controller('NewMemberController' , ['$scope',"$log", '$http' ,function ($sco
     response.error(function(data, status, headers, config) {
         alert("Ha fallado la petición. Estado HTTP:"+status);
     });
-
-/*    $scope.put = function(member) {
-        $http.put("http://localhost:8080/rest/member", { 'member': member })
-            .success(function(result) {
-            console.log(result);
-            $scope.resultPut = result;
-        }).error(function() {
-            console.log("error");
-        });
-    };*/
-
-
-
-
-
-    /*    $scope.anlegen = function() {
-
-            $scope.model.members.name = "caddca";
-
-
-            var config={
-             method:"PUT",
-             url:"http://localhost:8080/rest/member",
-             data: $scope.model
-             };
-
-             var response=$http(config);
-
-             response.success(function(data, status, headers, config) {
-             alert("Se ha añadido marc:"+status);
-             });
-
-             response.error(function(data, status, headers, config) {
-             alert("Ha fallado la petición. Estado HTTP:"+status);
-             });
-
-        };*/
-
-
 
 }]);
 
