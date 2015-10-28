@@ -62,7 +62,7 @@ app.service('memberService', ['$http', function ($http) {
 //*******************************************************************************************************
 
 
-app.controller('NewMemberController' , ['$scope', '$http' ,function ($scope  ,$http){
+app.controller('NewMemberController' , ['$scope',"$log", '$http' ,function ($scope, $log ,$http){
 
 
     $scope.model = {
@@ -84,35 +84,77 @@ app.controller('NewMemberController' , ['$scope', '$http' ,function ($scope  ,$h
     };
 
 
-    $.ajax({
-        type: 'PUT',
-        url: 'http://localhost:8080/rest/member',
-        data: $scope.model
+    var member=this;
 
-        });
-
-    $scope.anlegen = function() {
-
-        $scope.model.members.name = "caddca";
-
-
-        var config={
-         method:"PUT",
-         url:"http://localhost:8080/rest/member",
-         data: $scope.model
-         };
-
-         var response=$http(config);
-
-         response.success(function(data, status, headers, config) {
-         alert("Se ha añadido marc:"+status);
-         });
-
-         response.error(function(data, status, headers, config) {
-         alert("Ha fallado la petición. Estado HTTP:"+status);
-         });
-
+    //inicializo un objeto en los datos de formulario
+    member = {
+            name: "jsjs",
+            surname: "fff",
+            city: "fff",
+            address: "fff",
+            zipcode: "fff",
+            birthday: "11-11-2010",
+            entryDate: "11-11-2010",
+            iban: "ffff",
+            familyMembers: false,
+            memberType: {
+                name: "Vollmitglied",
+                amount: 25
+            }
     };
+
+    var config={
+        method:"PUT",
+        url:"rest/member",
+        data: member
+    };
+
+    var response=$http(config);
+
+    response.success(function(data, status, headers, config) {
+        alert("Se ha borrado el 2:"+status);
+    });
+
+    response.error(function(data, status, headers, config) {
+        alert("Ha fallado la petición. Estado HTTP:"+status);
+    });
+
+/*    $scope.put = function(member) {
+        $http.put("http://localhost:8080/rest/member", { 'member': member })
+            .success(function(result) {
+            console.log(result);
+            $scope.resultPut = result;
+        }).error(function() {
+            console.log("error");
+        });
+    };*/
+
+
+
+
+
+    /*    $scope.anlegen = function() {
+
+            $scope.model.members.name = "caddca";
+
+
+            var config={
+             method:"PUT",
+             url:"http://localhost:8080/rest/member",
+             data: $scope.model
+             };
+
+             var response=$http(config);
+
+             response.success(function(data, status, headers, config) {
+             alert("Se ha añadido marc:"+status);
+             });
+
+             response.error(function(data, status, headers, config) {
+             alert("Ha fallado la petición. Estado HTTP:"+status);
+             });
+
+        };*/
 
 
 
