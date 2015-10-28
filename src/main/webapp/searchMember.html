@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<fieldset>
+
+    <legend>Mitglieder suchen:</legend>
+
+
+    <label for="name">Vorname:</label>
+    <input id="name"
+           name="name"
+           type="text"
+           ng-model="search.name"/><br>
+
+    <label for="surname">Nachname:</label>
+    <input id="surname"
+           name="surname"
+           type="text"
+           ng-model="search.surname"/><br>
+
+    </select><br>
+
+    <button ng-click="search()">Suchen</button>
+
+</fieldset>
+
+</body>
+</html>
