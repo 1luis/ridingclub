@@ -15,72 +15,86 @@
     <select id="memberType"
             name="memberType"
             type="checkbox"
-            ng-model="MemberRequest.memberType">
-        <option value="">--Bitte wählen--</option>
-        <option value="VM">Vollmitglied (20€)</option>
-        <option value="FA">Familienmitglied (-3€)</option>
-        <option value="EM">Ermäßigt (23€)</option>
-        <option value="JM">Jugendlicher (15€)</option>
-        <option value="FM">Fördermitgleid (10€)</option><br>
+            ng-model="model.members.memberType.name"><br>
+        <option value="">&#45;&#45;Bitte wählen&#45;&#45;</option>
+        <option value="VM">Vollmitglied</option>
+        <option value="FA">Familienmitglied</option>
+        <option value="EM">Ermäßigt</option>
+        <option value="JM">Jugendlicher</option>
+        <option value="FM">Fördermitgleid</option>
 
     <label for="name">Vorname:</label>
     <input id="name"
            name="name"
            type="text"
-           ng-model="MemberRequest.name"/><br>
+           ng-model="model.members.name"/><br>
 
     <label for="surname">Nachname:</label>
     <input id="surname"
            name="surname"
            type="text"
-           ng-model="MemberRequest.surname"/><br>
+           ng-model="model.members.surname"/><br>
 
     <label for="city">Wohnort:</label>
     <input id="city"
            name="city"
            type="text"
-           ng-model="MemberRequest.city"/><br>
+           ng-model="model.members.city"/><br>
 
-    <label for="addresse">Adresse:</label>
-    <input id="addresse"
-           name="addresse"
+    <label for="address">Adresse:</label>
+    <input id="address"
+           name="address"
            type="text"
-           ng-model="MemberRequest.addresse"/><br>
+           ng-model="model.members.address"/><br>
 
     <label for="zipcode">PLZ:</label>
     <input id="zipcode"
            name="zipcode"
            type="text"
-           ng-model="MemberRequest.zipcode"/><br>
+           ng-model="model.members.zipcode"/><br>
 
     <label for="birthday">Geburtsdatum:</label>
     <input id="birthday"
            name="birthday"
            type="date"
-           ng-model="MemberRequest.birthday"/><br>
+           ng-model="model.members.birthday"/><br>
 
     <label for="entryDate">Eintrittsdatum:</label>
     <input id="entryDate"
            name="entryDate"
            type="date"
-           ng-model="MemberRequest.entryDate"/><br>
+           ng-model="model.members.entryDate"/><br>
 
-    <label  ng-show="Member.memberType === 'FA'"
+    <label  ng-show="model.members.memberType.name === 'FA'"
             for="family_members">Familienmitglieder:</label>
     <input id="family_members"
            name="family_members"
            type="text"
-           ng-show="Member.memberType === 'FA'"
-           ng-model="MemberRequest.family_members"/><br>
+           ng-show="model.members.memberType.name === 'FA'"
+           ng-model="model.members.familyMembers"/><br>
 
         <label for="IBAN">IBAN-Kontonr.:</label>
         <input id="IBAN"
                name="IBAN"
                type="text"
-               ng-model="MemberRequest.IBAN"/><br>
+               ng-model="model.members.IBAN"/><br>
+
+        {{model.members.name}}
+        {{model.members.surname}}
+        {{model.members.city}}
+        {{model.members.address}}
+        {{model.members.zipcode}}
+        {{model.members.birthday}}
+        {{model.members.entryDate}}
+        {{model.members.memberType.name}}
+        {{model.members.familyMembers}}
+        {{model.members.IBAN}}
+        {{model.members.memberType.name}}
+        {{model.members.memberType.amount}}
 
     </select><br>
 
+    <button ng-click="anlegen()">Anlegen</button>
 
 </fieldset>
 

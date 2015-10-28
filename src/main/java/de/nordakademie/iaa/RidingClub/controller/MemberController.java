@@ -24,7 +24,7 @@ public class MemberController {
     }
 
     @RequestMapping(value = "/member" , method = RequestMethod.PUT)
-    public void saveMember(@ModelAttribute Member member) throws Exception{
+    public void saveMember(@RequestBody Member member) throws Exception{
         memberService.saveMember(member);
     }
 

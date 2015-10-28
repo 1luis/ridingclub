@@ -62,44 +62,57 @@ app.service('memberService', ['$http', function ($http) {
 //*******************************************************************************************************
 
 
-app.controller('NewMemberController' , ['$scope', '$http' ,function ($scope ,$http){
+app.controller('NewMemberController' , ['$scope', '$http' ,function ($scope  ,$http){
 
 
-        $scope.model ={
-            members: {
-                name: "Testname",
-                surname: "Testsurname",
-                city: "Testcity",
-                address: "Testadress",
-                zipcode: "28250",
-                birthday: "01-02-1904",
-                entryDate: "2011-12-10",
-                iban: "DE1234567890",
-                familyMembers: false,
-                memberType:{
-                    name:"Vollmitglied",
-                    amount: 25
-                }
+    $scope.model = {
+        members: {
+            name: "jsjs",
+            surname: "fff",
+            city: "fff",
+            address: "fff",
+            zipcode: "fff",
+            birthday: "fff",
+            entryDate: "fff",
+            iban: "ffff",
+            familyMembers: false,
+            memberType: {
+                name: "VM",
+                amount: 25
             }
-
-};
-
-
-    var config={
-        method:"PUT",
-        url:"http://localhost:8080/rest/member",
-        data: $scope.Member
+        }
     };
 
-    var response=$http(config);
 
-    response.success(function(data, status, headers, config) {
-        alert("Se ha añadido marc:"+status);
-    });
+    $.ajax({
+        type: 'PUT',
+        url: 'http://localhost:8080/rest/member',
+        data: $scope.model
 
-    response.error(function(data, status, headers, config) {
-        alert("Ha fallado la petición. Estado HTTP:"+status);
-    });
+        });
+
+    $scope.anlegen = function() {
+
+        $scope.model.members.name = "caddca";
+
+
+        var config={
+         method:"PUT",
+         url:"http://localhost:8080/rest/member",
+         data: $scope.model
+         };
+
+         var response=$http(config);
+
+         response.success(function(data, status, headers, config) {
+         alert("Se ha añadido marc:"+status);
+         });
+
+         response.error(function(data, status, headers, config) {
+         alert("Ha fallado la petición. Estado HTTP:"+status);
+         });
+
+    };
 
 
 

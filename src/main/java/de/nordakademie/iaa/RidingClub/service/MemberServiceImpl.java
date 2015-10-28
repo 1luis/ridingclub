@@ -32,8 +32,9 @@ public class MemberServiceImpl implements MemberService{
            payments.setYear(2015);
        }
 
-        memberDAO.save(member);
         paymentsService.savePayment(payments);
+        memberDAO.save(member);
+
     }
 
     @Override
