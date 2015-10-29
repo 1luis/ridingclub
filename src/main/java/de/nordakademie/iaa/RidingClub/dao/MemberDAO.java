@@ -18,21 +18,41 @@ public class MemberDAO {
     }
 
     @SuppressWarnings("JpaQlInspection")
-    public List<Member> findAll(String name, String surname) {
+    public List<Member> findName(String name) {
+
+            return entityManager
+                    .createQuery("select m from Member m where m.name like CONCAT('%', :name, '%') ")
+                    .setParameter("name", name)
+                    .getResultList();
+
+    }
+
+    @SuppressWarnings("JpaQlInspection")
+    public List<Member> findSurname(String surname) {
+
         return entityManager
-                .createQuery("select m from Member m where m.name like CONCAT('%', :name, '%') and m.surname like CONCAT('%', :surname, '%')")
-                .setParameter("name", name)
+                .createQuery("select m from Member m where m.surname like CONCAT('%', :surname, '%') ")
                 .setParameter("surname", surname)
                 .getResultList();
 
     }
 
 
+    @SuppressWarnings("JpaQlInspection")
+    public List<Member> findAll(String name, String surname) {
+
+            return entityManager
+                    .createQuery("select m from Member m where m.name like CONCAT('%', :name, '%') and m.surname like CONCAT('%', :surname, '%')")
+                    .setParameter("name", name)
+                    .setParameter("surname", surname)
+                    .getResultList();
+
+    }
+
     public Member load(Long id) {
         return entityManager.find(Member.class, id);
     }
 
-//TODO: Brauchen wir diese Methode wirklich? (Pascal)
     public void save(Member member) {
         if (member.getId() == null) {
             entityManager.persist(member);

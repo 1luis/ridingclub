@@ -31,14 +31,24 @@
 
     <table border>
         <tr>
-            <th>Vorname</th> <th>Name</th> <th>Standort</th> <th>Adresse</th> <th>PLZ</th>
+            <th>Vorname</th>
+            <th>Nachname</th>
+            <th>Adresse</th>
+            <th>Wohnort</th>
+            <th>PLZ</th>
+            <th>Geburtsdatum</th>
+            <th>Mitgliedsart</th>
+            <th>Eintrittsdatum</th>
         </tr>
-        <tr ng-repeat="results in model.results">
+        <tr ng-repeat="results in model.results | orderBy:['surname', 'name']">
             <td>{{results.name}}</td>
             <td>{{results.surname}}</td>
-            <td>{{results.city}}</td>
             <td>{{results.address}}</td>
+            <td>{{results.city}}</td>
             <td>{{results.zipcode}}</td>
+            <td>{{results.birthday}}</td>
+            <td>{{results.memberType}}</td>
+            <td>{{results.entryDate}}</td>
 
         </tr>
     </table>

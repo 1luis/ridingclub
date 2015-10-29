@@ -113,12 +113,21 @@ app.controller("searchController", ["$scope", '$http', function ($scope, $http) 
         results: []
     };
 
-
     $scope.suchen = function () {
+
+        var url;
+
+        if ($scope.name == ""){
+            url = "rest/searchSurname/"+ $scope.search.surname;
+        }else if($scope.surname === ""){
+            url = "rest/searchName/"+ $scope.search.name;
+        }else{
+            url = "rest/search/"+ $scope.search.name + "/"+ $scope.search.surname;
+        }
 
         var config = {
             method: "GET",
-            url: "rest/searchmember/"+ $scope.search.name + "/" + $scope.search.surname
+            url: url
         };
 
         var response = $http(config);

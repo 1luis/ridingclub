@@ -17,11 +17,21 @@ public class MemberController {
         return memberService.listMembers();
     }
 
-    @RequestMapping(value = "/searchmember/{name}/{surname}", method = RequestMethod.GET)
+
+    @RequestMapping(value = "/searchName/{name}", method = RequestMethod.GET)
+    public List<Member> listMembersName(@PathVariable String name) {
+        return memberService.listMembersName(name);
+    }
+
+    @RequestMapping(value = "/searchSurname/{surname}", method = RequestMethod.GET)
+    public List<Member> listMembersSurname(@PathVariable String surname) {
+        return memberService.listMembersSurname(surname);
+    }
+
+    @RequestMapping(value = "/search/{name}/{surname}", method = RequestMethod.GET)
     public List<Member> listMembers(@PathVariable String name, @PathVariable String surname) {
         return memberService.listMembers(name, surname);
     }
-
 
     @RequestMapping(value = "/member/{id}", method = RequestMethod.DELETE)
     public void deleteMember(@PathVariable Long id) throws Exception {

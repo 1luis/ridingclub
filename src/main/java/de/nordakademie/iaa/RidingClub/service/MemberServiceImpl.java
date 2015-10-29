@@ -23,7 +23,7 @@ public class MemberServiceImpl implements MemberService {
       /*  //TODO: Validierungen der Inputs
         if (member.getName1() == null
                 || member.getName1().isEmpty()) {
-            throw new ValidatorException("Der Vorname ist ungültig.");
+            throw new ValidatorException("Der Vorname ist ungï¿½ltig.");
         }
 */
         // Wenn ein neuer Member angelegt wird
@@ -63,9 +63,21 @@ public class MemberServiceImpl implements MemberService {
     }
 
     @Override
+    public List<Member> listMembersName(String name){
+        return memberDAO.findName(name);
+    }
+
+    @Override
+    public List<Member> listMembersSurname(String surname){
+        return memberDAO.findSurname(surname);
+    }
+
+    @Override
     public List<Member> listMembers(String name, String surname) {
         return memberDAO.findAll(name, surname);
     }
+
+
 
     @Override
     public Member loadMember(Long id) {
