@@ -32,7 +32,7 @@ public class MemberDAO {
         return entityManager.find(Member.class, id);
     }
 
-
+//TODO: Brauchen wir diese Methode wirklich? (Pascal)
     public void save(Member member) {
         if (member.getId() == null) {
             entityManager.persist(member);

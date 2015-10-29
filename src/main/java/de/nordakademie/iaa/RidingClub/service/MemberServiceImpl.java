@@ -16,11 +16,16 @@ public class MemberServiceImpl implements MemberService {
     private PaymentsService paymentsService;
 
     @Override
-    public void saveMember(Member member) throws EntityAlreadyPresentException {
+    public void saveMember(Member member) throws EntityAlreadyPresentException, ValidatorException {
 
         Payments payments = new Payments();
 
-
+      /*  //TODO: Validierungen der Inputs
+        if (member.getName1() == null
+                || member.getName1().isEmpty()) {
+            throw new ValidatorException("Der Vorname ist ungültig.");
+        }
+*/
         // Wenn ein neuer Member angelegt wird
         if (member.getId() == null) {
             memberDAO.save(member);

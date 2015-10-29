@@ -42,7 +42,7 @@ app.controller("MemberController", ["$scope", 'memberService', function ($scope,
             $scope.model.members = data;
         })
         .error(function () {
-            alert('Error ocurred while loading members list')
+            alert('Fehler beim Laden der Mitgliederliste')
         });
 
 
@@ -64,10 +64,12 @@ app.controller('NewMemberController', ['$scope', "$log", '$http', function ($sco
 
 
     $scope.member = {
-        name: "",
+        name1: "",
         surname: "",
+        address: "",
         city: "",
         zipcode: "",
+        entryDate: "",
         memberType: ""
     };
 
@@ -83,11 +85,11 @@ app.controller('NewMemberController', ['$scope', "$log", '$http', function ($sco
         var response = $http(config);
 
         response.success(function (data, status, headers, config) {
-            alert("Mitglieder erfolgreich angelegt:" + status);
+            alert("Mitglied erfolgreich angelegt:" + status);
         });
 
         response.error(function (data, status, headers, config) {
-            alert("Fehler bei Mitgliedererfassung:" + status);
+            alert("Fehler beim Anlegen des Mitglieds:" + status);
         });
 
     };

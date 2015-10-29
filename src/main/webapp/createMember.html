@@ -8,19 +8,20 @@
 
 <fieldset>
 
-    <legend>Mitglieder anlegen:</legend>
-
-    <label for="memberType">MemberType:</label>
+    <legend>Neues Mitglied anlegen:</legend>
+    <div class="form-group">
+    <label for="memberType">Mitgliedsart:</label>
     <input id="memberType"
            name="memberType"
            type="text"
            ng-model="member.memberType"/><br>
+    </div>
 
-    <label for="name">Vorname:</label>
-    <input id="name"
-           name="name"
+    <label for="name1">Vorname:</label>
+    <input id="name1"
+           name="name1"
            type="text"
-           ng-model="member.name"/><br>
+           ng-model="member.name1"/><br>
 
     <label for="surname">Nachname:</label>
     <input id="surname"
@@ -28,11 +29,11 @@
            type="text"
            ng-model="member.surname"/><br>
 
-    <label for="city">City:</label>
-    <input id="city"
-           name="city"
+    <label for="birthday">Geburtsdatum:</label>
+    <input id="birthday"
+           name="birthday"
            type="text"
-           ng-model="member.city"/><br>
+           ng-model="member.birthday"/><br>
 
     <label for="address">Adresse:</label>
     <input id="address"
@@ -40,13 +41,25 @@
            type="text"
            ng-model="member.address"/><br>
 
+    <label for="city">Wohnort:</label>
+    <input id="city"
+           name="city"
+           type="text"
+           ng-model="member.city"/><br>
+
     <label for="zipcode">Zipcode:</label>
     <input id="zipcode"
            name="zipcode"
            type="text"
            ng-model="member.zipcode"/><br>
 
+    <label for="entryDate">Eintrittsdatum:</label>
+    <input id="entryDate"
+           name="entryDate"
+           type="text"
+           ng-model="member.entryDate"/><br>
 
+<br>
 
     <button ng-click="anlegen()">Anlegen</button>
 

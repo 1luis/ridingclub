@@ -10,12 +10,13 @@
 
     <legend>Mitglieder suchen:</legend>
 
-
-    <label for="name">Vorname:</label>
-    <input id="name"
-           name="name"
+    <!--"Name" in "Name1" geändert, damit Feld befüllbar ist!-->
+    <label for="name1">Vorname:</label>
+    <input id="name1"
+           name="name1"
            type="text"
-           ng-model="search.vorname"/><br>
+           ng-model="search.name1"/><br>
+         
 
     <label for="surname">Nachname:</label>
     <input id="surname"
@@ -23,6 +24,7 @@
            type="text"
            ng-model="search.surname"/><br>
 
+    <br>
 
     <button ng-click="suchen()">Suchen</button>
 

@@ -32,7 +32,13 @@ public class MemberController {
     public void saveMember(@RequestBody Member member) throws Exception{
         memberService.saveMember(member);
     }
-
+    //TODO SearchMemberRequest implementieren
+    /*
+    @RequestMapping(value = "/searchMember", method = RequestMethod.GET)
+    public List<Member> searchMember(@RequestBody SearchMemberRequest reqSeach) {
+        return memberService.searchMember(reqSeach);
+    }
+*/
 
 
 }
