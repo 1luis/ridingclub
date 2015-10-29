@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f6486d2-a8b4-4f57-a721-0df9e8e32540" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/controller/MemberController.java" afterPath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/controller/MemberController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/dao/MemberDAO.java" afterPath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/dao/MemberDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/MemberService.java" afterPath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/MemberService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/MemberServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/MemberServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/application.js" afterPath="$PROJECT_DIR$/src/main/webapp/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/searchMember.html" afterPath="$PROJECT_DIR$/src/main/webapp/searchMember.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="roommgmt-orm.iws" />
@@ -931,7 +925,7 @@
       <workItem from="1446037021617" duration="20986000" />
       <workItem from="1446070675347" duration="1185000" />
       <workItem from="1446111648081" duration="6754000" />
-      <workItem from="1446120155254" duration="7068000" />
+      <workItem from="1446120155254" duration="7123000" />
     </task>
     <task id="LOCAL-00001" summary="initial repo">
       <created>1445782478887</created>
@@ -1059,11 +1053,17 @@
       <option name="project" value="LOCAL" />
       <updated>1446116858086</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="search immplementiert">
+      <created>1446127881558</created>
+      <option name="number" value="00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1446127881558</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88920000" />
+    <option name="totallyTimeSpent" value="88975000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1136,7 +1136,8 @@
     <MESSAGE value="Wichtige änderungen, suche immplementiert" />
     <MESSAGE value="Merge remote-tracking branch 'github/master'&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/de/nordakademie/iaa/RidingClub/controller/MemberController.java&#10;#&#9;src/main/resources/import.sql&#10;#&#9;src/main/webapp/application.js&#10;#&#9;src/main/webapp/createMember.html&#10;#&#9;src/main/webapp/deleteMember.html&#10;#&#9;src/main/webapp/index.html&#10;#&#9;src/main/webapp/searchMember.html&#10;" />
     <MESSAGE value="kein name1 mehr" />
-    <option name="LAST_COMMIT_MESSAGE" value="kein name1 mehr" />
+    <MESSAGE value="search immplementiert" />
+    <option name="LAST_COMMIT_MESSAGE" value="search immplementiert" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
