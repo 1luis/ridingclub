@@ -14,7 +14,7 @@ public class Member implements  Serializable{
     //id wird als eindeutige Mitgliedsnummer verwendet
     private Long id;
 
-    private String name1;
+    private String name;
 
     private String surname;
 
@@ -26,7 +26,7 @@ public class Member implements  Serializable{
 
     private String iban;
 
-    //TODO: folgende Strings auf Date ändern sowie Pattern dd-MM-yyyy
+    //TODO: folgende Strings auf Date ï¿½ndern sowie Pattern dd-MM-yyyy
     private String entryDate;
     private String noticeDate;
     private String exitDate;
@@ -47,12 +47,12 @@ public class Member implements  Serializable{
 
     // Name of the member:
     @Column( nullable = false)
-    public String getName1() {
-        return name1;
+    public String getName() {
+        return name;
     }
 
-    public void setName1(String name1) {
-        this.name1 = name1;
+    public void setName(String name) {
+        this.name = name;
     }
 
     // Surname of the member:
@@ -115,7 +115,7 @@ public class Member implements  Serializable{
         this.entryDate = entryDate;
     }
 
-    // Kündigungsdatum
+    // Kï¿½ndigungsdatum
     @Column(nullable = true)
     public String getNoticeDate() {
         return noticeDate;
@@ -146,7 +146,7 @@ public class Member implements  Serializable{
     }
 
 
-    // MemberType wird als Referenz geführt??
+    // MemberType wird als Referenz gefï¿½hrt??
     public String getMemberType() {
         return memberType;
     }

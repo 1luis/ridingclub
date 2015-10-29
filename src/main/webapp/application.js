@@ -60,11 +60,11 @@ app.service('memberService', ['$http', function ($http) {
 //*******************************************************************************************************
 
 
-app.controller('NewMemberController', ['$scope', "$log", '$http', function ($scope, $log, $http) {
+app.controller('NewMemberController', ['$scope', '$http', function ($scope, $http) {
 
 
     $scope.member = {
-        name1: "",
+        name: "",
         surname: "",
         address: "",
         city: "",
@@ -105,7 +105,7 @@ app.controller('NewMemberController', ['$scope', "$log", '$http', function ($sco
 app.controller("searchController", ["$scope", '$http', function ($scope, $http) {
 
     $scope.search = {
-        vorname: "",
+        name: "",
         surname: ""
     };
 
@@ -118,7 +118,7 @@ app.controller("searchController", ["$scope", '$http', function ($scope, $http) 
 
         var config = {
             method: "GET",
-            url: "rest/member/"+ $scope.search.vorname + "/" + $scope.search.surname
+            url: "rest/searchmember/"+ $scope.search.name + "/" + $scope.search.surname
         };
 
         var response = $http(config);

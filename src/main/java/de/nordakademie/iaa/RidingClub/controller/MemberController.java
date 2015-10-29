@@ -17,7 +17,7 @@ public class MemberController {
         return memberService.listMembers();
     }
 
-    @RequestMapping(value = "/member/{name}/{surname}", method = RequestMethod.GET)
+    @RequestMapping(value = "/searchmember/{name}/{surname}", method = RequestMethod.GET)
     public List<Member> listMembers(@PathVariable String name, @PathVariable String surname) {
         return memberService.listMembers(name, surname);
     }
@@ -32,13 +32,7 @@ public class MemberController {
     public void saveMember(@RequestBody Member member) throws Exception{
         memberService.saveMember(member);
     }
-    //TODO SearchMemberRequest implementieren
-    /*
-    @RequestMapping(value = "/searchMember", method = RequestMethod.GET)
-    public List<Member> searchMember(@RequestBody SearchMemberRequest reqSeach) {
-        return memberService.searchMember(reqSeach);
-    }
-*/
+
 
 
 }

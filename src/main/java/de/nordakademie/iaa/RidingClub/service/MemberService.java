@@ -13,7 +13,6 @@ public interface MemberService {
 
     List<Member> listMembers(String name, String surname);
 
-
     Member loadMember(Long id);
 
 
