@@ -17,6 +17,16 @@ public class MemberDAO {
 
     }
 
+    @SuppressWarnings("JpaQlInspection")
+    public List<Member> findAll(String name, String surname) {
+        return entityManager
+                .createQuery("select m from Member m where m.name like CONCAT('%', :name, '%') and m.surname like CONCAT('%', :surname, '%')")
+                .setParameter("name", name)
+                .setParameter("surname", surname)
+                .getResultList();
+
+    }
+
 
     public Member load(Long id) {
         return entityManager.find(Member.class, id);

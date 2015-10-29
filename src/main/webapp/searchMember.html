@@ -15,7 +15,7 @@
     <input id="name"
            name="name"
            type="text"
-           ng-model="search.name"/><br>
+           ng-model="search.vorname"/><br>
 
     <label for="surname">Nachname:</label>
     <input id="surname"
@@ -23,9 +23,24 @@
            type="text"
            ng-model="search.surname"/><br>
 
-    </select><br>
 
-    <button ng-click="search()">Suchen</button>
+    <button ng-click="suchen()">Suchen</button>
+
+
+    <table border>
+        <tr>
+            <th>Vorname</th> <th>Name</th> <th>Standort</th> <th>Adresse</th> <th>PLZ</th>
+        </tr>
+        <tr ng-repeat="results in model.results">
+            <td>{{results.name}}</td>
+            <td>{{results.surname}}</td>
+            <td>{{results.city}}</td>
+            <td>{{results.address}}</td>
+            <td>{{results.zipcode}}</td>
+
+        </tr>
+    </table>
+
 
 </fieldset>
 

@@ -17,6 +17,11 @@ public class MemberController {
         return memberService.listMembers();
     }
 
+    @RequestMapping(value = "/member/{name}/{surname}", method = RequestMethod.GET)
+    public List<Member> listMembers(@PathVariable String name, @PathVariable String surname) {
+        return memberService.listMembers(name, surname);
+    }
+
 
     @RequestMapping(value = "/member/{id}", method = RequestMethod.DELETE)
     public void deleteMember(@PathVariable Long id) throws Exception {

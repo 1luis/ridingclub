@@ -13,11 +13,6 @@ app.config(['$routeProvider', function ($routeProvider) {
         templateUrl: "createMember.html",
         controller: "NewMemberController"
     });
-    /*
-     $routeProvider.when('/deleteMember',{
-     templateUrl: "deleteMember.html",
-     controller: "delMemberController"
-     });*/
 
     $routeProvider.when('/searchMember', {
         templateUrl: "searchMember.html",
@@ -100,40 +95,6 @@ app.controller('NewMemberController', ['$scope', "$log", '$http', function ($sco
 
 }]);
 
-//*******************************************************************************************************
-//*Deletes an existing member
-//*******************************************************************************************************
-
-app.controller("delMemberController", ["$scope", '$log', '$http', function ($scope, $log, $http) {
-
-
-    $scope.todelete = {
-        name: "",
-        surname: ""
-    };
-
-    $scope.delete = function () {
-        $scope.todelete.name = "caddca";
-        $scope.todelete.surname = "caddcfffffa";
-    };
-
-
-    var config = {
-        method: "DELETE",
-        url: "http://localhost:8080/rest/member/"
-    };
-
-    var response = $http(config);
-
-    response.success(function (data, status, headers, config) {
-        alert("Se ha borrado el 2:" + status);
-    });
-
-    response.error(function (data, status, headers, config) {
-        alert("Ha fallado la petición. Estado HTTP:" + status);
-    });
-
-}]);
 
 //*******************************************************************************************************
 //*Search Members
@@ -142,33 +103,32 @@ app.controller("delMemberController", ["$scope", '$log', '$http', function ($sco
 app.controller("searchController", ["$scope", '$http', function ($scope, $http) {
 
     $scope.search = {
-        name: "",
+        vorname: "",
         surname: ""
     };
 
-    $scope.search = function () {
+    $scope.model = {
+        results: []
+    };
 
 
+    $scope.suchen = function () {
 
         var config = {
-            method: "PUT",
-            url: "rest/member",
-            data: $scope.member
+            method: "GET",
+            url: "rest/member/"+ $scope.search.vorname + "/" + $scope.search.surname
         };
 
         var response = $http(config);
 
-        response.success(function (data, status, headers, config) {
-            alert("Mitglieder erfolgreich angelegt:" + status);
+        response.success(function (data){
+            $scope.model.results = data;
         });
-
         response.error(function (data, status, headers, config) {
-            alert("Fehler bei Mitgliedererfassung:" + status);
+            alert("Fehler bei Mitgliederersuche:" + status);
         });
 
     };
-
-
 
 }]);
 

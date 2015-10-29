@@ -58,6 +58,11 @@ public class MemberServiceImpl implements MemberService {
     }
 
     @Override
+    public List<Member> listMembers(String name, String surname) {
+        return memberDAO.findAll(name, surname);
+    }
+
+    @Override
     public Member loadMember(Long id) {
         return memberDAO.load(id);
     }
