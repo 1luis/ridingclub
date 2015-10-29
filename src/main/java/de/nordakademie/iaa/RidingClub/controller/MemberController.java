@@ -17,7 +17,6 @@ public class MemberController {
         return memberService.listMembers();
     }
 
-
     @RequestMapping(value = "/member/{id}", method = RequestMethod.DELETE)
     public void deleteMember(@PathVariable Long id) throws Exception {
         memberService.deleteMember(id);
@@ -27,7 +26,13 @@ public class MemberController {
     public void saveMember(@RequestBody Member member) throws Exception{
         memberService.saveMember(member);
     }
-
+    //TODO SearchMemberRequest implementieren
+    /*
+    @RequestMapping(value = "/searchMember", method = RequestMethod.GET)
+    public List<Member> searchMember(@RequestBody SearchMemberRequest reqSeach) {
+        return memberService.searchMember(reqSeach);
+    }
+*/
 
 
 }

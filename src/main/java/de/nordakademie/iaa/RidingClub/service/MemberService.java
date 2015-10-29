@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface MemberService {
 
-    void saveMember(Member member) throws EntityAlreadyPresentException;
+    void saveMember(Member member) throws EntityAlreadyPresentException, ValidatorException;
 
     List<Member> listMembers();
 

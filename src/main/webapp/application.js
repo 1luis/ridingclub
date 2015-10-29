@@ -47,7 +47,7 @@ app.controller("MemberController", ["$scope", 'memberService', function ($scope,
             $scope.model.members = data;
         })
         .error(function () {
-            alert('Error ocurred while loading members list')
+            alert('Fehler beim Laden der Mitgliederliste')
         });
 
 
@@ -69,10 +69,12 @@ app.controller('NewMemberController', ['$scope', "$log", '$http', function ($sco
 
 
     $scope.member = {
-        name: "",
+        name1: "",
         surname: "",
+        address: "",
         city: "",
         zipcode: "",
+        entryDate: "",
         memberType: ""
     };
 
@@ -88,11 +90,11 @@ app.controller('NewMemberController', ['$scope', "$log", '$http', function ($sco
         var response = $http(config);
 
         response.success(function (data, status, headers, config) {
-            alert("Mitglieder erfolgreich angelegt:" + status);
+            alert("Mitglied erfolgreich angelegt:" + status);
         });
 
         response.error(function (data, status, headers, config) {
-            alert("Fehler bei Mitgliedererfassung:" + status);
+            alert("Fehler beim Anlegen des Mitglieds:" + status);
         });
 
     };
@@ -113,8 +115,8 @@ app.controller("delMemberController", ["$scope", '$log', '$http', function ($sco
     };
 
     $scope.delete = function () {
-        $scope.todelete.name = "caddca";
-        $scope.todelete.surname = "caddcfffffa";
+        $scope.todelete.name = "zu löschender vorname";
+        $scope.todelete.surname = "zu löschender nachname";
     };
 
 
@@ -126,11 +128,11 @@ app.controller("delMemberController", ["$scope", '$log', '$http', function ($sco
     var response = $http(config);
 
     response.success(function (data, status, headers, config) {
-        alert("Se ha borrado el 2:" + status);
+        alert("Das Mitglied wurde gelöscht:" + status);
     });
 
     response.error(function (data, status, headers, config) {
-        alert("Ha fallado la petición. Estado HTTP:" + status);
+        alert("Ungültige Anfrage (Bad Request). HTTP-Status:" + status);
     });
 
 }]);
@@ -151,7 +153,7 @@ app.controller("searchController", ["$scope", '$http', function ($scope, $http) 
 
 
         var config = {
-            method: "PUT",
+            method: "GET",
             url: "rest/member",
             data: $scope.member
         };
@@ -159,11 +161,11 @@ app.controller("searchController", ["$scope", '$http', function ($scope, $http) 
         var response = $http(config);
 
         response.success(function (data, status, headers, config) {
-            alert("Mitglieder erfolgreich angelegt:" + status);
+            alert("Mitglieder erfolgreich gesucht:" + status);
         });
 
         response.error(function (data, status, headers, config) {
-            alert("Fehler bei Mitgliedererfassung:" + status);
+            alert("Fehler bei Mitgliedersuche:" + status);
         });
 
     };
