@@ -5,5 +5,5 @@ package de.nordakademie.iaa.RidingClub.model;
  */
 public class SearchMemberRequest {
 
-
+//TODO: SearchMemberRequest im Backend implementieren
 }
