@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f6486d2-a8b4-4f57-a721-0df9e8e32540" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/application.js" afterPath="$PROJECT_DIR$/src/main/webapp/application.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="roommgmt-orm.iws" />
@@ -70,8 +69,8 @@
       <file leaf-file-name="members.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/members.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37769786">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.35071942">
+              <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -942,7 +941,7 @@
       <workItem from="1446252569520" duration="295000" />
       <workItem from="1446253965210" duration="6937000" />
       <workItem from="1446261303823" duration="9043000" />
-      <workItem from="1446270956593" duration="422000" />
+      <workItem from="1446270956593" duration="442000" />
     </task>
     <task id="LOCAL-00001" summary="initial repo">
       <created>1445782478887</created>
@@ -1088,11 +1087,17 @@
       <option name="project" value="LOCAL" />
       <updated>1446271375524</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="änderungen in der Beziehung die Tabellen">
+      <created>1446271408408</created>
+      <option name="number" value="00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1446271408408</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129246000" />
+    <option name="totallyTimeSpent" value="129266000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1604,8 +1609,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/members.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37769786">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.35071942">
+          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
           <folding />
         </state>
       </provider>
