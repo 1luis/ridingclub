@@ -166,10 +166,10 @@ app.controller("searchController", ["$scope", '$http', function ($scope, $http) 
 //* Show Payments
 //******************************************************************************************
 
-app.controller("paymentsController", ["$scope","$routeParams","paymentsService", function ($scope, $routeParams, paymentsService) {
+app.controller("paymentsController", ["$scope","$routeParams","$http", function ($scope, $routeParams, $http) {
 
     $scope.id = $routeParams.id;
-    $scope.allPayments = {
+/*    $scope.allPayments = {
         payments: {
             id_payment:"",
             amount:"",
@@ -177,7 +177,31 @@ app.controller("paymentsController", ["$scope","$routeParams","paymentsService",
             status: "",
             memberType:"",
             member:{
-                id: "",
+                id: undefined,
+                name:"",
+                surname:"",
+                address:"",
+                city:"",
+                zipcode:"",
+                iban:"",
+                entryDate:"",
+                exitDate:"",
+                noticedate:"",
+                birthday:"",
+                memberType:""
+            }
+        }
+    };*/
+
+     $scope.model = {
+        payments: {
+            id_payment:"",
+            amount:"",
+            year: "",
+            status: "",
+            memberType:"",
+            member:{
+                id: undefined,
                 name:"",
                 surname:"",
                 address:"",
@@ -193,52 +217,25 @@ app.controller("paymentsController", ["$scope","$routeParams","paymentsService",
         }
     };
 
-    $scope.model = {
-        payments: {
-            id_payment:"",
-            amount:"",
-            year: "",
-            status: "",
-            memberType:"",
-            member:{
-                id: "",
-                name:"",
-                surname:"",
-                address:"",
-                city:"",
-                zipcode:"",
-                iban:"",
-                entryDate:"",
-                exitDate:"",
-                noticedate:"",
-                birthday:"",
-                memberType:""
-            }
-        }
-    };
 
-    paymentsService.listPayments()
-        .success(function (data) {
-            $scope.allPayments = data;
+        var config={
+            method:"GET",
+            url:"rest/payments"
+        };
 
-      if($scope.allPayments.payments.member.id === $scope.id){
-                $scope.model.payments = $scope.allPayments.payments;
-            }
-        })
-        .error(function () {
-            alert('Fehler beim Laden die Zahlungen')
+        var response=$http(config);
+
+        response.success(function(data, status, headers, config) {
+            $scope.model.payments=data;
+        });
+
+        response.error(function(data, status, headers, config) {
+            alert("Ha fallado la petición. Estado HTTP:"+status);
         });
 
 
-
 }]);
 
-
-app.service('paymentsService', ['$http', function ($http) {
-    this.listPayments = function () {
-        return $http.get('rest/payments');
-    }
-}]);
 
 
 //*******************************************************************************************************

@@ -22,6 +22,15 @@
     </tr>
     </thead>
     <tbody>
+    id------> {{model.payments.member.id}}
+    ------por segund VEZ
+    {{model.payments.id_payment}}
+    {{model.payments.amount}}
+    {{model.payments.year}}
+    {{model.payments.member.id}}
+    {{model.payments.member.name}}
+----
+
     <tr ng-repeat="payments in model.payments">
 
 
@@ -37,7 +46,7 @@
 
 <div></div>
 
-<a href="#addPayment/{{id}}">{{id}}<button>Add Payment</button></a>
+<a href="#addPayment/{{id}}"><button>Add Payment</button></a>
 
 
 </body>
