@@ -5,7 +5,7 @@ app.config(['$routeProvider', function ($routeProvider) {
 
 
     $routeProvider.when('/members', {
-        templateUrl: "Members.html",
+        templateUrl: "members.html",
         controller: "MemberController"
     });
 

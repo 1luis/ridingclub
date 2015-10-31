@@ -2,26 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f6486d2-a8b4-4f57-a721-0df9e8e32540" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/Member.hbm.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/Payments.hbm.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/StyleSheet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/payments.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/model/Member.java" afterPath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/model/Member.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/MemberServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/MemberServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/Members.html" afterPath="$PROJECT_DIR$/src/main/webapp/Members.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/model/Payments.java" afterPath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/model/Payments.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/controller/PaymentsController.java" afterPath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/controller/PaymentsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/dao/PaymentsDAO.java" afterPath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/dao/PaymentsDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/PaymentsService.java" afterPath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/PaymentsService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/PaymentsServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/PaymentsServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/bower_components/angular/README.md" afterPath="$PROJECT_DIR$/src/main/webapp/bower_components/angular/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/application.js" afterPath="$PROJECT_DIR$/src/main/webapp/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/createMember.html" afterPath="$PROJECT_DIR$/src/main/webapp/createMember.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/import.sql" afterPath="$PROJECT_DIR$/src/main/resources/import.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/roommgmt-orm.iml" afterPath="$PROJECT_DIR$/roommgmt-orm.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/searchMember.html" afterPath="$PROJECT_DIR$/src/main/webapp/searchMember.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spring-config.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring-config.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="roommgmt-orm.iws" />
@@ -86,11 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Members.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/Members.html">
+      <file leaf-file-name="members.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/members.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.26978418">
-              <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.37769786">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -961,7 +942,7 @@
       <workItem from="1446252569520" duration="295000" />
       <workItem from="1446253965210" duration="6937000" />
       <workItem from="1446261303823" duration="9043000" />
-      <workItem from="1446270956593" duration="388000" />
+      <workItem from="1446270956593" duration="422000" />
     </task>
     <task id="LOCAL-00001" summary="initial repo">
       <created>1445782478887</created>
@@ -1101,11 +1082,17 @@
       <option name="project" value="LOCAL" />
       <updated>1446127908604</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="änderungen in der Beziehung die Tabellen">
+      <created>1446271375524</created>
+      <option name="number" value="00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1446271375524</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129212000" />
+    <option name="totallyTimeSpent" value="129246000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1118,7 +1105,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="726" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1615,10 +1602,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/Members.html">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/members.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26978418">
-          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.37769786">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>
