@@ -15,9 +15,12 @@
                 <li><label for="memberType">Mitgliedsart:</label> <select id="memberType" name="memberType" type="checkbox"  required
                                                                           ng-model="member.memberType">
                     <option value="">--Wählen Sie bitte--</option>
-                    <option value="VM">Vollmitglied (20€)</option>
-                    <option value="VM">Vollmitglied (21€)</option>
-                    <option value="VM">Vollmitglied (22€)</option>
+                    <option value="Vollmitglied">Vollmitglied (25€)</option>
+                    <option value="Ermaessigt">Ermaessigt (23€)</option>
+                    <option value="Jugendmitglied">Jugendmitglied (15€)</option>
+                    <option value="Foerdermitglied">Foerdermitglied (10€)</option>
+                    <option value="Foerdermitglied">bo5</option>
+
 
                 </select><br>
 
@@ -61,9 +64,16 @@
                                                                           type="date"
                                                                           required ng-model="member.entryDate"/></li>
 
+                <li><label for="entryDate">Exitsdatum:</label> <input id="exitDate"
+                                                                          name="exitDate"
+                                                                          type="date"
+                                                                          required ng-model="member.exitDate"/></li>
+
+
+
                 <li><label for="iban">IBAN:</label> <input id="iban"
                                                            name="iban"
-                                                           type="text" required/></li>
+                                                           type="text" required ng-model="member.iban"/></li>
 
             </ul>
         </div>

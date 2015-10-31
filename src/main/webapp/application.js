@@ -5,7 +5,7 @@ app.config(['$routeProvider', function ($routeProvider) {
 
 
     $routeProvider.when('/members', {
-        templateUrl: "members.html",
+        templateUrl: "Members.html",
         controller: "MemberController"
     });
 
@@ -22,6 +22,11 @@ app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/payments/:id', {
         templateUrl: "payments.html",
         controller: "paymentsController"
+    });
+
+    $routeProvider.when('/addPayment/:id', {
+        templateUrl: "addPayment.html",
+        controller: "addPaymentController"
     });
 
     $routeProvider.otherwise({
@@ -72,9 +77,19 @@ app.controller('NewMemberController', ['$scope', '$http', function ($scope, $htt
         name: "",
         surname: "",
         address: "",
-        city: ""
+        city: "",
+        memberType: "",
+        birthday: "",
+        zipcode: "",
+        iban:"",
+        entrydate:"",
+        noticedate:"",
+        exitdate:""
+
 
     };
+
+
 
 
     $scope.anlegen = function () {
@@ -147,12 +162,94 @@ app.controller("searchController", ["$scope", '$http', function ($scope, $http) 
 
 }]);
 
+//******************************************************************************************
+//* Show Payments
+//******************************************************************************************
 
-app.controller("paymentsController", ["$scope","$routeParams", function ($scope, $routeParams) {
+app.controller("paymentsController", ["$scope","$routeParams","paymentsService", function ($scope, $routeParams, paymentsService) {
 
-    $scope.hola = "hola";
     $scope.id = $routeParams.id;
+    $scope.allPayments = {
+        payments: {
+            id_payment:"",
+            amount:"",
+            year: "",
+            status: "",
+            memberType:"",
+            member:{
+                id: "",
+                name:"",
+                surname:"",
+                address:"",
+                city:"",
+                zipcode:"",
+                iban:"",
+                entryDate:"",
+                exitDate:"",
+                noticedate:"",
+                birthday:"",
+                memberType:""
+            }
+        }
+    };
+
+    $scope.model = {
+        payments: {
+            id_payment:"",
+            amount:"",
+            year: "",
+            status: "",
+            memberType:"",
+            member:{
+                id: "",
+                name:"",
+                surname:"",
+                address:"",
+                city:"",
+                zipcode:"",
+                iban:"",
+                entryDate:"",
+                exitDate:"",
+                noticedate:"",
+                birthday:"",
+                memberType:""
+            }
+        }
+    };
+
+    paymentsService.listPayments()
+        .success(function (data) {
+            $scope.allPayments = data;
+
+      if($scope.allPayments.payments.member.id === $scope.id){
+                $scope.model.payments = $scope.allPayments.payments;
+            }
+        })
+        .error(function () {
+            alert('Fehler beim Laden die Zahlungen')
+        });
+
 
 
 }]);
 
+
+app.service('paymentsService', ['$http', function ($http) {
+    this.listPayments = function () {
+        return $http.get('rest/payments');
+    }
+}]);
+
+
+//*******************************************************************************************************
+//*Adds a Payment
+//*******************************************************************************************************
+
+
+app.controller('addPaymentController', ['$scope', "$routeParams",'$http', function ($scope, $routeParams, $http) {
+
+    $scope.id = $routeParams.id;
+
+
+
+}]);

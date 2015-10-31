@@ -15,37 +15,30 @@
 <table>
     <thead>
     <tr>
-        <th></th>
-        <th>Vorname</th>
-        <th>Nachname</th>
-        <th>Adresse</th>
-        <th>Wohnort</th>
-        <th>PLZ</th>
-        <th>Geburtsdatum</th>
+        <th>Status</th>
         <th>Mitgliedsart</th>
-        <th>Eintrittsdatum</th>
+        <th>Jahr</th>
+        <th>Betrag</th>
     </tr>
     </thead>
     <tbody>
-    <tr ng-repeat="member in model.members | orderBy:['id']">
+    <tr ng-repeat="payments in model.payments">
 
 
-        <td><a href="#payments/{{member.id}}">{{member.id}}</a></td>
-        <td>{{member.name}}</td>
-        <td>{{member.surname}}</td>
-        <td>{{member.address}}</td>
-        <td>{{member.city}}</td>
-        <td>{{member.zipcode}}</td>
-        <td>{{member.birthday}}</td>
-        <td>{{member.memberType}}</td>
-        <td>{{member.entryDate}}</td>
+        <td>{{payments.status}}</td>
+        <td>{{payments.memberType}}</td>
+        <td>{{payments.year}}</td>
+        <td>{{payments.amount}}</td>
 
     </tr>
     </tbody>
 
 </table>
 
+<div></div>
 
-{{id}}
+<a href="#addPayment/{{id}}">{{id}}<button>Add Payment</button></a>
+
+
 </body>
 </html>

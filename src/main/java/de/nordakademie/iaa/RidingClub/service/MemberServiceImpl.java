@@ -3,6 +3,8 @@ package de.nordakademie.iaa.RidingClub.service;
 import de.nordakademie.iaa.RidingClub.dao.MemberDAO;
 import de.nordakademie.iaa.RidingClub.model.Member;
 import de.nordakademie.iaa.RidingClub.model.Payments;
+
+import java.util.Calendar;
 import java.util.List;
 import javax.inject.Inject;
 import java.util.HashSet;
@@ -19,7 +21,7 @@ public class MemberServiceImpl implements MemberService {
     @Override
     public void saveMember(Member member) throws EntityAlreadyPresentException, ValidatorException {
 
-        //Payments payments = new Payments();
+        Payments payments = new Payments();
 
       /*  //TODO: Validierungen der Inputs
         if (member.getName1() == null
@@ -29,7 +31,6 @@ public class MemberServiceImpl implements MemberService {
 */
         // Neu
         if (member.getId() == null) {
-           /* memberDAO.save(member);
 
             payments.setMemberType(member.getMemberType());
 
@@ -53,13 +54,16 @@ public class MemberServiceImpl implements MemberService {
             payments.setYear(year);
             payments.setStatus("aktiv");
             payments.setMember(member);
-            member.getPayments().add(payments);
-            paymentsService.savePayment(payments);*/
+
+
+            paymentsService.savePayment(payments);
+
+            memberDAO.save(member);
 
 
             // Profesor profesor=new Profesor(7, "Sara", "Barrrera", "Salas");
 
-            Set<Payments> payments=new HashSet<>();
+        /*    Set<Payments> payments=new HashSet<>();
 
             Payments payment1 = new Payments();
             Payments payment2 = new Payments();
@@ -86,9 +90,7 @@ public class MemberServiceImpl implements MemberService {
 
             member.setId((long) 1);
 
-            memberDAO.save(member);
-
-
+            memberDAO.save(member);*/
 
         }
         //Aktualisierung

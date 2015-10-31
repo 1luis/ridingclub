@@ -19,13 +19,11 @@ public class Payments implements Serializable {
 
     private static final long serialVersionUID = 6925248180274039273L;
 
-  /*  @Id
+    @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id_payment",unique=true, nullable = false)*/
+    @Column(name = "id_payment")
     private Long id_payment;
 
-    @Column(name = "memberType")
-    private String memberType;
 
     @Column(name = "amount")
     private int amount;
@@ -36,15 +34,16 @@ public class Payments implements Serializable {
     @Column(name = "status")
     private String status;
 
+    @Column(name = "memberType")
+    private String memberType;
+
     @ManyToOne
-    @JoinColumn(name="idMember")
     private Member member;
 
 
     //**************************************************
 
-    @Id
-    //@GeneratedValue(strategy = GenerationType.AUTO)
+
     public Long getId_payment() {
         return id_payment;
     }
