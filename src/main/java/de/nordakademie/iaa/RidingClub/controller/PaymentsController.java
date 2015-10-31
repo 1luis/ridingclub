@@ -21,6 +21,11 @@ public class PaymentsController {
         return paymentService.listPayments();
     }
 
+    @RequestMapping(value = "/payments/{id_member}", method = RequestMethod.GET)
+    public List<Payments> listPayments(@PathVariable Long id) {
+        return paymentService.listPayments();
+    }
+
 
     @RequestMapping(value = "/payments/{id}", method = RequestMethod.DELETE)
     public void deleteMember(@PathVariable Long id) throws Exception {

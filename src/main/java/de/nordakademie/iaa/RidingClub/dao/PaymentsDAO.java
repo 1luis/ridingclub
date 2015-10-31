@@ -1,6 +1,7 @@
 package de.nordakademie.iaa.RidingClub.dao;
 
 import de.nordakademie.iaa.RidingClub.model.Payments;
+import de.nordakademie.iaa.RidingClub.model.Member;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -18,6 +19,14 @@ public class PaymentsDAO {
         @SuppressWarnings("JpaQlInspection")
         public List<Payments> findAll() {
             return entityManager.createQuery("select p from Payments p").getResultList();
+
+        }
+
+        @SuppressWarnings("JpaQlInspection")
+        public List<Payments> findAll(Member id) {
+        return entityManager.createQuery("select p from Payments p where p.member = :id")
+                .setParameter("id", id)
+                .getResultList();
 
         }
 

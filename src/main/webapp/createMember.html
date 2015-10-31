@@ -2,68 +2,77 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Mitglieder anlegen</title>
+    <link href="StyleSheet.css" rel="stylesheet"/>
+
 </head>
 <body>
 
-<fieldset>
 
-    <legend>Neues Mitglied anlegen:</legend>
-    <div class="form-group">
-    <label for="memberType">Mitgliedsart:</label>
-    <input id="memberType"
-           name="memberType"
-           type="text"
-           ng-model="member.memberType"/><br>
-    </div>
+    <form class="contact_form" action="#" id="contact_form" runat="server">
+        <div>
+            <ul>
+                <li><label for="memberType">Mitgliedsart:</label> <select id="memberType" name="memberType" type="checkbox"  required
+                                                                          ng-model="member.memberType">
+                    <option value="">--Wählen Sie bitte--</option>
+                    <option value="VM">Vollmitglied (20€)</option>
+                    <option value="VM">Vollmitglied (21€)</option>
+                    <option value="VM">Vollmitglied (22€)</option>
 
-    <label for="name">Vorname:</label>
-    <input id="name"
-           name="name"
-           type="text"
-           ng-model="member.name"/><br>
+                </select><br>
 
-    <label for="surname">Nachname:</label>
-    <input id="surname"
-           name="surname"
-           type="text"
-           ng-model="member.surname"/><br>
+                <li><label for="name">Vorname:</label> <input id="name"
+                                                              name="name"
+                                                              type="text"
+                                                              placeholder="Marc"
+                                                              required ng-model="member.name"/></li>
 
-    <label for="birthday">Geburtsdatum:</label>
-    <input id="birthday"
-           name="birthday"
-           type="text"
-           ng-model="member.birthday"/><br>
+                <li><label for="surname">Nachname:</label> <input id="surname"
+                                                                  name="surname"
+                                                                  type="text"
+                                                                  placeholder="Reiniking"
+                                                                  required ng-model="member.surname"/></li>
 
-    <label for="address">Adresse:</label>
-    <input id="address"
-           name="address"
-           type="text"
-           ng-model="member.address"/><br>
+                <li><label for="birthday">Geburtsdatum:</label> <input id="birthday"
+                                                                       name="birthday"
+                                                                       type="date"
+                                                                       required ng-model="member.birthday"/></li>
 
-    <label for="city">Wohnort:</label>
-    <input id="city"
-           name="city"
-           type="text"
-           ng-model="member.city"/><br>
+                <li><label for="address">Adresse:</label> <input id="address"
+                                                                 name="address"
+                                                                 type="text"
+                                                                 placeholder="Stressemanstr. 223"
+                                                                 required ng-model="member.address"/></li>
 
-    <label for="zipcode">Zipcode:</label>
-    <input id="zipcode"
-           name="zipcode"
-           type="text"
-           ng-model="member.zipcode"/><br>
+                <li><label for="city">Wohnort:</label> <input id="city"
+                                                              name="city"
+                                                              type="text"
+                                                              placeholder="Hamburg"
+                                                              required ng-model="member.city"/></li>
 
-    <label for="entryDate">Eintrittsdatum:</label>
-    <input id="entryDate"
-           name="entryDate"
-           type="text"
-           ng-model="member.entryDate"/><br>
+                <li><label for="zipcode">PLZ:</label> <input id="zipcode"
+                                                             name="zipcode"
+                                                             type="text"
+                                                             placeholder="21129"
+                                                             required ng-model="member.zipcode"/></li>
 
-<br>
+                <li><label for="entryDate">Eintrittsdatum:</label> <input id="entryDate"
+                                                                          name="entryDate"
+                                                                          type="date"
+                                                                          required ng-model="member.entryDate"/></li>
+
+                <li><label for="iban">IBAN:</label> <input id="iban"
+                                                           name="iban"
+                                                           type="text" required/></li>
+
+            </ul>
+        </div>
+    </form>
+
 
     <button ng-click="anlegen()">Anlegen</button>
 
-</fieldset>
+
 
 </body>
 </html>

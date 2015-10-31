@@ -2,28 +2,49 @@ package de.nordakademie.iaa.RidingClub.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import static javax.persistence.GenerationType.IDENTITY;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
 
 @Entity
-@Table(name = "Payments")
+@Table(name = "payments")
 public class Payments implements Serializable {
 
 
     private static final long serialVersionUID = 6925248180274039273L;
 
+  /*  @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id_payment",unique=true, nullable = false)*/
     private Long id_payment;
 
+    @Column(name = "memberType")
     private String memberType;
 
+    @Column(name = "amount")
     private int amount;
 
-    //private int year;
-    //private boolean status;
+    @Column(name = "year")
+    private int year;
 
+    @Column(name = "status")
+    private String status;
+
+    @ManyToOne
+    @JoinColumn(name="idMember")
     private Member member;
 
-    // Zahlungs-Id
+
+    //**************************************************
+
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    //@GeneratedValue(strategy = GenerationType.AUTO)
     public Long getId_payment() {
         return id_payment;
     }
@@ -31,7 +52,7 @@ public class Payments implements Serializable {
         this.id_payment = id_payment;
     }
 
-    // Mitgliedsart
+
     public String getMemberType() {
         return memberType;
     }
@@ -39,7 +60,7 @@ public class Payments implements Serializable {
         this.memberType = type;
     }
 
-    // Jahresbeitrag
+
     public int getAmount() {
         return amount;
     }
@@ -47,12 +68,36 @@ public class Payments implements Serializable {
         this.amount = amount;
     }
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
     //Member
-    @ManyToOne(fetch = FetchType.EAGER)
+/*    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "Member", nullable = false)
     public Member getMember(){
         return this.member;
     }
+    public void setMember(Member member) {
+        this.member = member;
+    }*/
+
+    public Member getMember() {
+        return this.member;
+    }
+
     public void setMember(Member member) {
         this.member = member;
     }

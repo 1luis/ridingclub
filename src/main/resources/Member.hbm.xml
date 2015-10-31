@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="de.nordakademie.iaa.RidingClub.model.Member">
+        <id column="id" name="id" type="java.lang.Long"/>
+        <property name="name"/>
+        <property name="surname"/>
+        <property name="address"/>
+        <property name="city"/>
+
+        <set name="payments" cascade="all" inverse="true">
+            <key>
+                <column name="idMember"/>
+            </key>
+            <one-to-many class="de.nordakademie.iaa.RidingClub.model.Payments"/>
+        </set>
+    </class>
+</hibernate-mapping>

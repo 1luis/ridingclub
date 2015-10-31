@@ -10,6 +10,7 @@ You can install this package either with `npm` or with `bower`.
 
 ### npm
 
+
 ```shell
 npm install angular
 ```
@@ -30,6 +31,7 @@ global.
 ```shell
 bower install angular
 ```
+
 
 Then add a `<script>` to your `index.html`:
 

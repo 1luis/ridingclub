@@ -2,41 +2,59 @@ package de.nordakademie.iaa.RidingClub.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.List;
 import java.util.Set;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import static javax.persistence.GenerationType.IDENTITY;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
 
 @Entity
-@Table(name = "Member")
+@Table(name = "member")
 public class Member implements  Serializable{
 
     private static final long serialVersionUID = 6925248180274039273L;
 
-    //id wird als eindeutige Mitgliedsnummer verwendet
+
     private Long id;
 
+    @Column( name = "name")
     private String name;
 
+    @Column( name = "surname")
     private String surname;
 
+    @Column( name = "address")
     private String address;
 
+    @Column( name = "city")
     private String city;
 
-    private String zipcode;
+/*    @Column( name = "zipcode")
+    private String zipcode;*/
 
-    private String iban;
+    //@OneToMany(mappedBy="member",cascade= CascadeType.ALL)
+    @OneToMany
+    private Set<Payments> payments;
+
+    //private String iban;
 
     //TODO: folgende Strings auf Date �ndern sowie Pattern dd-MM-yyyy
-    private String entryDate;
-    private String noticeDate;
-    private String exitDate;
-    private String birthday;
+    //private String entryDate;
+    //private String noticeDate;
+    //private String exitDate;
+    //private String birthday;
 
-    private String memberType;
+    //private String memberType;
 
+    //**************************************************************
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    //@GeneratedValue(strategy = GenerationType.AUTO)
     public Long getId() {
         return id;
     }
@@ -45,8 +63,6 @@ public class Member implements  Serializable{
         this.id = id;
     }
 
-    // Name of the member:
-    @Column( nullable = false)
     public String getName() {
         return name;
     }
@@ -55,8 +71,6 @@ public class Member implements  Serializable{
         this.name = name;
     }
 
-    // Surname of the member:
-    @Column(nullable = false)
     public String getSurname() {
         return surname;
     }
@@ -65,18 +79,6 @@ public class Member implements  Serializable{
         this.surname = surname;
     }
 
-    // ZIP-Code (PLZ)
-    @Column(nullable = false)
-    public String getZipcode() {
-        return zipcode;
-    }
-
-    public void setZipcode(String zipcode) {
-        this.zipcode = zipcode;
-    }
-
-    // Adresse
-    @Column(nullable = false)
     public String getAddress() {
         return address;
     }
@@ -85,8 +87,6 @@ public class Member implements  Serializable{
         this.address = address;
     }
 
-    // Wohnort
-    @Column(nullable = false)
     public String getCity() {
         return city;
     }
@@ -95,7 +95,7 @@ public class Member implements  Serializable{
         this.city = city;
     }
 
-    // IBAN-Code
+/*    // IBAN-Code
     @Column(nullable = true)
     public String getIban() {
         return iban;
@@ -103,9 +103,9 @@ public class Member implements  Serializable{
 
     public void setIban(String iban) {
         this.iban = iban;
-    }
+    }*/
 
-    // Eintrittsdatum
+/*    // Eintrittsdatum
     @Column(nullable = false)
     public String getEntryDate() {
         return entryDate;
@@ -113,9 +113,9 @@ public class Member implements  Serializable{
 
     public void setEntryDate(String entryDate) {
         this.entryDate = entryDate;
-    }
+    }*/
 
-    // K�ndigungsdatum
+ /*   // K�ndigungsdatum
     @Column(nullable = true)
     public String getNoticeDate() {
         return noticeDate;
@@ -123,9 +123,9 @@ public class Member implements  Serializable{
 
     public void setNoticeDate(String noticeDate) {
         this.noticeDate = noticeDate;
-    }
+    }*/
 
-    // Austrittsdatum
+/*    // Austrittsdatum
     @Column(nullable = true)
     public String getExitDate() {
         return exitDate;
@@ -133,9 +133,9 @@ public class Member implements  Serializable{
 
     public void setExitDate(String exitDate) {
         this.exitDate = exitDate;
-    }
+    }*/
 
-    // Geburtsdatum
+/*    // Geburtsdatum
     @Column(nullable = true)
     public String getBirthday() {
         return birthday;
@@ -143,16 +143,24 @@ public class Member implements  Serializable{
 
     public void setBirthday(String Birthday) {
         this.birthday = Birthday;
-    }
+    }*/
 
 
-    // MemberType wird als Referenz gef�hrt??
+   /* // MemberType wird als Referenz gef�hrt??
     public String getMemberType() {
         return memberType;
     }
 
     public void setMemberType(String memberType) {
         this.memberType = memberType;
+    }*/
+
+
+    public Set<Payments> getPayments() {
+        return this.payments;
     }
 
+    public void setPayments(Set<Payments> payments) {
+        this.payments = payments;
+    }
 }

@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <link href="StyleSheet.css" rel="stylesheet"/>
+
     <meta charset="UTF-8">
-    <title></title>
+    <title>Suchergebnisse</title>
+
 </head>
 <body>
 
@@ -28,8 +32,9 @@
 
     <button ng-click="suchen()">Suchen</button>
 
+    <div></div>
 
-    <table border>
+    <table>
         <tr>
             <th>Vorname</th>
             <th>Nachname</th>
@@ -40,8 +45,10 @@
             <th>Mitgliedsart</th>
             <th>Eintrittsdatum</th>
         </tr>
+
         <tr ng-repeat="results in model.results | orderBy:['surname', 'name']">
-            <td>{{results.name}}</td>
+
+            <td><a href="#payments/{{results.id}}">{{results.name}}</a></td>
             <td>{{results.surname}}</td>
             <td>{{results.address}}</td>
             <td>{{results.city}}</td>
@@ -49,12 +56,13 @@
             <td>{{results.birthday}}</td>
             <td>{{results.memberType}}</td>
             <td>{{results.entryDate}}</td>
-
         </tr>
+
     </table>
 
 
 </fieldset>
+
 
 </body>
 </html>

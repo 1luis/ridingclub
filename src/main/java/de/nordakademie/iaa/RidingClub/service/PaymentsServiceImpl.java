@@ -1,4 +1,5 @@
 package de.nordakademie.iaa.RidingClub.service;
+import de.nordakademie.iaa.RidingClub.model.Member;
 
 import de.nordakademie.iaa.RidingClub.dao.PaymentsDAO;
 import de.nordakademie.iaa.RidingClub.model.Payments;
@@ -8,6 +9,7 @@ import javax.inject.Inject;
 
 public class PaymentsServiceImpl implements PaymentsService {
 
+    @Inject
     private PaymentsDAO paymentsDAO;
     @Inject
     private MemberService memberService;
@@ -21,6 +23,16 @@ public class PaymentsServiceImpl implements PaymentsService {
     @Override
     public List<Payments> listPayments() {
         return paymentsDAO.findAll();
+    }
+
+    @Override
+    public List<Payments> listPayments(Long id) {
+        Member member = new Member();
+
+        member.setId(id);
+        member = memberService.loadMember(id);
+
+        return paymentsDAO.findAll(member);
     }
 
     @Override

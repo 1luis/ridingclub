@@ -4,7 +4,7 @@ var app = angular.module('ridingClub', ['ngRoute']);
 app.config(['$routeProvider', function ($routeProvider) {
 
 
-    $routeProvider.when('/Members', {
+    $routeProvider.when('/members', {
         templateUrl: "Members.html",
         controller: "MemberController"
     });
@@ -17,6 +17,11 @@ app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/searchMember', {
         templateUrl: "searchMember.html",
         controller: "searchController"
+    });
+
+    $routeProvider.when('/payments/:id', {
+        templateUrl: "payments.html",
+        controller: "paymentsController"
     });
 
     $routeProvider.otherwise({
@@ -48,12 +53,12 @@ app.controller("MemberController", ["$scope", 'memberService', function ($scope,
 
 }]);
 
-
 app.service('memberService', ['$http', function ($http) {
     this.listMembers = function () {
         return $http.get('rest/members');
     }
 }]);
+
 
 //*******************************************************************************************************
 //*Adds a new member
@@ -67,10 +72,8 @@ app.controller('NewMemberController', ['$scope', '$http', function ($scope, $htt
         name: "",
         surname: "",
         address: "",
-        city: "",
-        zipcode: "",
-        entryDate: "",
-        memberType: ""
+        city: ""
+
     };
 
 
@@ -117,12 +120,12 @@ app.controller("searchController", ["$scope", '$http', function ($scope, $http) 
 
         var url;
 
-        if ($scope.name == ""){
-            url = "rest/searchSurname/"+ $scope.search.surname;
-        }else if($scope.surname === ""){
-            url = "rest/searchName/"+ $scope.search.name;
-        }else{
-            url = "rest/search/"+ $scope.search.name + "/"+ $scope.search.surname;
+        if (0 === $scope.search.name.length) {
+            url = "rest/searchSurname/" + $scope.search.surname;
+        } else if (0 === $scope.search.surname.length) {
+            url = "rest/searchName/" + $scope.search.name;
+        } else {
+            url = "rest/search/" + $scope.search.name + "/" + $scope.search.surname;
         }
 
         var config = {
@@ -132,7 +135,7 @@ app.controller("searchController", ["$scope", '$http', function ($scope, $http) 
 
         var response = $http(config);
 
-        response.success(function (data){
+        response.success(function (data) {
             $scope.model.results = data;
         });
         response.error(function (data, status, headers, config) {
@@ -140,6 +143,16 @@ app.controller("searchController", ["$scope", '$http', function ($scope, $http) 
         });
 
     };
+
+
+}]);
+
+
+app.controller("paymentsController", ["$scope","$routeParams", function ($scope, $routeParams) {
+
+    $scope.hola = "hola";
+    $scope.id = $routeParams.id;
+
 
 }]);
 

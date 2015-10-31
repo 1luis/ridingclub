@@ -12,6 +12,8 @@ public interface PaymentsService{
 
     List<Payments> listPayments();
 
+    List<Payments> listPayments(Long id);
+
 
     Payments loadPayments(Long id);
 
