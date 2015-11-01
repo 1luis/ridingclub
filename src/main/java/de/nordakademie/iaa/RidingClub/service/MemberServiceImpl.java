@@ -46,13 +46,14 @@ public class MemberServiceImpl implements MemberService {
                 case "Jugendmitglied":
                     payments.setAmount(15);
                     break;
+
                 case "Foerdermitglied":
                     payments.setAmount(10);
                     break;
             }
             int year = Calendar.getInstance().get(Calendar.YEAR);
             payments.setYear(year);
-            payments.setStatus("aktiv");
+            payments.setStatus("offen");
             payments.setMember(member);
 
 

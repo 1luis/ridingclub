@@ -5,7 +5,7 @@ app.config(['$routeProvider', function ($routeProvider) {
 
 
     $routeProvider.when('/members', {
-        templateUrl: "Members.html",
+        templateUrl: "members.html",
         controller: "MemberController"
     });
 
@@ -30,7 +30,7 @@ app.config(['$routeProvider', function ($routeProvider) {
     });
 
     $routeProvider.otherwise({
-        redirectTo: '/Members'
+        redirectTo: '/members'
     });
 
 
@@ -210,7 +210,7 @@ app.controller("paymentsController", ["$scope","$routeParams","$http", function 
                 iban:"",
                 entryDate:"",
                 exitDate:"",
-                noticedate:"",
+                noticeDate:"",
                 birthday:"",
                 memberType:""
             }
@@ -230,7 +230,7 @@ app.controller("paymentsController", ["$scope","$routeParams","$http", function 
         });
 
         response.error(function(data, status, headers, config) {
-            alert("Ha fallado la petición. Estado HTTP:"+status);
+            alert("Fehler beim Anzeigen der Zahlungen. HTTP-Statuscode:"+status);
         });
 
 

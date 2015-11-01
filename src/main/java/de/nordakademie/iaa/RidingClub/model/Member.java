@@ -42,7 +42,7 @@ public class Member implements  Serializable{
 
     private String exitDate;
 
-    private String noticedate;
+    private String noticeDate;
 
     private String birthday;
 
@@ -135,12 +135,12 @@ public class Member implements  Serializable{
         this.zipcode = zipcode;
     }
 
-    public String getNoticedate() {
-        return noticedate;
+    public String getNoticeDate() {
+        return noticeDate;
     }
 
-    public void setNoticedate(String noticedate) {
-        this.noticedate = noticedate;
+    public void setNoticeDate(String noticeDate) {
+        this.noticeDate = noticeDate;
     }
 
     public String getExitDate() {
