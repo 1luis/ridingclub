@@ -82,9 +82,9 @@ app.controller('NewMemberController', ['$scope', '$http', function ($scope, $htt
         birthday: "",
         zipcode: "",
         iban:"",
-        entrydate:"",
-        noticedate:"",
-        exitdate:""
+        entryDate:"",
+      //  noticeDate:"",
+      //  exitDate:""
 
 
     };
@@ -186,7 +186,7 @@ app.controller("paymentsController", ["$scope","$routeParams","$http", function 
                 iban:"",
                 entryDate:"",
                 exitDate:"",
-                noticedate:"",
+                noticeDate:"",
                 birthday:"",
                 memberType:""
             }

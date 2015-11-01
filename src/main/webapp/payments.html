@@ -1,43 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
 
     <link href="style.css" rel="stylesheet"/>
 
     <meta charset="UTF-8">
-    <title>Payments</title>
+    <title>Zahlungsübersicht</title>
 
 
 </head>
 <body>
-<h1>Zahlungsübersicht zu Mitgliedsnummer: {{id}}</h1>
+<h1>Zahlungsübersicht für {{member.name}} {{member.surname}}</h1>
 
 <table>
     <thead>
     <tr>
-        <th>Status</th>
-        <th>Mitgliedsart</th>
         <th>Jahr</th>
         <th>Betrag</th>
+        <th>Mitgliedsart</th>
+        <th>Status</th>
     </tr>
     </thead>
     <tbody>
-    id------> {{model.payments.member.id}}
-    ------por segund VEZ
-    {{model.payments.id_payment}}
-    {{model.payments.amount}}
-    {{model.payments.year}}
+    <!--id-->
     {{model.payments.member.id}}
-    {{model.payments.member.name}}
-----
+    <!--por segunda VEZ-->
+    {{model.payments.id_payment}}
+    {{model.payments.year}}
+    {{model.payments.amount}}
+    {{model.payments.memberType}}
+    {{model.payments.status}}
+    <!--{{model.payments.member.name}}-->
 
     <tr ng-repeat="payments in model.payments">
 
-
-        <td>{{payments.status}}</td>
-        <td>{{payments.memberType}}</td>
         <td>{{payments.year}}</td>
         <td>{{payments.amount}}</td>
+        <td>{{payments.memberType}}</td>
+        <td>{{payments.status}}</td>
 
     </tr>
     </tbody>

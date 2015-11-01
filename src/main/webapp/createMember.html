@@ -14,12 +14,11 @@
             <ul>
                 <li><label for="memberType">Mitgliedsart:</label> <select id="memberType" name="memberType" type="checkbox"  required
                                                                           ng-model="member.memberType">
-                    <option value="">--Wählen Sie bitte--</option>
+                    <option value="">- Mitgliedart wählen -</option>
                     <option value="Vollmitglied">Vollmitglied (25€)</option>
                     <option value="Ermaessigt">Ermaessigt (23€)</option>
                     <option value="Jugendmitglied">Jugendmitglied (15€)</option>
                     <option value="Foerdermitglied">Foerdermitglied (10€)</option>
-                    <option value="Foerdermitglied">bo5</option>
 
 
                 </select><br>
@@ -27,13 +26,13 @@
                 <li><label for="name">Vorname:</label> <input id="name"
                                                               name="name"
                                                               type="text"
-                                                              placeholder="Marc"
+                                                              placeholder="Maximilian"
                                                               required ng-model="member.name"/></li>
 
                 <li><label for="surname">Nachname:</label> <input id="surname"
                                                                   name="surname"
                                                                   type="text"
-                                                                  placeholder="Reiniking"
+                                                                  placeholder="Mustermann"
                                                                   required ng-model="member.surname"/></li>
 
                 <li><label for="birthday">Geburtsdatum:</label> <input id="birthday"
@@ -44,19 +43,19 @@
                 <li><label for="address">Adresse:</label> <input id="address"
                                                                  name="address"
                                                                  type="text"
-                                                                 placeholder="Stressemanstr. 223"
+                                                                 placeholder="Musterstrasse 12"
                                                                  required ng-model="member.address"/></li>
 
                 <li><label for="city">Wohnort:</label> <input id="city"
                                                               name="city"
                                                               type="text"
-                                                              placeholder="Hamburg"
+                                                              placeholder="Musterstadt"
                                                               required ng-model="member.city"/></li>
 
                 <li><label for="zipcode">PLZ:</label> <input id="zipcode"
                                                              name="zipcode"
                                                              type="text"
-                                                             placeholder="21129"
+                                                             placeholder="20999"
                                                              required ng-model="member.zipcode"/></li>
 
                 <li><label for="entryDate">Eintrittsdatum:</label> <input id="entryDate"
@@ -64,16 +63,23 @@
                                                                           type="date"
                                                                           required ng-model="member.entryDate"/></li>
 
-                <li><label for="entryDate">Exitsdatum:</label> <input id="exitDate"
+                 <!--Folgende Felder nur anzeigen, sofern ein Mitglied bearbeitet wird - nicht bei Neuanlage-->
+<!--
+                <li><label for="entryDate">Kündigungsdatum:</label> <input id="noticeDate"
+                                                                          name="noticeDate"
+                                                                          type="date"
+                                                                          required ng-model="member.noticeDate"/></li>
+                <li><label for="entryDate">Austrittsdatum:</label> <input id="exitDate"
                                                                           name="exitDate"
                                                                           type="date"
                                                                           required ng-model="member.exitDate"/></li>
+-->
 
-
-
-                <li><label for="iban">IBAN:</label> <input id="iban"
-                                                           name="iban"
-                                                           type="text" required ng-model="member.iban"/></li>
+                <li><label for="iban">IBAN-Kontonummer:</label> <input id="iban"
+                                                                  name="iban"
+                                                                  type="text"
+                                                                  placeholder="DE12 3456 7890 1234 5678 9012"
+                                                                  required ng-model="member.iban"/></li>
 
             </ul>
         </div>
