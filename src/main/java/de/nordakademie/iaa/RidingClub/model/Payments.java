@@ -37,7 +37,7 @@ public class Payments implements Serializable {
 
     @ManyToOne
     //@ManyToOne(fetch=FetchType.LAZY)
-    @JoinColumn(name = "member_id")
+    @JoinColumn(name = "MEMBER_FK")
     //@JoinColumn(foreignKey = @ForeignKey(name = "member_id"))
     private Member member;
 

@@ -23,8 +23,8 @@ public class PaymentsDAO {
         }
 
         @SuppressWarnings("JpaQlInspection")
-        public List<Payments> findAll(Member member_id) {
-        return entityManager.createQuery("select p from Payments p where p.member = :member_id")
+        public List<Payments> findAll(Long member_id) {
+        return entityManager.createQuery("select p from Payments p where p.MEMBER_FK = :member_id")
                 .setParameter("member_id", member_id)
                 .getResultList();
 
