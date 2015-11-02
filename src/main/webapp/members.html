@@ -8,13 +8,13 @@
 </head>
 <body>
 
-<h1>Übersicht über alle Mitglieder:</h1>
+<h1>Mitgliederübersicht:</h1>
 
 <table>
     <thead>
 
     <tr>
-        <th>ID</th>
+        <th>Mitglieds-ID</th>
         <th>Vorname</th>
         <th>Nachname</th>
         <th>Adresse</th>
@@ -26,10 +26,10 @@
     </tr>
     </thead>
     <tbody>
-    <tr ng-repeat="member in model.members | orderBy:['id']">
+    <tr ng-repeat="member in model.members | orderBy:['member_id']">
 
 
-        <td><a href="#payments/{{member.id}}">{{member.id}}</a></td>
+        <td><a href="#payments/{{member.member_id}}">{{member.member_id}}</a></td>
         <td>{{member.name}}</td>
         <td>{{member.surname}}</td>
         <td>{{member.address}}</td>

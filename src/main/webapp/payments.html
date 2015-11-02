@@ -10,7 +10,7 @@
 
 </head>
 <body>
-<h1>Zahlungsübersicht für {{member.name}} {{member.surname}}</h1>
+<h1>Zahlungsübersicht für {{model.payments.member.name}} {{model.payments.member.surname}}</h1>
 
 <table>
     <thead>
@@ -23,9 +23,9 @@
     </thead>
     <tbody>
     <!--id-->
-    {{model.payments.member.id}}
+    {{model.payments.member.member_id}}
     <!--por segunda VEZ-->
-    {{model.payments.id_payment}}
+    {{model.payments.payment_id}}
     {{model.payments.year}}
     {{model.payments.amount}}
     {{model.payments.memberType}}

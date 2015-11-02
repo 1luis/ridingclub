@@ -26,23 +26,23 @@ public class PaymentsServiceImpl implements PaymentsService {
     }
 
     @Override
-    public List<Payments> listPayments(Long id) {
+    public List<Payments> listPayments(Long member_id) {
         Member member = new Member();
 
-        member.setId(id);
-        member = memberService.loadMember(id);
+        member.setMember_id(member_id);
+        member = memberService.loadMember(member_id);
 
         return paymentsDAO.findAll(member);
     }
 
     @Override
-    public Payments loadPayments(Long id) {
-        return paymentsDAO.load(id);
+    public Payments loadPayments(Long payment_id) {
+        return paymentsDAO.load(payment_id);
     }
 
     @Override
-    public void deletePayments(Long id) throws EntityNotFoundException {
-        Payments payments = loadPayments(id);
+    public void deletePayments(Long payment_id) throws EntityNotFoundException {
+        Payments payments = loadPayments(payment_id);
         if (payments == null) {
             throw new EntityNotFoundException();
         }

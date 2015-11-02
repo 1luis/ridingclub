@@ -16,41 +16,41 @@ import javax.persistence.Table;
 @Table(name = "payments")
 public class Payments implements Serializable {
 
-
     private static final long serialVersionUID = 6925248180274039273L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id_payment")
-    private Long id_payment;
-
-
-    @Column(name = "amount")
-    private int amount;
+    @Column(name = "payment_id")
+    private Long payment_id;
 
     @Column(name = "year")
     private int year;
 
+    @Column(name = "memberType")
+    private String memberType;
+    //TODO: Referenz auf Jahresbeitrag des jeweiligen MemberType
+    @Column(name = "amount")
+    private int amount;
+
     @Column(name = "status")
     private String status;
 
-    @Column(name = "memberType")
-    private String memberType;
-
     @ManyToOne
+    //@ManyToOne(fetch=FetchType.LAZY)
+    @JoinColumn(name = "member_id")
+    //@JoinColumn(foreignKey = @ForeignKey(name = "member_id"))
     private Member member;
 
 
     //**************************************************
 
 
-    public Long getId_payment() {
-        return id_payment;
+    public Long getPayment_id() {
+        return payment_id;
     }
-    public void setId_payment(Long id_payment) {
-        this.id_payment = id_payment;
+    public void setPayment_id(Long payment_id) {
+        this.payment_id = payment_id;
     }
-
 
     public String getMemberType() {
         return memberType;
@@ -94,11 +94,11 @@ public class Payments implements Serializable {
     }*/
 
     public Member getMember() {
-        return this.member;
+        return member;
     }
 
     public void setMember(Member member) {
-        this.member = member;
+        member = member;
     }
 }
 

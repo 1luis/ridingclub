@@ -19,7 +19,9 @@ public class Member implements  Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    //@OneToMany
+    //@JoinColumn( name = "member_id")
+    private Long member_id;
 
     @Column( name = "name")
     private String name;
@@ -36,27 +38,33 @@ public class Member implements  Serializable{
     @Column( name = "zipcode")
     private String zipcode;
 
+    @Column( name = "iban")
     private String iban;
 
+    @Column( name = "entryDate")
     private String entryDate;
 
+    @Column( name = "exitDate")
     private String exitDate;
 
+    @Column( name = "noticeDate")
     private String noticeDate;
 
+    @Column( name = "birthday")
     private String birthday;
 
+    @Column( name = "memberType")
     private String memberType;
 
     //**************************************************************
 
 
-    public Long getId() {
-        return id;
+    public Long getMember_id() {
+        return member_id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setMember_id(Long member_id) {
+        this.member_id = member_id;
     }
 
     public String getName() {
@@ -108,7 +116,7 @@ public class Member implements  Serializable{
     }
 
 
-    @Column(nullable = true)
+    //@Column(nullable = true)
     public String getBirthday() {
         return birthday;
     }

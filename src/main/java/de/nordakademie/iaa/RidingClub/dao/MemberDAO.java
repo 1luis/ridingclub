@@ -49,12 +49,12 @@ public class MemberDAO {
 
     }
 
-    public Member load(Long id) {
-        return entityManager.find(Member.class, id);
+    public Member load(Long member_id) {
+        return entityManager.find(Member.class, member_id);
     }
 
     public void save(Member member) {
-        if (member.getId() == null) {
+        if (member.getMember_id() == null) {
             entityManager.persist(member);
         } else {
             entityManager.merge(member);

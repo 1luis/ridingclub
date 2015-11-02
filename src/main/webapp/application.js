@@ -168,16 +168,16 @@ app.controller("searchController", ["$scope", '$http', function ($scope, $http) 
 
 app.controller("paymentsController", ["$scope","$routeParams","$http", function ($scope, $routeParams, $http) {
 
-    $scope.id = $routeParams.id;
+    $scope.member_id = $routeParams.member_id;
 /*    $scope.allPayments = {
         payments: {
-            id_payment:"",
+            payment_id:"",
             amount:"",
             year: "",
             status: "",
             memberType:"",
             member:{
-                id: undefined,
+                member_id: undefined,
                 name:"",
                 surname:"",
                 address:"",
@@ -195,13 +195,13 @@ app.controller("paymentsController", ["$scope","$routeParams","$http", function 
 
      $scope.model = {
         payments: {
-            id_payment:"",
+            payment_id:"",
             amount:"",
             year: "",
             status: "",
             memberType:"",
             member:{
-                id: undefined,
+                member_id: undefined,
                 name:"",
                 surname:"",
                 address:"",
@@ -245,7 +245,7 @@ app.controller("paymentsController", ["$scope","$routeParams","$http", function 
 
 app.controller('addPaymentController', ['$scope', "$routeParams",'$http', function ($scope, $routeParams, $http) {
 
-    $scope.id = $routeParams.id;
+    $scope.member_id = $routeParams.member_id;
 
 
 

@@ -30,7 +30,7 @@ public class MemberServiceImpl implements MemberService {
         }
 */
         // Neu
-        if (member.getId() == null) {
+        if (member.getMember_id() == null) {
 
             payments.setMemberType(member.getMemberType());
 
@@ -125,13 +125,13 @@ public class MemberServiceImpl implements MemberService {
 
 
     @Override
-    public Member loadMember(Long id) {
-        return memberDAO.load(id);
+    public Member loadMember(Long member_id) {
+        return memberDAO.load(member_id);
     }
 
     @Override
-    public void deleteMember(Long id) throws EntityNotFoundException {
-        Member member = loadMember(id);
+    public void deleteMember(Long member_id) throws EntityNotFoundException {
+        Member member = loadMember(member_id);
         if (member == null) {
             throw new EntityNotFoundException();
         }

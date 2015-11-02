@@ -23,23 +23,23 @@ public class PaymentsDAO {
         }
 
         @SuppressWarnings("JpaQlInspection")
-        public List<Payments> findAll(Member id) {
-        return entityManager.createQuery("select p from Payments p where p.member = :id")
-                .setParameter("id", id)
+        public List<Payments> findAll(Member member_id) {
+        return entityManager.createQuery("select p from Payments p where p.member = :member_id")
+                .setParameter("member_id", member_id)
                 .getResultList();
 
         }
 
 
-        public Payments load(Long id) {
-            return entityManager.find(Payments.class, id);
+        public Payments load(Long payment_id) {
+            return entityManager.find(Payments.class, payment_id);
         }
 
 
         public void save(Payments payments) {
 
             //Wenn neu-> gespeichert sonst aktualisiert
-            if (payments.getId_payment() == null) {
+            if (payments.getPayment_id() == null) {
                 entityManager.persist(payments);
             } else {
                 entityManager.merge(payments);
