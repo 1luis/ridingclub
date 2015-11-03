@@ -26,9 +26,8 @@ public class PaymentsController {
         return paymentService.listPayments(member_id);
     }
 
-
     @RequestMapping(value = "/payments/{payment_id}", method = RequestMethod.DELETE)
-    public void deleteMember(@PathVariable Long payment_id) throws Exception {
+    public void deletePayment(@PathVariable Long payment_id) throws Exception {
         paymentService.deletePayments(payment_id);
     }
 

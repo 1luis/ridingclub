@@ -22,6 +22,10 @@ public class MemberType implements Serializable {
     @Column(nullable = false)
     private int amount;
 
+/*  TODO: Wenn ein Member ein Familienmitglied ist, bekommt er 3 Euro Rabatt
+    auf seinen jeweiligen Jahresbeitrag angerechnet
+*/
+
 
     public String getMemberTypes() {
         return name;

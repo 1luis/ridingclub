@@ -8,13 +8,13 @@
 </head>
 <body>
 
-<h1>Mitgliederübersicht:</h1>
+<h1>Alle Mitglieder:</h1>
 
 <table>
     <thead>
 
     <tr>
-        <th>Mitglieds-ID</th>
+        <th>ID</th>
         <th>Vorname</th>
         <th>Nachname</th>
         <th>Adresse</th>
@@ -23,11 +23,14 @@
         <th>Geburtsdatum</th>
         <th>Mitgliedsart</th>
         <th>Eintrittsdatum</th>
+        <th>Kündigungsdatum</th>
+        <th>Austrittsdatum</th>
+        <th>IBAN</th>
+
     </tr>
     </thead>
     <tbody>
     <tr ng-repeat="member in model.members | orderBy:['member_id']">
-
 
         <td><a href="#payments/{{member.member_id}}">{{member.member_id}}</a></td>
         <td>{{member.name}}</td>
@@ -38,7 +41,9 @@
         <td>{{member.birthday}}</td>
         <td>{{member.memberType}}</td>
         <td>{{member.entryDate}}</td>
-
+        <td>{{member.noticeDate}}</td>
+        <td>{{member.exitDate}}</td>
+        <td>{{member.iban}}</td>
 
     </tr>
     </tbody>

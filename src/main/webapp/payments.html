@@ -10,7 +10,7 @@
 
 </head>
 <body>
-<h1>Zahlungsübersicht für {{model.payments.member.name}} {{model.payments.member.surname}}</h1>
+<h1>Zahlungsübersicht:</h1>
 
 <table>
     <thead>
@@ -22,9 +22,8 @@
     </tr>
     </thead>
     <tbody>
-    <!--id-->
+
     {{model.payments.member.member_id}}
-    <!--por segunda VEZ-->
     {{model.payments.payment_id}}
     {{model.payments.year}}
     {{model.payments.amount}}
@@ -46,7 +45,7 @@
 
 <div></div>
 
-<a href="#addPayment/{{id}}"><button>Zahlung hinzufügen</button></a>
+<!--<a href="#changePayment/{{id}}"><button>Status ändern</button></a>-->
 
 
 </body>

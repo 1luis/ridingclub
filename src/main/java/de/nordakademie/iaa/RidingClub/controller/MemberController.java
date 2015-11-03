@@ -23,11 +23,13 @@ public class MemberController {
     public List<Member> listMembersName(@PathVariable String name) {
         return memberService.listMembersName(name);
     }
+
     //Suche nach Nachname
     @RequestMapping(value = "/searchSurname/{surname}", method = RequestMethod.GET)
     public List<Member> listMembersSurname(@PathVariable String surname) {
         return memberService.listMembersSurname(surname);
     }
+
     //Suche nach Vor- und Nachname
     @RequestMapping(value = "/search/{name}/{surname}", method = RequestMethod.GET)
     public List<Member> listMembers(@PathVariable String name, @PathVariable String surname) {

@@ -12,12 +12,12 @@ public interface PaymentsService{
 
     List<Payments> listPayments();
 
-    List<Payments> listPayments(Long id);
+    List<Payments> listPayments(Long member_id);
 
 
-    Payments loadPayments(Long id);
+    Payments loadPayments(Long member_id);
 
 
-    void deletePayments(Long id) throws EntityNotFoundException;
+    void deletePayments(Long member_id) throws EntityNotFoundException;
 
 }
