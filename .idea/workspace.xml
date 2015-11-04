@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f6486d2-a8b4-4f57-a721-0df9e8e32540" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/model/Payments.java" afterPath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/model/Payments.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/application.js" afterPath="$PROJECT_DIR$/src/main/webapp/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/payments.html" afterPath="$PROJECT_DIR$/src/main/webapp/payments.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="roommgmt-orm.iws" />
@@ -38,7 +35,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/webapp/application.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.5809859">
-              <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -940,7 +937,7 @@
       <workItem from="1446460577294" duration="3875000" />
       <workItem from="1446469618086" duration="570000" />
       <workItem from="1446470792176" duration="12772000" />
-      <workItem from="1446641066302" duration="5334000" />
+      <workItem from="1446641066302" duration="5423000" />
     </task>
     <task id="LOCAL-00001" summary="initial repo">
       <created>1445782478887</created>
@@ -1098,11 +1095,17 @@
       <option name="project" value="LOCAL" />
       <updated>1446644939594</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="stand vor Aufbau des Zahlungsübersichtkontrollers">
+      <created>1446646522831</created>
+      <option name="number" value="00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1446646522831</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124075000" />
+    <option name="totallyTimeSpent" value="124164000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1211,7 +1214,8 @@
     <MESSAGE value="ACHTUNG: ID-Felder in &quot;member_id&quot; und &quot;payment_id&quot; umbenannt (refactoring manuell). Weiterhin Ausgabe ALLER Payments je Member; wahrscheinlich wg. Fehlender WHERE-Abfrage in SQL" />
     <MESSAGE value="Tests mit DB und Payments nach member_FK SPielerei/Test" />
     <MESSAGE value="Kleinichkeiten" />
-    <option name="LAST_COMMIT_MESSAGE" value="Kleinichkeiten" />
+    <MESSAGE value="stand vor Aufbau des Zahlungsübersichtkontrollers" />
+    <option name="LAST_COMMIT_MESSAGE" value="stand vor Aufbau des Zahlungsübersichtkontrollers" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1607,7 +1611,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/application.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5809859">
-          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
         </state>
       </provider>
