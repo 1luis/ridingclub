@@ -54,44 +54,18 @@ public class MemberServiceImpl implements MemberService {
             int year = Calendar.getInstance().get(Calendar.YEAR);
             payments.setYear(year);
             payments.setStatus("offen");
-            payments.setMember(member);
 
+
+            payments.setMember(member);
 
             paymentsService.savePayment(payments);
 
             memberDAO.save(member);
 
 
-            // Profesor profesor=new Profesor(7, "Sara", "Barrrera", "Salas");
-
-        /*    Set<Payments> payments=new HashSet<>();
-
-            Payments payment1 = new Payments();
-            Payments payment2 = new Payments();
 
 
-            payment1.setYear(2015);
-            payment1.setAmount(20);
-            payment1.setId_payment((long) 1);
-            payment1.setStatus("aktiv");
-            payment1.setMemberType("tuputamadre");
-            payment1.setMember(member);
 
-            payment2.setYear(2016);
-            payment2.setId_payment((long) 2);
-            payment2.setAmount(21);
-            payment2.setStatus("aktivo");
-            payment2.setMemberType("tuputamadre2");
-            payment2.setMember(member);
-
-            payments.add(payment1);
-            payments.add(payment2);
-
-            member.setPayments(payments);
-
-            member.setId((long) 1);
-
-            memberDAO.save(member);*/
 
         }
         //Aktualisierung
