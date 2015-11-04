@@ -94,11 +94,11 @@ public class Payments implements Serializable {
     }*/
 
     public Member getMember() {
-        return member;
+        return this.member;
     }
 
     public void setMember(Member member) {
-        member = member;
+        this.member = member;
     }
 }
 

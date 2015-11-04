@@ -24,6 +24,8 @@ app.config(['$routeProvider', function ($routeProvider) {
         controller: "paymentsController"
     });
 
+
+
     $routeProvider.otherwise({
         redirectTo: '/members'
     });
@@ -76,15 +78,13 @@ app.controller('NewMemberController', ['$scope', '$http', function ($scope, $htt
         memberType: "",
         birthday: "",
         zipcode: "",
-        iban:"",
-        entryDate:"",
-      //  noticeDate:"",
-      //  exitDate:""
+        iban: "",
+        entryDate: "",
+        //  noticeDate:"",
+        //  exitDate:""
 
 
     };
-
-
 
 
     $scope.anlegen = function () {
@@ -161,41 +161,48 @@ app.controller("searchController", ["$scope", '$http', function ($scope, $http) 
 //* Show Payments
 //******************************************************************************************
 
-app.controller("paymentsController", ["$scope","$routeParams","$http", function ($scope, $routeParams, $http) {
+app.controller("paymentsController", ["$scope", "$routeParams", "$http", function ($scope, $routeParams, $http) {
 
     $scope.member_id = $routeParams.member_id;
 
 
-     $scope.model = {
+    $scope.model = {
         payments: {
-            payment_id:"",
-            amount:"",
+            payment_id: "",
+            amount: "",
             year: "",
             status: "",
-            memberType:"",
+            memberType: "",
             member_id: ""
         }
     };
 
-//TODO: Luis implementiert die �bergabe der member_id hier:
-        var config={
-            method:"GET",
-            url:"rest/payments/" + $scope.member_id
-        };
+    var url;
 
-        var response=$http(config);
+    if(0 === $scope.member_id.length){
+        url = "rest/payments";
 
-        response.success(function(data, status, headers, config) {
-            $scope.model.payments=data;
-        });
+    }else{
+        url = "rest/payments/" + $scope.member_id;
+    }
 
-        response.error(function(data, status, headers, config) {
-            alert("Fehler beim Anzeigen der Zahlungen. HTTP-Statuscode:"+status);
-        });
+    var config = {
+        method: "GET",
+        url: url
+    };
+
+    var response = $http(config);
+
+    response.success(function (data, status, headers, config) {
+        $scope.model.payments = data;
+    });
+
+    response.error(function (data, status, headers, config) {
+        alert("Fehler beim Anzeigen der Zahlungen. HTTP-Statuscode:" + status);
+    });
 
 
 }]);
-
 
 
 //*******************************************************************************************************
@@ -203,10 +210,9 @@ app.controller("paymentsController", ["$scope","$routeParams","$http", function 
 //*******************************************************************************************************
 
 
-app.controller('addPaymentController', ['$scope', "$routeParams",'$http', function ($scope, $routeParams, $http) {
+app.controller('addPaymentController', ['$scope', "$routeParams", '$http', function ($scope, $routeParams, $http) {
 
     $scope.member_id = $routeParams.member_id;
-
 
 
 }]);
