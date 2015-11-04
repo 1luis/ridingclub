@@ -19,7 +19,7 @@ app.config(['$routeProvider', function ($routeProvider) {
         controller: "searchController"
     });
 
-    $routeProvider.when('/payments/:id', {
+    $routeProvider.when('/payments/:member_id', {
         templateUrl: "payments.html",
         controller: "paymentsController"
     });
@@ -164,29 +164,7 @@ app.controller("searchController", ["$scope", '$http', function ($scope, $http) 
 app.controller("paymentsController", ["$scope","$routeParams","$http", function ($scope, $routeParams, $http) {
 
     $scope.member_id = $routeParams.member_id;
-/*    $scope.allPayments = {
-        payments: {
-            payment_id:"",
-            amount:"",
-            year: "",
-            status: "",
-            memberType:"",
-            member:{
-                member_id: undefined,
-                name:"",
-                surname:"",
-                address:"",
-                city:"",
-                zipcode:"",
-                iban:"",
-                entryDate:"",
-                exitDate:"",
-                noticeDate:"",
-                birthday:"",
-                memberType:""
-            }
-        }
-    };*/
+
 
      $scope.model = {
         payments: {
@@ -199,10 +177,10 @@ app.controller("paymentsController", ["$scope","$routeParams","$http", function 
         }
     };
 
-//TODO: Luis implementiert die Übergabe der member_id hier:
+//TODO: Luis implementiert die ï¿½bergabe der member_id hier:
         var config={
             method:"GET",
-            url:"rest/payments/" + $scope.model.payments.member_id
+            url:"rest/payments/" + $scope.member_id
         };
 
         var response=$http(config);

@@ -28,7 +28,14 @@ public class PaymentsServiceImpl implements PaymentsService {
     @Override
     public List<Payments> listPayments(Long member_id) {
 
-        return paymentsDAO.findMember_id(member_id);
+        Member member = memberService.loadMember(member_id);
+
+        if (member == null) {
+            //Excetion
+        }
+
+
+        return paymentsDAO.findMember_id(member);
     }
 
     @Override

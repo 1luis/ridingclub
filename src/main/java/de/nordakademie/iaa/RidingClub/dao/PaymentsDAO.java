@@ -23,9 +23,9 @@ public class PaymentsDAO {
         }
 
         @SuppressWarnings({"JpaQlInspection", "JpaQueryApiInspection"})
-        public List findMember_id(Long member_id) {
-        return entityManager.createQuery("select p from Payments p where p.MEMBER_FK = :member_id")
-                .setParameter("member_id", member_id)
+        public List findMember_id(Member member) {
+        return entityManager.createQuery("select p from Payments p where p.member = :member")
+                .setParameter("member", member)
                 .getResultList();
 
         }
