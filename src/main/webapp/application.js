@@ -1,8 +1,10 @@
+/**
+ * @author Marc & Luis
+ */
+
 var app = angular.module('ridingClub', ['ngRoute']);
 
-
 app.config(['$routeProvider', function ($routeProvider) {
-
 
     $routeProvider.when('/members', {
         templateUrl: "members.html",
@@ -24,25 +26,26 @@ app.config(['$routeProvider', function ($routeProvider) {
         controller: "paymentsController"
     });
 
-
+    $routeProvider.when('/payments', {
+        templateUrl: "payments.html",
+        controller: "paymentsController"
+    });
 
     $routeProvider.otherwise({
         redirectTo: '/members'
     });
 
-
 }]);
 
-//*******************************************************************************************************
-//*Shows all members in a list
-//*******************************************************************************************************
+/**
+ * Zeigt alle Mitglieder in einer Übersicht
+ */
 
 app.controller("MemberController", ["$scope", 'memberService', function ($scope, memberService) {
 
     $scope.model = {
         members: []
     };
-
 
     memberService.listMembers()
         .success(function (data) {
@@ -51,7 +54,6 @@ app.controller("MemberController", ["$scope", 'memberService', function ($scope,
         .error(function () {
             alert('Fehler beim Laden der Mitgliederliste')
         });
-
 
 }]);
 
@@ -62,13 +64,11 @@ app.service('memberService', ['$http', function ($http) {
 }]);
 
 
-//*******************************************************************************************************
-//*Adds a new member
-//*******************************************************************************************************
-
+/**
+ * Fügt ein neues Mitglied hinzu
+ */
 
 app.controller('NewMemberController', ['$scope', '$http', function ($scope, $http) {
-
 
     $scope.member = {
         name: "",
@@ -83,9 +83,7 @@ app.controller('NewMemberController', ['$scope', '$http', function ($scope, $htt
         //  noticeDate:"",
         //  exitDate:""
 
-
     };
-
 
     $scope.anlegen = function () {
 
@@ -107,13 +105,12 @@ app.controller('NewMemberController', ['$scope', '$http', function ($scope, $htt
 
     };
 
-
 }]);
 
 
-//*******************************************************************************************************
-//*Search Members
-//*******************************************************************************************************
+/**
+ * Sucht ein Mitglied anhand seines Vor- und Nachnamens
+ */
 
 app.controller("searchController", ["$scope", '$http', function ($scope, $http) {
 
@@ -153,18 +150,15 @@ app.controller("searchController", ["$scope", '$http', function ($scope, $http) 
         });
 
     };
-
-
 }]);
 
-//******************************************************************************************
-//* Show Payments
-//******************************************************************************************
+/**
+ * Zeigt die Zahlungen eines Mitglieds bzw. alle Zahlungen an
+ */
 
 app.controller("paymentsController", ["$scope", "$routeParams", "$http", function ($scope, $routeParams, $http) {
 
     $scope.member_id = $routeParams.member_id;
-
 
     $scope.model = {
         payments: {
@@ -177,9 +171,10 @@ app.controller("paymentsController", ["$scope", "$routeParams", "$http", functio
         }
     };
 
+    //zeigt die Zahlungen aller Mitglieder an, wenn keine member_id übergeben wird
     var url;
 
-    if(0 === $scope.member_id.length){
+   if($scope.member_id.isUndefined){
         url = "rest/payments";
 
     }else{
@@ -200,19 +195,14 @@ app.controller("paymentsController", ["$scope", "$routeParams", "$http", functio
     response.error(function (data, status, headers, config) {
         alert("Fehler beim Anzeigen der Zahlungen. HTTP-Statuscode:" + status);
     });
-
-
 }]);
 
-
-//*******************************************************************************************************
-//*Adds a Payment
-//*******************************************************************************************************
-
+/**
+ * Fügt eine Zahlung hinzu
+ */
 
 app.controller('addPaymentController', ['$scope', "$routeParams", '$http', function ($scope, $routeParams, $http) {
 
     $scope.member_id = $routeParams.member_id;
-
 
 }]);

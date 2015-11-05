@@ -23,6 +23,9 @@ public class Member implements  Serializable{
     //@JoinColumn( name = "member_id")
     private Long member_id;
 
+    @Column ( name = "active")
+    private Boolean active;
+
     @Column( name = "name")
     private String name;
 
@@ -56,8 +59,10 @@ public class Member implements  Serializable{
     @Column( name = "memberType")
     private String memberType;
 
-    //**************************************************************
-
+    /**
+     * Getters and Setters
+     * @return
+     */
 
     public Long getMember_id() {
         return member_id;
@@ -65,6 +70,14 @@ public class Member implements  Serializable{
 
     public void setMember_id(Long member_id) {
         this.member_id = member_id;
+    }
+
+    public Boolean getActive() {
+        return active;
+    }
+
+    public void setActive(Boolean active) {
+        this.active = active;
     }
 
     public String getName() {
@@ -105,7 +118,6 @@ public class Member implements  Serializable{
 
     public void setIban(String iban) {
         this.iban = iban;
-
     }
     public String getEntryDate() {
         return entryDate;
@@ -114,7 +126,6 @@ public class Member implements  Serializable{
     public void setEntryDate(String entryDate) {
         this.entryDate = entryDate;
     }
-
 
     //@Column(nullable = true)
     public String getBirthday() {
@@ -125,8 +136,6 @@ public class Member implements  Serializable{
         this.birthday = Birthday;
     }
 
-
-    // MemberType wird als Referenz gef�hrt??
     public String getMemberType() {
         return memberType;
     }

@@ -5,16 +5,17 @@
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
     <script src='//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular-route.min.js'></script>
     <script src="application.js"></script>
+    <script src="print.js"></script>
     <link href="style.css" rel="stylesheet"/>
 
 </head>
 <body>
-    <h1>Willkommen in der angularMV</h1>
+    <h1>angularMV - Reitverein Elmshorn</h1>
 
-    <h4>Die angularMV ist das Mitgliederverwaltungssystem des Elmshorner Reitvereins!</h4>
+    <h4>IAA-Hausarbeit: Mitgliederverwaltung</h4>
 
     <ul>
-        <a href="#members"><button>Mitgliederuebersicht</button></a>
+        <a href="#members"><button>Mitgliederübersicht</button></a>
         <a href="#payments"><button>Zahlungsübersicht</button></a>
         <a href="#createMember"><button>Neues Mitglied anlegen</button></a>
         <a href="#searchMember"><button>Mitglied suchen</button></a>
@@ -23,6 +24,8 @@
     <!--TODO: Eine Druckansicht (ohne Buttons) muss erzeugt werden können!-->
 
     <div ng-view></div>
+
+    <button class="btn btn-primary" ng-print print-element-id="printThisElement"><i class="fa fa-print"></i> Drucken</button>
 
     <h5>(c) 2015 MyL</h5>
 

@@ -10,11 +10,12 @@
 
 </head>
 <body>
-<h1>Zahlungsübersicht: {{member_id}}</h1>
+<h1>Zahlungsübersicht:</h1>
 
 <table>
     <thead>
     <tr>
+        <th>ID</th>
         <th>Jahr</th>
         <th>Betrag</th>
         <th>Mitgliedsart</th>
@@ -23,15 +24,16 @@
     </thead>
     <tbody>
 
-<!--    {{model.payments.member.member_id}}
+    {{model.payments.member.member_id}}
     {{model.payments.payment_id}}
     {{model.payments.year}}
     {{model.payments.amount}}
     {{model.payments.memberType}}
     {{model.payments.status}}
-    &lt;!&ndash;{{model.payments.member.name}}&ndash;&gt;-->
+    {{model.payments.member.name}}
 
     <tr ng-repeat="payments in model.payments">
+
 
         <td>{{payments.year}}</td>
         <td>{{payments.amount}}</td>

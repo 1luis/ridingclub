@@ -31,7 +31,6 @@ public class PaymentsController {
         paymentService.deletePayments(payment_id);
     }
 
-
     @RequestMapping(value = "/payments" , method = RequestMethod.PUT)
     public void savePayment(@RequestBody Payments payment) throws Exception{
         paymentService.savePayment(payment);

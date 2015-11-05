@@ -10,13 +10,21 @@ public class MemberDAO {
 
     private EntityManager entityManager;
 
-
+    /**
+     * Gibt alle vorhandenen Mitglieder zurück
+     * @return
+     */
     @SuppressWarnings("JpaQlInspection")
     public List<Member> findAll() {
         return entityManager.createQuery("select m from Member m").getResultList();
 
     }
 
+    /**
+     * Gibt alle Mitglieder mit entsprechenden Vornamenbestandteilen zurück
+     * @param name
+     * @return
+     */
     @SuppressWarnings("JpaQlInspection")
     public List<Member> findName(String name) {
 
@@ -27,6 +35,11 @@ public class MemberDAO {
 
     }
 
+    /**
+     * Gibt alle Mitglieder mit entsprechenden Nachnamenbestandteilen zurück
+     * @param surname
+     * @return
+     */
     @SuppressWarnings("JpaQlInspection")
     public List<Member> findSurname(String surname) {
 
@@ -37,7 +50,12 @@ public class MemberDAO {
 
     }
 
-
+    /**
+     * Gibt alle Mitglieder mit entsprechenden Vor- und Nachnamenbestandteilen zurück
+     * @param name
+     * @param surname
+     * @return
+     */
     @SuppressWarnings("JpaQlInspection")
     public List<Member> findAll(String name, String surname) {
 
@@ -49,10 +67,20 @@ public class MemberDAO {
 
     }
 
+    /**
+     * Lädt die Mitglieder anhand der member_id
+     * @param member_id
+     * @return
+     */
+
     public Member load(Long member_id) {
         return entityManager.find(Member.class, member_id);
     }
 
+    /**
+     * Speichert ein Mitglied, wenn es neu angelegt wird - sonst aktualisiert es ein Mitglied
+     * @param member
+     */
     public void save(Member member) {
         if (member.getMember_id() == null) {
             entityManager.persist(member);
@@ -61,11 +89,19 @@ public class MemberDAO {
         }
     }
 
+    /**
+     * Löscht ein Mitglied manuell
+     * @param member
+     */
 
     public void delete(Member member) {
         entityManager.remove(member);
     }
 
+    /**
+     * Entity Manager für Member
+     * @param entityManager
+     */
     @PersistenceContext
     public void setEntityManager(EntityManager entityManager) {
         this.entityManager = entityManager;

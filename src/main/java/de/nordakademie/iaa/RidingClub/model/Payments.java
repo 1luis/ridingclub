@@ -11,7 +11,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-
 @Entity
 @Table(name = "payments")
 public class Payments implements Serializable {
@@ -41,9 +40,7 @@ public class Payments implements Serializable {
     //@JoinColumn(foreignKey = @ForeignKey(name = "member_id"))
     private Member member;
 
-
     //**************************************************
-
 
     public Long getPayment_id() {
         return payment_id;

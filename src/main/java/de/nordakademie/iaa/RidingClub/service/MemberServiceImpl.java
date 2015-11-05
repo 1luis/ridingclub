@@ -9,6 +9,7 @@ import java.util.List;
 import javax.inject.Inject;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.regex.Pattern;
 
 
 public class MemberServiceImpl implements MemberService {
@@ -23,13 +24,20 @@ public class MemberServiceImpl implements MemberService {
 
         Payments payments = new Payments();
 
-      /*  //TODO: Validierungen der Inputs
-        if (member.getName1() == null
-                || member.getName1().isEmpty()) {
-            throw new ValidatorException("Der Vorname ist ung�ltig.");
+      //TODO: Prüfung der Eingaben, ob leer
+        if (member.getName() == null
+                || member.getName().isEmpty()
+                || member.getSurname().isEmpty()
+                || member.getAddress().isEmpty()
+                || member.getBirthday().isEmpty()
+                || member.getEntryDate().isEmpty())
+
+        {
+            throw new ValidatorException("Der Vorname ist ungueltig.");
         }
-*/
-        // Neu
+
+
+        // Wenn neues Mitglied, dann
         if (member.getMember_id() == null) {
 
             payments.setMemberType(member.getMemberType());
@@ -68,7 +76,7 @@ public class MemberServiceImpl implements MemberService {
 
 
         }
-        //Aktualisierung
+        //TODO: Wenn kein neues Mitglied, dann Aktualisierung der Mitgliedsdaten
         else{
 
         }

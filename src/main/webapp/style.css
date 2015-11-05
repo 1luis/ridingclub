@@ -1,4 +1,3 @@
-
 *:focus {
     outline: none;
 }
@@ -6,7 +5,6 @@
 body {
     font: 14px/20px "Arial";
 }
-
 
 .contact_form ul {
     width: 750px;
@@ -21,8 +19,6 @@ body {
     border-bottom: 1px solid #eee;
     position: relative;
 }
-
-
 
 .contact_form h2 {
     margin: 0;
@@ -55,7 +51,6 @@ body {
     width: 300px;
 }
 
-
 .contact_form input, .contact_form textarea {
     border: 1px solid #aaa;
     box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
@@ -74,9 +69,6 @@ body {
     padding-right: 70px;
 }
 
-
-
-
 .contact_form input:required:valid, .contact_form textarea:required:valid {
     /*background: #fff url(images/valid.png) no-repeat 98% center;*/
     box-shadow: 0 0 5px #5cd053;
@@ -94,12 +86,36 @@ table, th , td  {
     border-collapse: collapse;
     padding: 5px;
 }
+
 table tr:nth-child(odd) {
     background-color: #f1f1f1;
 }
+
 table tr:nth-child(even) {
     background-color: #ffffff;
 }
 
+/* Für Druckansicht */
+
+@media screen {
+    #printSection {
+        display: none;
+    }
+}
+
+@media print {
+    body * {
+        visibility:hidden;
+    }
+
+    #printSection, #printSection * {
+        visibility:visible;
+    }
+    #printSection {
+        position:absolute;
+        left:0;
+        top:0;
+    }
+}
 
 

@@ -7,21 +7,26 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
 
-/**
- * Created by luisiglesias on 23/10/15.
- */
 public class PaymentsDAO {
 
 
         private EntityManager entityManager;
 
-
+    /**
+     * Holt alle vorhandenen Zahlungen aus der Datenbank
+     * @return
+     */
         @SuppressWarnings("JpaQlInspection")
         public List<Payments> findAll() {
             return entityManager.createQuery("select p from Payments p").getResultList();
 
         }
 
+    /**
+     * Holt alle Zahlungen eines Mitglieds aus der Datenbank
+     * @param member
+     * @return
+     */
         @SuppressWarnings({"JpaQlInspection", "JpaQueryApiInspection"})
         public List findMember_id(Member member) {
         return entityManager.createQuery("select p from Payments p where p.member = :member")
@@ -30,15 +35,21 @@ public class PaymentsDAO {
 
         }
 
-
+    /**
+     * Lädt eine Zahlung nach ID
+     * @param payment_id
+     * @return
+     */
         public Payments load(Long payment_id) {
             return entityManager.find(Payments.class, payment_id);
         }
 
-
+    /**
+     * Speichert eine neue Zahlung, falls neu - sonst aktualisiert eine Zahlung
+     * @param payments
+     */
         public void save(Payments payments) {
 
-            //Wenn neu-> gespeichert sonst aktualisiert
             if (payments.getPayment_id() == null) {
                 entityManager.persist(payments);
             } else {
@@ -46,7 +57,10 @@ public class PaymentsDAO {
             }
         }
 
-
+    /**
+     * Löschen einer Zahlung
+     * @param payments
+     */
         public void delete(Payments payments) {
             entityManager.remove(payments);
         }
