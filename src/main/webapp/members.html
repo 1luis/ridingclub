@@ -32,7 +32,7 @@
     <tbody>
     <tr ng-repeat="member in model.members | orderBy:['member_id']">
 
-        <td><a href="#payments/{{member.member_id}}">{{member.member_id}}</a></td>
+        <td><a href="#editMember/{{member.member_id}}">{{member.member_id}}</a></td>
         <td>{{member.name}}</td>
         <td>{{member.surname}}</td>
         <td>{{member.address}}</td>

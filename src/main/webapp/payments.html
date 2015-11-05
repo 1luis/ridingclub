@@ -10,7 +10,7 @@
 
 </head>
 <body>
-<h1>Zahlungsübersicht:</h1>
+<h1>Zahlungsübersicht: {{member_id}}</h1>
 
 <table>
     <thead>
@@ -24,22 +24,13 @@
     </thead>
     <tbody>
 
-    {{model.payments.member.member_id}}
-    {{model.payments.payment_id}}
-    {{model.payments.year}}
-    {{model.payments.amount}}
-    {{model.payments.memberType}}
-    {{model.payments.status}}
-    {{model.payments.member.name}}
-
     <tr ng-repeat="payments in model.payments">
 
-
+        <td>{{payments.payment_id}}</td>
         <td>{{payments.year}}</td>
         <td>{{payments.amount}}</td>
         <td>{{payments.memberType}}</td>
-        <td>{{payments.status}}</td>
-
+        <td><button ng-click="changeStatus(payments.payment_id)">{{payments.status}}</button></td>
     </tr>
     </tbody>
 
@@ -47,7 +38,6 @@
 
 <div></div>
 
-<!--<a href="#changePayment/{{id}}"><button>Status ändern</button></a>-->
 
 
 </body>

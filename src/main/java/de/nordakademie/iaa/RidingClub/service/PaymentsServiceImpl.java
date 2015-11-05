@@ -16,6 +16,7 @@ public class PaymentsServiceImpl implements PaymentsService {
 
     /**
      * Speichert eine neue Zahlung in der Tabelle Payments
+     *
      * @param payments
      * @throws EntityAlreadyPresentException
      */
@@ -26,7 +27,8 @@ public class PaymentsServiceImpl implements PaymentsService {
     }
 
     /**
-     * Zeigt alle Zahlungen aller Mitglieder und Jahre an (Zahlungsübersicht)
+     * Zeigt alle Zahlungen aller Mitglieder und Jahre an (Zahlungsï¿½bersicht)
+     *
      * @return
      */
     @Override
@@ -36,6 +38,7 @@ public class PaymentsServiceImpl implements PaymentsService {
 
     /**
      * Zeigt alle Zahlungen eines Mitgliedes an - sonst alle
+     *
      * @param member_id
      * @return
      */
@@ -54,7 +57,8 @@ public class PaymentsServiceImpl implements PaymentsService {
     }
 
     /**
-     * Lädt alle Zahlungen aus der Tabelle Payments
+     * Lï¿½dt alle Zahlungen aus der Tabelle Payments
+     *
      * @param payment_id
      * @return
      */
@@ -64,7 +68,8 @@ public class PaymentsServiceImpl implements PaymentsService {
     }
 
     /**
-     * Löscht eine ausgewählte Zalung nach seiner ID
+     * Lï¿½scht eine ausgewï¿½hlte Zalung nach seiner ID
+     *
      * @param payment_id
      * @throws EntityNotFoundException
      */
@@ -74,15 +79,32 @@ public class PaymentsServiceImpl implements PaymentsService {
         if (payments == null) {
             throw new EntityNotFoundException();
         }
-    paymentsDAO.delete(payments);
+        paymentsDAO.delete(payments);
     }
 
     /**
      * Ehem. setRoomsDAO
+     *
      * @param paymentDAO
      */
     @Inject
     public void setPaymentsDAO(PaymentsDAO paymentDAO) {
         this.paymentsDAO = paymentDAO;
+    }
+
+
+    @Override
+    public void changeStatusPayments(Long payment_id) throws EntityNotFoundException {
+        Payments payment = loadPayments(payment_id);
+        if (payment == null) {
+            throw new EntityNotFoundException();
+        }
+
+        if ( payment.getStatus().equals("offen")){
+            payment.setStatus("bezahlt");
+        }else if(payment.getStatus().equals("bezahlt")){
+            payment.setStatus("offen");
+        }
+        paymentsDAO.save(payment);
     }
 }

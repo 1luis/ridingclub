@@ -63,6 +63,10 @@ public class Member implements  Serializable{
      * Getters and Setters
      * @return
      */
+    @Column (name = "familyMember")
+    private boolean familyMember;
+
+    //**************************************************************
 
     public Long getMember_id() {
         return member_id;
@@ -166,6 +170,14 @@ public class Member implements  Serializable{
 
     public void setExitDate(String exitDate) {
         this.exitDate = exitDate;
+    }
+
+    public boolean getFamilyMember() {
+        return familyMember;
+    }
+
+    public void setFamilyMember(boolean familyMember) {
+        this.familyMember = familyMember;
     }
 
 }

@@ -20,4 +20,6 @@ public interface PaymentsService{
 
     void deletePayments(Long member_id) throws EntityNotFoundException;
 
+    void changeStatusPayments(Long member_id) throws EntityNotFoundException;
+
 }

@@ -24,6 +24,12 @@ public class MemberController {
         return memberService.listMembersName(name);
     }
 
+    //Load nach ID
+    @RequestMapping(value = "/member/{member_id}", method = RequestMethod.GET)
+    public Member listMembersName(@PathVariable Long member_id) {
+        return memberService.loadMember(member_id);
+    }
+
     //Suche nach Nachname
     @RequestMapping(value = "/searchSurname/{surname}", method = RequestMethod.GET)
     public List<Member> listMembersSurname(@PathVariable String surname) {
@@ -36,7 +42,7 @@ public class MemberController {
         return memberService.listMembers(name, surname);
     }
 
-    //Löschen eines Mitglieds
+    //Lï¿½schen eines Mitglieds
     @RequestMapping(value = "/member/{id}", method = RequestMethod.DELETE)
     public void deleteMember(@PathVariable Long id) throws Exception {
         memberService.deleteMember(id);

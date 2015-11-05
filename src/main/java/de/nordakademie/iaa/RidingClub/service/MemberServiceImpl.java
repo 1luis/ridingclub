@@ -42,42 +42,30 @@ public class MemberServiceImpl implements MemberService {
 
             payments.setMemberType(member.getMemberType());
 
-            switch (member.getMemberType()) {
-                case "Vollmitglied":
-                    payments.setAmount(25);
-                    break;
+            //Set price
+            payments.setAmount(familyMember(member.getFamilyMember(), member.getMemberType()));
 
-                case "Ermaessigt":
-                    payments.setAmount(23);
-                    break;
-
-                case "Jugendmitglied":
-                    payments.setAmount(15);
-                    break;
-
-                case "Foerdermitglied":
-                    payments.setAmount(10);
-                    break;
-            }
             int year = Calendar.getInstance().get(Calendar.YEAR);
             payments.setYear(year);
             payments.setStatus("offen");
-
-
             payments.setMember(member);
-
             paymentsService.savePayment(payments);
-
             memberDAO.save(member);
-
-
-
-
-
 
         }
         //TODO: Wenn kein neues Mitglied, dann Aktualisierung der Mitgliedsdaten
         else{
+
+            Member member2 = loadMember(member.getMember_id());
+            payments =  paymentsService.loadPayments(member.getMember_id());
+
+            //änderung price falls FamilyMember geändert ist
+            if (member2.getFamilyMember() != member.getFamilyMember()){
+                payments.setAmount(familyMember(member.getFamilyMember(), member.getMemberType()));
+            }
+
+            paymentsService.savePayment(payments);
+            memberDAO.save(member);
 
         }
 
@@ -118,6 +106,35 @@ public class MemberServiceImpl implements MemberService {
             throw new EntityNotFoundException();
         }
         memberDAO.delete(member);
+    }
+
+    public int familyMember (boolean familyMember, String memberType){
+
+        int price = 0;
+
+        switch (memberType) {
+            case "Vollmitglied":
+                price = 25;
+                break;
+
+            case "Ermaessigt":
+                price = 23;
+                break;
+
+            case "Jugendmitglied":
+                price = 15;
+                break;
+
+            case "Foerdermitglied":
+                price = 10;
+                break;
+        }
+
+        if (familyMember = true){
+            price = price - 3;
+        }
+        return price;
+
     }
 
 }

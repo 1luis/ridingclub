@@ -21,6 +21,11 @@ public class PaymentsController {
         return paymentService.listPayments();
     }
 
+    @RequestMapping(value = "/payment/changeStatus/{payment_id}", method = RequestMethod.GET)
+    public void changeStatusPayment(@PathVariable Long payment_id) throws Exception {
+        paymentService.changeStatusPayments(payment_id);
+    }
+
     @RequestMapping(value = "/payments/{member_id}", method = RequestMethod.GET)
     public List<Payments> listPayments(@PathVariable Long member_id) {
         return paymentService.listPayments(member_id);

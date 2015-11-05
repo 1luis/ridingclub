@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mitglieder bearbeiten</title>
+    <link href="style.css" rel="stylesheet"/>
+
+</head>
+<body>
+
+
+<form class="contact_form" action="#" id="contact_form" runat="server">
+    <div>
+        <ul>
+            <li><label for="memberType">Mitgliedsart:</label> <select id="memberType" name="memberType" type="checkbox"  required
+                                                                      ng-model="member.memberType">
+                <option value="">- Mitgliedart wählen -</option>
+                <option value="Vollmitglied">Vollmitglied (25€)</option>
+                <option value="Ermaessigt">Ermaessigt (23€)</option>
+                <option value="Jugendmitglied">Jugendmitglied (15€)</option>
+                <option value="Foerdermitglied">Foerdermitglied (10€)</option>
+
+
+            </select><br>
+
+            <li><label for="name">Vorname:</label> <input id="name"
+                                                          name="name"
+                                                          type="text"
+                                                          placeholder="Maximilian"
+                                                          required ng-model="member.name"/></li>
+
+            <li><label for="surname">Nachname:</label> <input id="surname"
+                                                              name="surname"
+                                                              type="text"
+                                                              placeholder="Mustermann"
+                                                              required ng-model="member.surname"/></li>
+
+
+            <li><label for="familyMember">Familienmitglied?:</label><input id="familyMember"
+                                                                           type="checkbox"
+                                                                           name="familyMember"
+                                                                           ng-model="member.familyMember"/></li>
+
+            <li><label for="birthday">Geburtsdatum:</label> <input id="birthday"
+                                                                   name="birthday"
+                                                                   type="date"
+                                                                   required ng-model="member.birthday"/></li>
+
+            <li><label for="address">Adresse:</label> <input id="address"
+                                                             name="address"
+                                                             type="text"
+                                                             placeholder="Musterstrasse 12"
+                                                             required ng-model="member.address"/></li>
+
+            <li><label for="city">Wohnort:</label> <input id="city"
+                                                          name="city"
+                                                          type="text"
+                                                          placeholder="Musterstadt"
+                                                          required ng-model="member.city"/></li>
+
+            <li><label for="zipcode">PLZ:</label> <input id="zipcode"
+                                                         name="zipcode"
+                                                         type="text"
+                                                         placeholder="20999"
+                                                         required ng-model="member.zipcode"/></li>
+
+            <li><label for="entryDate">Eintrittsdatum:</label> <input id="entryDate"
+                                                                      name="entryDate"
+                                                                      type="date"
+                                                                      disabled
+                                                                      required ng-model="member.entryDate"/></li>
+
+            <!--Folgende Felder nur anzeigen, sofern ein Mitglied bearbeitet wird - nicht bei Neuanlage-->
+
+            <li><label for="entryDate">Kündigungsdatum:</label> <input id="noticeDate"
+                                                                       name="noticeDate"
+                                                                       type="date"
+                                                                       ng-model="member.noticeDate"/></li>
+
+            <li><label for="entryDate">Austrittsdatum:</label> <input id="exitDate"
+                                                                      name="exitDate"
+                                                                      type="date"
+                                                                      disabled
+                                                                      ng-model="member.exitDate"/></li>
+
+
+            <li><label for="iban">IBAN-Kontonummer:</label> <input id="iban"
+                                                                   name="iban"
+                                                                   type="text"
+                                                                   required ng-model="member.iban"/></li>
+
+        </ul>
+    </div>
+</form>
+
+
+<button ng-click="speichern()">Speichern</button>
+<a href="#payments/{{member_id}}"><button>Payments angugken</button></a>
+
+
+</body>
+</html>

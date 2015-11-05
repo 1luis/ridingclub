@@ -16,17 +16,17 @@ app.config(['$routeProvider', function ($routeProvider) {
         controller: "NewMemberController"
     });
 
+    $routeProvider.when('/editMember/:member_id', {
+        templateUrl: "editMember.html",
+        controller: "editMemberController"
+    });
+
     $routeProvider.when('/searchMember', {
         templateUrl: "searchMember.html",
         controller: "searchController"
     });
 
     $routeProvider.when('/payments/:member_id', {
-        templateUrl: "payments.html",
-        controller: "paymentsController"
-    });
-
-    $routeProvider.when('/payments', {
         templateUrl: "payments.html",
         controller: "paymentsController"
     });
@@ -38,7 +38,7 @@ app.config(['$routeProvider', function ($routeProvider) {
 }]);
 
 /**
- * Zeigt alle Mitglieder in einer Übersicht
+ * Zeigt alle Mitglieder in einer ï¿½bersicht
  */
 
 app.controller("MemberController", ["$scope", 'memberService', function ($scope, memberService) {
@@ -65,7 +65,7 @@ app.service('memberService', ['$http', function ($http) {
 
 
 /**
- * Fügt ein neues Mitglied hinzu
+ * Fï¿½gt ein neues Mitglied hinzu
  */
 
 app.controller('NewMemberController', ['$scope', '$http', function ($scope, $http) {
@@ -80,6 +80,7 @@ app.controller('NewMemberController', ['$scope', '$http', function ($scope, $htt
         zipcode: "",
         iban: "",
         entryDate: "",
+        familyMember: ""
         //  noticeDate:"",
         //  exitDate:""
 
@@ -166,39 +167,125 @@ app.controller("paymentsController", ["$scope", "$routeParams", "$http", functio
             amount: "",
             year: "",
             status: "",
-            memberType: "",
-            member_id: ""
+            memberType: ""
         }
     };
 
-    //zeigt die Zahlungen aller Mitglieder an, wenn keine member_id übergeben wird
-    var url;
+    var getData = function(){
+        //zeigt die Zahlungen aller Mitglieder an, wenn keine member_id ï¿½bergeben wird
+        var url;
 
-   if($scope.member_id.isUndefined){
-        url = "rest/payments";
+        if (0 === $scope.member_id.length) {
+            url = "rest/payments";
+            $scope.member_id= "Alle Mitglieder";
+        }else{
+            url = "rest/payments/" + $scope.member_id;
+        }
 
-    }else{
-        url = "rest/payments/" + $scope.member_id;
-    }
+        var config = {
+            method: "GET",
+            url: url
+        };
 
-    var config = {
-        method: "GET",
-        url: url
+        var response = $http(config);
+
+        response.success(function (data) {
+            $scope.model.payments = data;
+        });
+
+        response.error(function (data, status) {
+            alert("Fehler beim Anzeigen der Zahlungen. HTTP-Statuscode:" + status);
+        });
+
     };
 
-    var response = $http(config);
+    getData();
 
-    response.success(function (data, status, headers, config) {
-        $scope.model.payments = data;
-    });
 
-    response.error(function (data, status, headers, config) {
-        alert("Fehler beim Anzeigen der Zahlungen. HTTP-Statuscode:" + status);
-    });
+    $scope.changeStatus = function (payment_id) {
+
+        var config = {
+            method: "GET",
+            url: "rest/payment/changeStatus/" + payment_id
+        };
+        var response = $http(config);
+
+        response.success(function () {
+           alert("Status geÃ¤ndert");
+            getData();
+        });
+        response.error(function () {
+            alert("Status nicht geÃ¤ndert");
+        });
+
+    };
+
+
+
 }]);
 
 /**
- * Fügt eine Zahlung hinzu
+ * Edit Member Controller
+ */
+
+app.controller("editMemberController", ["$scope", "$routeParams", "$http", function ($scope, $routeParams, $http) {
+
+    $scope.member_id = $routeParams.member_id;
+
+    $scope.member = {
+        member_id: "",
+        name: "",
+        surname: "",
+        address: "",
+        city: "",
+        memberType: "",
+        birthday: "",
+        zipcode: "",
+        iban: "",
+        entryDate: "",
+        noticeDate:"",
+        exitDate:"",
+        familyMember: ""
+    };
+
+    var config = {
+        method: "GET",
+        url: "/rest/member/" + $routeParams.member_id
+    };
+    var response = $http(config);
+
+    response.success(function (data) {
+        $scope.member = data;
+    });
+
+
+    $scope.speichern = function(){
+
+        var config = {
+            method: "PUT",
+            url: "rest/member",
+            data: $scope.member
+        };
+
+        var response = $http(config);
+
+        response.success(function (data, status, headers, config) {
+            alert("Mitglied erfolgreich gespeichert:" + status);
+        });
+
+        response.error(function (data, status, headers, config) {
+            alert("Fehler beim Speichert des Mitglieds:" + status);
+        });
+
+    }
+
+}]);
+
+
+
+
+/**
+ * Fï¿½gt eine Zahlung hinzu
  */
 
 app.controller('addPaymentController', ['$scope', "$routeParams", '$http', function ($scope, $routeParams, $http) {
