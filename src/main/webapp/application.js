@@ -101,7 +101,7 @@ app.controller('NewMemberController', ['$scope', '$http', function ($scope, $htt
         });
 
         response.error(function (data, status, headers, config) {
-            alert("Fehler beim Anlegen des Mitglieds:" + status);
+            alert("Fehler:" + data.message);
         });
 
     };

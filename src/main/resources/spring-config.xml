@@ -60,13 +60,11 @@
     <!-- DAOs -->
     <bean id="paymentsDAO" class="de.nordakademie.iaa.RidingClub.dao.PaymentsDAO"/>
     <bean id="memberDAO" class="de.nordakademie.iaa.RidingClub.dao.MemberDAO"/>
-    <bean id="memberTypeDAO" class="de.nordakademie.iaa.RidingClub.dao.MemberTypeDAO"/>
 
 
     <!-- Services -->
     <bean id="paymentsService" class="de.nordakademie.iaa.RidingClub.service.PaymentsServiceImpl"/>
     <bean id="memberService" class="de.nordakademie.iaa.RidingClub.service.MemberServiceImpl"/>
-    <bean id="memberTypeService" class="de.nordakademie.iaa.RidingClub.service.MemberTypeServiceImpl"/>
 
 
 

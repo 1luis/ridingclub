@@ -2,31 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f6486d2-a8b4-4f57-a721-0df9e8e32540" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\DEV\ridingclub2\src\main\webapp\print.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/model/Member.java" afterPath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/model/Member.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/controller/MemberController.java" afterPath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/controller/MemberController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/dao/MemberDAO.java" afterPath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/dao/MemberDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/MemberService.java" afterPath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/MemberService.java" />
+      <change type="DELETED" beforePath="D:\DEV\ridingclub2\src\main\java\de\nordakademie\iaa\RidingClub\dao\MemberTypeDAO.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\ridingclub2\src\main\java\de\nordakademie\iaa\RidingClub\model\MemberType.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\ridingclub2\src\main\java\de\nordakademie\iaa\RidingClub\service\MemberTypeService.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\ridingclub2\src\main\java\de\nordakademie\iaa\RidingClub\service\MemberTypeServiceImpl.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/MemberServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/MemberServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/model/MemberType.java" afterPath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/model/MemberType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/dao/MemberTypeDAO.java" afterPath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/dao/MemberTypeDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/MemberTypeService.java" afterPath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/MemberTypeService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/MemberTypeServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/MemberTypeServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/model/Payments.java" afterPath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/model/Payments.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/controller/PaymentsController.java" afterPath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/controller/PaymentsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/dao/PaymentsDAO.java" afterPath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/dao/PaymentsDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/PaymentsService.java" afterPath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/PaymentsService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/PaymentsServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/PaymentsServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/ValidatorException.java" afterPath="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/ValidatorException.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/application.js" afterPath="$PROJECT_DIR$/src/main/webapp/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/createMember.html" afterPath="$PROJECT_DIR$/src/main/webapp/createMember.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/editMember.html" afterPath="$PROJECT_DIR$/src/main/webapp/editMember.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/import.sql" afterPath="$PROJECT_DIR$/src/main/resources/import.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/members.html" afterPath="$PROJECT_DIR$/src/main/webapp/members.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/payments.html" afterPath="$PROJECT_DIR$/src/main/webapp/payments.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/searchMember.html" afterPath="$PROJECT_DIR$/src/main/webapp/searchMember.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/style.css" afterPath="$PROJECT_DIR$/src/main/webapp/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spring-config.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring-config.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="roommgmt-orm.iws" />
@@ -79,7 +65,186 @@
     <favorites_list name="roommgmt-orm" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="PaymentsDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/dao/PaymentsDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PaymentsServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/PaymentsServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MemberController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/controller/MemberController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MemberServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/MemberServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="38" column="41" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/application.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="103" column="44" selection-start-line="103" selection-start-column="44" selection-end-line="103" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ValidatorException.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/ValidatorException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+              <folding>
+                <element signature="e#238#239#0" expanded="true" />
+                <element signature="e#268#269#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spring-config.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/spring-config.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="60" column="54" selection-start-line="60" selection-start-column="54" selection-end-line="60" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MemberService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/MemberService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JAVA/de.nordakademie.iaa.RidingClub" pinned="false" current-in-tab="true">
+        <entry file="uml://JAVA/de.nordakademie.iaa.RidingClub">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement>de.nordakademie.iaa.RidingClub</OriginalElement>
+              <nodes>
+                <node x="2048.4166666666665" y="488.5">de.nordakademie.iaa.RidingClub.service.ValidatorException</node>
+                <node x="1741.4166666666665" y="422.0">de.nordakademie.iaa.RidingClub.model.Payments</node>
+                <node x="748.9032020610969" y="363.2123665807875">de.nordakademie.iaa.RidingClub.service.EntityAlreadyPresentException</node>
+                <node x="942.0659722222222" y="710.0">de.nordakademie.iaa.RidingClub.controller.MemberController</node>
+                <node x="751.6666666666666" y="466.0">de.nordakademie.iaa.RidingClub.service.EntityNotFoundException</node>
+                <node x="113.66666666666674" y="433.5">de.nordakademie.iaa.RidingClub.service.PaymentsService</node>
+                <node x="978.9166666666666" y="422.5">de.nordakademie.iaa.RidingClub.service.MemberService</node>
+                <node x="503.0347222222222" y="709.5">de.nordakademie.iaa.RidingClub.service.PaymentsServiceImpl</node>
+                <node x="1340.9166666666665" y="688.0">de.nordakademie.iaa.RidingClub.service.MemberServiceImpl</node>
+                <node x="114.2712933753943" y="728.429022082019">de.nordakademie.iaa.RidingClub.controller.PaymentsController</node>
+                <node x="1401.4166666666665" y="411.0">de.nordakademie.iaa.RidingClub.dao.MemberDAO</node>
+                <node x="1661.4166666666665" y="0.0">de.nordakademie.iaa.RidingClub.model.Member</node>
+                <node x="444.66666666666663" y="433.0">de.nordakademie.iaa.RidingClub.dao.PaymentsDAO</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="de.nordakademie.iaa.RidingClub.service.PaymentsServiceImpl" target="de.nordakademie.iaa.RidingClub.dao.PaymentsDAO">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="de.nordakademie.iaa.RidingClub.service.MemberServiceImpl" target="de.nordakademie.iaa.RidingClub.service.PaymentsService">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="de.nordakademie.iaa.RidingClub.service.MemberServiceImpl" target="de.nordakademie.iaa.RidingClub.dao.MemberDAO">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="de.nordakademie.iaa.RidingClub.service.PaymentsServiceImpl" target="de.nordakademie.iaa.RidingClub.service.PaymentsService">
+                  <point x="-135.75" y="-104.0" />
+                  <point x="548.2847222222222" y="668.0" />
+                  <point x="269.16666666666674" y="668.0" />
+                  <point x="0.0" y="81.0" />
+                </edge>
+                <edge source="de.nordakademie.iaa.RidingClub.service.MemberServiceImpl" target="de.nordakademie.iaa.RidingClub.service.EntityNotFoundException">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="de.nordakademie.iaa.RidingClub.model.Payments" target="de.nordakademie.iaa.RidingClub.model.Member">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="de.nordakademie.iaa.RidingClub.service.MemberServiceImpl" target="de.nordakademie.iaa.RidingClub.model.Payments">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="de.nordakademie.iaa.RidingClub.service.PaymentsServiceImpl" target="de.nordakademie.iaa.RidingClub.service.EntityNotFoundException">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="de.nordakademie.iaa.RidingClub.service.MemberServiceImpl" target="de.nordakademie.iaa.RidingClub.service.ValidatorException">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="de.nordakademie.iaa.RidingClub.service.MemberServiceImpl" target="de.nordakademie.iaa.RidingClub.service.MemberService">
+                  <point x="-31.5" y="-125.5" />
+                  <point x="1498.4166666666665" y="638.0" />
+                  <point x="1247.25" y="638.0" />
+                  <point x="107.33333333333326" y="92.0" />
+                </edge>
+                <edge source="de.nordakademie.iaa.RidingClub.controller.MemberController" target="de.nordakademie.iaa.RidingClub.service.MemberService">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="de.nordakademie.iaa.RidingClub.controller.PaymentsController" target="de.nordakademie.iaa.RidingClub.service.PaymentsService">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="de.nordakademie.iaa.RidingClub.service.PaymentsServiceImpl" target="de.nordakademie.iaa.RidingClub.service.MemberService">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="0.9600706713780919" x="744.583469384722" y="656.1581790786083" />
+              <SelectedNodes />
+              <Categories>
+                <Category>Fields</Category>
+                <Category>Constructors</Category>
+                <Category>Inner Classes</Category>
+                <Category>Methods</Category>
+                <Category>Properties</Category>
+              </Categories>
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>private</VISIBILITY>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -118,7 +283,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/deleteMember.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/Members.html" />
         <option value="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/model/SearchMemberRequest.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring-config.xml" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/45b7e827-81e5-4ae8-9d3f-ab95055d53d9/console.sql" />
         <option value="dbtable:/a6f79ada/73f90512-b15e-4e1a-b655-fae9cae44c6a/NAK.PUBLIC.PAYMENTS" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/73f90512-b15e-4e1a-b655-fae9cae44c6a/console.sql" />
@@ -131,23 +295,24 @@
         <option value="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/model/MemberType.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/model/Payments.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/MemberService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/MemberServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/MemberTypeService.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/MemberTypeServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/PaymentsService.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/PaymentsServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/ValidatorException.java" />
         <option value="$PROJECT_DIR$/src/main/resources/import.sql" />
         <option value="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/controller/MemberController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/application.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/editMember.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/searchMember.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/createMember.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/print.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/members.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/payments.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/style.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/payments.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/members.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/searchMember.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring-config.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/MemberServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/ValidatorException.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/application.js" />
       </list>
     </option>
   </component>
@@ -247,9 +412,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -460,6 +622,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -499,129 +664,6 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\DEV\ridingclub2\src\main\webapp" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/controller/MemberController.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/controller/PaymentsController.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/model/Member.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/MemberServiceImpl.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/PaymentsService.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/PaymentsServiceImpl.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/import.sql</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/application.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/createMember.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/index.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/members.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/payments.html</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/webapp/editMember.html</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunManager" selected="Tomcat Server.localTomcat">
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.0.141" ALTERNATIVE_JRE_ENABLED="false" ALTERNATIVE_JRE_PATH="">
@@ -1049,7 +1091,8 @@
       <workItem from="1446469618086" duration="570000" />
       <workItem from="1446470792176" duration="12772000" />
       <workItem from="1446648525010" duration="12878000" />
-      <workItem from="1446748533690" duration="8465000" />
+      <workItem from="1446748533690" duration="13171000" />
+      <workItem from="1446816309878" duration="2297000" />
     </task>
     <task id="LOCAL-00001" summary="initial repo">
       <created>1445782478887</created>
@@ -1201,11 +1244,17 @@
       <option name="project" value="LOCAL" />
       <updated>1446717603340</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Erweiterung um Klassen-Kommentare,&#10;Druckansicht ohne Druck der Buttons">
+      <created>1446806279980</created>
+      <option name="number" value="00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1446806279980</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140084000" />
+    <option name="totallyTimeSpent" value="147087000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1218,37 +1267,37 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288889" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31849793" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44243422" sideWeight="0.5088853" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.10208333" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32369298" sideWeight="0.49353796" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36300418" sideWeight="0.4911147" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32814237" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2159383" sideWeight="0.8815789" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1773779" sideWeight="0.8815789" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5687633" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31663975" sideWeight="0.118421055" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3971079" sideWeight="0.4951535" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3971079" sideWeight="0.4951535" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31849793" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39933258" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36300418" sideWeight="0.4911147" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32814237" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32814237" sideWeight="0.49676898" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32684284" sideWeight="0.49676898" order="2" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1314,7 +1363,8 @@
     <MESSAGE value="ACHTUNG: ID-Felder in &quot;member_id&quot; und &quot;payment_id&quot; umbenannt (refactoring manuell). Weiterhin Ausgabe ALLER Payments je Member; wahrscheinlich wg. Fehlender WHERE-Abfrage in SQL" />
     <MESSAGE value="Tests mit DB und Payments nach member_FK SPielerei/Test" />
     <MESSAGE value="Erweiterung um Druckansicht und Validation für Imputs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Erweiterung um Druckansicht und Validation für Imputs" />
+    <MESSAGE value="Erweiterung um Klassen-Kommentare,&#10;Druckansicht ohne Druck der Buttons" />
+    <option name="LAST_COMMIT_MESSAGE" value="Erweiterung um Klassen-Kommentare,&#10;Druckansicht ohne Druck der Buttons" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1332,6 +1382,33 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/ValidatorException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding>
+            <element signature="e#238#239#0" expanded="true" />
+            <element signature="e#268#269#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="60" column="54" selection-start-line="60" selection-start-column="54" selection-end-line="60" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/MemberService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.2.1.RELEASE/spring-aop-4.2.1.RELEASE.jar!/org/springframework/aop/framework/ReflectiveMethodInvocation.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.8148148">
@@ -1381,20 +1458,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/roommgmt-orm.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.61764705">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reitverein-HA.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1440,26 +1503,26 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/a6f79ada/73f90512-b15e-4e1a-b655-fae9cae44c6a/NAK.PUBLIC.MEMBER">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/a6f79ada/73f90512-b15e-4e1a-b655-fae9cae44c6a/NAK.PUBLIC.MEMBERTYPE">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1485,56 +1548,20 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/a6f79ada/73f90512-b15e-4e1a-b655-fae9cae44c6a/NAK.PUBLIC.PAYMENTS">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/favicon.ico">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/model/MemberType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="26" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
-          <folding>
-            <element signature="e#608#609#0" expanded="false" />
-            <element signature="e#635#636#0" expanded="false" />
-            <element signature="e#689#690#0" expanded="false" />
-            <element signature="e#723#724#0" expanded="false" />
-            <element signature="e#754#755#0" expanded="false" />
-            <element signature="e#783#784#0" expanded="false" />
-            <element signature="e#824#825#0" expanded="false" />
-            <element signature="e#860#861#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/dao/MemberTypeDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/dao/PaymentsDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
-          <folding>
-            <element signature="e#464#500#0" expanded="false" />
-            <element signature="e#766#829#0" expanded="false" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/model/Payments.java">
@@ -1566,37 +1593,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/MemberTypeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/MemberTypeServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="e#401#402#0" expanded="false" />
-            <element signature="e#448#449#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/PaymentsService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/PaymentsServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
           <folding />
         </state>
       </provider>
@@ -1617,14 +1617,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/MemberService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2372093">
-          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/model/Member.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1633,23 +1625,96 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/MemberServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/editMember.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.6212871">
+          <caret line="92" column="80" selection-start-line="92" selection-start-column="80" selection-end-line="92" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.8744185">
+          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/payments.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6311881">
+          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/members.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.1153846">
+          <caret line="38" column="35" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.0">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/searchMember.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.307693">
+          <caret line="51" column="37" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/import.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.125">
+        <state vertical-scroll-proportion="-0.30357143">
           <caret line="7" column="205" selection-start-line="7" selection-start-column="205" selection-end-line="7" selection-end-column="205" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/dao/MemberDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/dao/PaymentsDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/PaymentsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/createMember.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.038462">
+          <caret line="20" column="82" selection-start-line="20" selection-start-column="82" selection-end-line="20" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="60" column="54" selection-start-line="60" selection-start-column="54" selection-end-line="60" selection-end-column="54" />
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/controller/MemberController.java">
@@ -1660,105 +1725,219 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/controller/PaymentsController.java">
+    <entry file="file://$PROJECT_DIR$/Reitverein-HA.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4348837">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/MemberServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-          <folding>
-            <element signature="e#971#972#0" expanded="false" />
-            <element signature="e#1032#1033#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/dao/MemberDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2372093">
-          <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
+          <caret line="38" column="41" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.4906976">
-          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding />
+    <entry file="uml://JAVA/de.nordakademie.iaa.RidingClub.controller">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>de.nordakademie.iaa.RidingClub.controller</OriginalElement>
+          <nodes>
+            <node x="" y="">de.nordakademie.iaa.RidingClub.controller.PaymentsController</node>
+            <node x="" y="">de.nordakademie.iaa.RidingClub.controller.MemberController</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="69.5" y="52.5" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Inner Classes</Category>
+            <Category>Properties</Category>
+            <Category>Methods</Category>
+            <Category>Fields</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/editMember.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6212871">
-          <caret line="92" column="80" selection-start-line="92" selection-start-column="80" selection-end-line="92" selection-end-column="80" />
-          <folding />
+    <entry file="uml://MODULES/mdl-roommgmt-orm">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>MODULES</ID>
+          <OriginalElement>mdl-roommgmt-orm</OriginalElement>
+          <nodes>
+            <node x="" y="">mdl-roommgmt-orm</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="86.5" y="15.0" />
+          <SelectedNodes />
+          <Categories />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/searchMember.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.4405941">
-          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-          <folding />
+    <entry file="uml://JAVA/">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="" y="">com</node>
+            <node x="" y="">de</node>
+            <node x="" y="">netscape</node>
+            <node x="" y="">oracle</node>
+            <node x="" y="">org</node>
+            <node x="" y="">antlr</node>
+            <node x="" y="">aj</node>
+            <node x="" y="">sun</node>
+            <node x="" y="">jdk</node>
+            <node x="" y="">license</node>
+            <node x="" y="">java</node>
+            <node x="" y="">javax</node>
+            <node x="" y="">javafx</node>
+            <node x="" y="">META-INF.maven</node>
+            <node x="" y="">META-INF.services</node>
+            <node x="" y="">javassist</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="203.5" y="242.5" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/createMember.html">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/application.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3490099">
-          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="103" column="44" selection-start-line="103" selection-start-column="44" selection-end-line="103" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/ValidatorException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4744186">
-          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
           <folding>
-            <element signature="e#237#238#0" expanded="true" />
-            <element signature="e#267#268#0" expanded="true" />
+            <element signature="e#238#239#0" expanded="true" />
+            <element signature="e#268#269#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/application.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/service/MemberService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07906977">
-          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/style.css">
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/nordakademie/iaa/RidingClub/controller/PaymentsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.8744185">
-          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.22109826">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/payments.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7574257">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/members.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42079207">
-          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5792079">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
+    <entry file="uml://JAVA/de.nordakademie.iaa.RidingClub">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>de.nordakademie.iaa.RidingClub</OriginalElement>
+          <nodes>
+            <node x="2048.4166666666665" y="488.5">de.nordakademie.iaa.RidingClub.service.ValidatorException</node>
+            <node x="1741.4166666666665" y="422.0">de.nordakademie.iaa.RidingClub.model.Payments</node>
+            <node x="748.9032020610969" y="363.2123665807875">de.nordakademie.iaa.RidingClub.service.EntityAlreadyPresentException</node>
+            <node x="942.0659722222222" y="710.0">de.nordakademie.iaa.RidingClub.controller.MemberController</node>
+            <node x="751.6666666666666" y="466.0">de.nordakademie.iaa.RidingClub.service.EntityNotFoundException</node>
+            <node x="113.66666666666674" y="433.5">de.nordakademie.iaa.RidingClub.service.PaymentsService</node>
+            <node x="978.9166666666666" y="422.5">de.nordakademie.iaa.RidingClub.service.MemberService</node>
+            <node x="503.0347222222222" y="709.5">de.nordakademie.iaa.RidingClub.service.PaymentsServiceImpl</node>
+            <node x="1340.9166666666665" y="688.0">de.nordakademie.iaa.RidingClub.service.MemberServiceImpl</node>
+            <node x="114.2712933753943" y="728.429022082019">de.nordakademie.iaa.RidingClub.controller.PaymentsController</node>
+            <node x="1401.4166666666665" y="411.0">de.nordakademie.iaa.RidingClub.dao.MemberDAO</node>
+            <node x="1661.4166666666665" y="0.0">de.nordakademie.iaa.RidingClub.model.Member</node>
+            <node x="444.66666666666663" y="433.0">de.nordakademie.iaa.RidingClub.dao.PaymentsDAO</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="de.nordakademie.iaa.RidingClub.service.PaymentsServiceImpl" target="de.nordakademie.iaa.RidingClub.dao.PaymentsDAO">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="de.nordakademie.iaa.RidingClub.service.MemberServiceImpl" target="de.nordakademie.iaa.RidingClub.service.PaymentsService">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="de.nordakademie.iaa.RidingClub.service.MemberServiceImpl" target="de.nordakademie.iaa.RidingClub.dao.MemberDAO">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="de.nordakademie.iaa.RidingClub.service.PaymentsServiceImpl" target="de.nordakademie.iaa.RidingClub.service.PaymentsService">
+              <point x="-135.75" y="-104.0" />
+              <point x="548.2847222222222" y="668.0" />
+              <point x="269.16666666666674" y="668.0" />
+              <point x="0.0" y="81.0" />
+            </edge>
+            <edge source="de.nordakademie.iaa.RidingClub.service.MemberServiceImpl" target="de.nordakademie.iaa.RidingClub.service.EntityNotFoundException">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="de.nordakademie.iaa.RidingClub.model.Payments" target="de.nordakademie.iaa.RidingClub.model.Member">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="de.nordakademie.iaa.RidingClub.service.MemberServiceImpl" target="de.nordakademie.iaa.RidingClub.model.Payments">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="de.nordakademie.iaa.RidingClub.service.PaymentsServiceImpl" target="de.nordakademie.iaa.RidingClub.service.EntityNotFoundException">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="de.nordakademie.iaa.RidingClub.service.MemberServiceImpl" target="de.nordakademie.iaa.RidingClub.service.ValidatorException">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="de.nordakademie.iaa.RidingClub.service.MemberServiceImpl" target="de.nordakademie.iaa.RidingClub.service.MemberService">
+              <point x="-31.5" y="-125.5" />
+              <point x="1498.4166666666665" y="638.0" />
+              <point x="1247.25" y="638.0" />
+              <point x="107.33333333333326" y="92.0" />
+            </edge>
+            <edge source="de.nordakademie.iaa.RidingClub.controller.MemberController" target="de.nordakademie.iaa.RidingClub.service.MemberService">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="de.nordakademie.iaa.RidingClub.controller.PaymentsController" target="de.nordakademie.iaa.RidingClub.service.PaymentsService">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="de.nordakademie.iaa.RidingClub.service.PaymentsServiceImpl" target="de.nordakademie.iaa.RidingClub.service.MemberService">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.9600706713780919" x="744.583469384722" y="656.1581790786083" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Inner Classes</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>

@@ -29,11 +29,11 @@ public class MemberServiceImpl implements MemberService {
 
       //TODO: Prüfung der Eingaben, ob leer
         if (member.getName() == null
-                || member.getName().isEmpty()
-                || member.getSurname().isEmpty()
+                || member.getName().isEmpty())
+/*                || member.getSurname().isEmpty()
                 || member.getAddress().isEmpty()
                 || member.getBirthday().isEmpty()
-                || member.getEntryDate().isEmpty())
+                || member.getEntryDate().isEmpty())*/
 
         {
             throw new ValidatorException("Der Vorname ist ungueltig.");
