@@ -1,4 +1,5 @@
 package de.nordakademie.iaa.RidingClub.service;
+
 import de.nordakademie.iaa.RidingClub.model.Member;
 
 import de.nordakademie.iaa.RidingClub.dao.PaymentsDAO;
@@ -6,6 +7,9 @@ import de.nordakademie.iaa.RidingClub.model.Payments;
 import java.util.List;
 import javax.inject.Inject;
 
+/**
+ * @author Marc & Luis
+ */
 
 public class PaymentsServiceImpl implements PaymentsService {
 

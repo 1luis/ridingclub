@@ -8,8 +8,9 @@ import javax.inject.Inject;
 import java.util.List;
 
 /**
- * Created by luisiglesias on 24/10/15.
+ * @author Marc & Luis
  */
+
 @RestController
 public class PaymentsController {
 

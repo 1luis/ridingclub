@@ -2,24 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Mitglieder bearbeiten</title>
+    <title>Mitglied bearbeiten</title>
     <link href="style.css" rel="stylesheet"/>
 
 </head>
 <body>
-
 
 <form class="contact_form" action="#" id="contact_form" runat="server">
     <div>
         <ul>
             <li><label for="memberType">Mitgliedsart:</label> <select id="memberType" name="memberType" type="checkbox"  required
                                                                       ng-model="member.memberType">
-                <option value="">- Mitgliedart wählen -</option>
+                <option value="">- Mitgliedsart wählen -</option>
                 <option value="Vollmitglied">Vollmitglied (25€)</option>
                 <option value="Ermaessigt">Ermaessigt (23€)</option>
                 <option value="Jugendmitglied">Jugendmitglied (15€)</option>
                 <option value="Foerdermitglied">Foerdermitglied (10€)</option>
-
 
             </select><br>
 
@@ -34,7 +32,6 @@
                                                               type="text"
                                                               placeholder="Mustermann"
                                                               required ng-model="member.surname"/></li>
-
 
             <li><label for="familyMember">Familienmitglied?:</label><input id="familyMember"
                                                                            type="checkbox"
@@ -83,7 +80,6 @@
                                                                       disabled
                                                                       ng-model="member.exitDate"/></li>
 
-
             <li><label for="iban">IBAN-Kontonummer:</label> <input id="iban"
                                                                    name="iban"
                                                                    type="text"
@@ -93,10 +89,8 @@
     </div>
 </form>
 
-
-<button ng-click="speichern()">Speichern</button>
-<a href="#payments/{{member_id}}"><button>Payments angugken</button></a>
-
+<button ng-click="speichern()">Änderungen speichern</button>
+<a href="#payments/{{member_id}}"><button>Zahlungsübersicht ansehen</button></a>
 
 </body>
 </html>

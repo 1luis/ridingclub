@@ -7,6 +7,10 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
 
+/**
+ * @author Marc & Luis
+ */
+
 public class PaymentsDAO {
 
 
@@ -32,7 +36,6 @@ public class PaymentsDAO {
         return entityManager.createQuery("select p from Payments p where p.member = :member")
                 .setParameter("member", member)
                 .getResultList();
-
         }
 
     /**

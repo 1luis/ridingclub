@@ -1,7 +1,7 @@
 package de.nordakademie.iaa.RidingClub.service;
 
 /**
- * Created by marc on 28.10.2015.
+ * @author Marc & Luis
  */
 
 //Exception für Validierungs-Fehler der Benutzereingaben

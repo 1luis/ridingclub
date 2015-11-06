@@ -6,8 +6,9 @@ import de.nordakademie.iaa.RidingClub.model.MemberType;
 import javax.inject.Inject;
 
 /**
- * Created by 13115 on 28.10.2015.
+ * @author Marc & Luis
  */
+
 public class MemberTypeServiceImpl implements  MemberTypeService{
 
     @Inject

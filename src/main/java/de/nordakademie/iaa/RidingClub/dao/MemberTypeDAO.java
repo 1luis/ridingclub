@@ -6,8 +6,9 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 /**
- * Created by 13115 on 28.10.2015.
+ * @author Marc & Luis
  */
+
 public class MemberTypeDAO {
 
     @PersistenceContext

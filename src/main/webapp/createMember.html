@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Mitglieder anlegen</title>
+    <title>Neues Mitglied anlegen</title>
     <link href="style.css" rel="stylesheet"/>
 
 </head>
@@ -14,12 +14,11 @@
             <ul>
                 <li><label for="memberType">Mitgliedsart:</label> <select id="memberType" name="memberType" type="checkbox"  required
                                                                           ng-model="member.memberType">
-                    <option value="">- Mitgliedart wählen -</option>
+                    <option value="">- Mitgliedsart wählen -</option>
                     <option value="Vollmitglied">Vollmitglied (25€)</option>
                     <option value="Ermaessigt">Ermaessigt (23€)</option>
                     <option value="Jugendmitglied">Jugendmitglied (15€)</option>
                     <option value="Foerdermitglied">Foerdermitglied (10€)</option>
-
 
                 </select><br>
 
@@ -84,17 +83,14 @@
                 <li><label for="iban">IBAN-Kontonummer:</label> <input id="iban"
                                                                   name="iban"
                                                                   type="text"
-                                                                  placeholder="DE12 3456 7890 1234 5678 9012"
+                                                                  placeholder="DE12 3456 7890 1234 5678 90"
                                                                   required ng-model="member.iban"/></li>
 
             </ul>
         </div>
     </form>
 
-
     <button ng-click="anlegen()">Anlegen</button>
-
-
 
 </body>
 </html>

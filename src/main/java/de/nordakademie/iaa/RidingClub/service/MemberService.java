@@ -3,7 +3,9 @@ package de.nordakademie.iaa.RidingClub.service;
 import de.nordakademie.iaa.RidingClub.model.Member;
 import java.util.List;
 
-
+/**
+ * @author Marc & Luis
+ */
 
 public interface MemberService {
 

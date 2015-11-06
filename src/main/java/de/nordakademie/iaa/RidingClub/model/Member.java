@@ -10,6 +10,9 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+/**
+ * @author Marc & Luis
+ */
 
 @Entity
 @Table(name = "member")
@@ -59,14 +62,13 @@ public class Member implements  Serializable{
     @Column( name = "memberType")
     private String memberType;
 
+    @Column (name = "familyMember")
+    private boolean familyMember;
+
     /**
      * Getters and Setters
      * @return
      */
-    @Column (name = "familyMember")
-    private boolean familyMember;
-
-    //**************************************************************
 
     public Long getMember_id() {
         return member_id;

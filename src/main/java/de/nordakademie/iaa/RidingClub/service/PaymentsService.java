@@ -3,6 +3,9 @@ package de.nordakademie.iaa.RidingClub.service;
 import de.nordakademie.iaa.RidingClub.model.Payments;
 import java.util.List;
 
+/**
+ * @author Marc & Luis
+ */
 
 public interface PaymentsService{
 

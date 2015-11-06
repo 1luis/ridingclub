@@ -11,6 +11,9 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.regex.Pattern;
 
+/**
+ * @author Marc & Luis
+ */
 
 public class MemberServiceImpl implements MemberService {
 

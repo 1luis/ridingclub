@@ -38,7 +38,7 @@ app.config(['$routeProvider', function ($routeProvider) {
 }]);
 
 /**
- * Zeigt alle Mitglieder in einer �bersicht
+ * Zeigt alle Mitglieder in einer Uebersicht
  */
 
 app.controller("MemberController", ["$scope", 'memberService', function ($scope, memberService) {
@@ -65,7 +65,7 @@ app.service('memberService', ['$http', function ($http) {
 
 
 /**
- * F�gt ein neues Mitglied hinzu
+ * Fuegt ein neues Mitglied hinzu
  */
 
 app.controller('NewMemberController', ['$scope', '$http', function ($scope, $http) {
@@ -172,7 +172,7 @@ app.controller("paymentsController", ["$scope", "$routeParams", "$http", functio
     };
 
     var getData = function(){
-        //zeigt die Zahlungen aller Mitglieder an, wenn keine member_id �bergeben wird
+        //zeigt die Zahlungen aller Mitglieder an, wenn keine member_id uebergeben wird
         var url;
 
         if (0 === $scope.member_id.length) {
@@ -201,7 +201,10 @@ app.controller("paymentsController", ["$scope", "$routeParams", "$http", functio
 
     getData();
 
-
+    /**
+     * Veraenderung des Zahlungsstatus in der Zahlungs�bersicht
+     * @param payment_id
+     */
     $scope.changeStatus = function (payment_id) {
 
         var config = {
@@ -211,11 +214,11 @@ app.controller("paymentsController", ["$scope", "$routeParams", "$http", functio
         var response = $http(config);
 
         response.success(function () {
-           alert("Status geändert");
+           alert("Status erfolgreich geaendert!");
             getData();
         });
         response.error(function () {
-            alert("Status nicht geändert");
+            alert("Fehler bei Statusaenderung!");
         });
 
     };
@@ -225,7 +228,7 @@ app.controller("paymentsController", ["$scope", "$routeParams", "$http", functio
 }]);
 
 /**
- * Edit Member Controller
+ * Bearbeitung der Stammdaten
  */
 
 app.controller("editMemberController", ["$scope", "$routeParams", "$http", function ($scope, $routeParams, $http) {
@@ -258,7 +261,9 @@ app.controller("editMemberController", ["$scope", "$routeParams", "$http", funct
         $scope.member = data;
     });
 
-
+    /**
+     * Speichern einer Stammdatenaenderung
+     */
     $scope.speichern = function(){
 
         var config = {
@@ -274,7 +279,7 @@ app.controller("editMemberController", ["$scope", "$routeParams", "$http", funct
         });
 
         response.error(function (data, status, headers, config) {
-            alert("Fehler beim Speichert des Mitglieds:" + status);
+            alert("Fehler beim Speichern des Mitglieds:" + status);
         });
 
     }
@@ -285,7 +290,7 @@ app.controller("editMemberController", ["$scope", "$routeParams", "$http", funct
 
 
 /**
- * F�gt eine Zahlung hinzu
+ * Hinzufuegen einer Zahlung
  */
 
 app.controller('addPaymentController', ['$scope', "$routeParams", '$http', function ($scope, $routeParams, $http) {

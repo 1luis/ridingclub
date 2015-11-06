@@ -11,6 +11,10 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+/**
+ * @author Marc & Luis
+ */
+
 @Entity
 @Table(name = "payments")
 public class Payments implements Serializable {
@@ -27,7 +31,7 @@ public class Payments implements Serializable {
 
     @Column(name = "memberType")
     private String memberType;
-    //TODO: Referenz auf Jahresbeitrag des jeweiligen MemberType
+
     @Column(name = "amount")
     private int amount;
 
@@ -40,7 +44,10 @@ public class Payments implements Serializable {
     //@JoinColumn(foreignKey = @ForeignKey(name = "member_id"))
     private Member member;
 
-    //**************************************************
+    /**
+     * Getters and Setters
+     * @return
+     */
 
     public Long getPayment_id() {
         return payment_id;

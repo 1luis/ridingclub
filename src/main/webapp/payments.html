@@ -12,19 +12,24 @@
 <body>
 <h1>Zahlungsübersicht: {{member_id}}</h1>
 
+<form>
+    <input type="button" value=" Drucken " onClick="javascript:window.print()">
+</form>
+<br>
+
 <table>
     <thead>
     <tr>
-        <th>ID</th>
+        <th>Zahlungs-ID</th>
         <th>Jahr</th>
         <th>Betrag</th>
         <th>Mitgliedsart</th>
-        <th>Status</th>
+        <th>Zahlungsstatus</th>
     </tr>
     </thead>
     <tbody>
 
-    <tr ng-repeat="payments in model.payments">
+    <tr ng-repeat="payments in model.payments | orderBy:['year']">
 
         <td>{{payments.payment_id}}</td>
         <td>{{payments.year}}</td>
@@ -35,10 +40,5 @@
     </tbody>
 
 </table>
-
-<div></div>
-
-
-
 </body>
 </html>

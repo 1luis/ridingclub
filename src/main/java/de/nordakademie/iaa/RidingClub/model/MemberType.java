@@ -7,8 +7,9 @@ import javax.persistence.Table;
 import java.io.Serializable;
 
 /**
- * Created by 13115 on 28.10.2015.
+ * @author Marc & Luis
  */
+
 @Entity
 @Table(name = "MemberType")
 public class MemberType implements Serializable {
@@ -22,10 +23,10 @@ public class MemberType implements Serializable {
     @Column(nullable = false)
     private int amount;
 
-/*  TODO: Wenn ein Member ein Familienmitglied ist, bekommt er 3 Euro Rabatt
-    auf seinen jeweiligen Jahresbeitrag angerechnet
-*/
-
+    /**
+     * Getters and Setters
+     * @return
+     */
 
     public String getMemberTypes() {
         return name;

@@ -6,6 +6,10 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
 
+/**
+ * @author Marc & Luis
+ */
+
 public class MemberDAO {
 
     private EntityManager entityManager;

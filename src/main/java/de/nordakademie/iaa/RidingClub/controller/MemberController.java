@@ -6,6 +6,10 @@ import org.springframework.web.bind.annotation.*;
 import javax.inject.Inject;
 import java.util.List;
 
+/**
+ * @author Marc & Luis
+ */
+
 @RestController
 public class MemberController {
 
@@ -42,7 +46,7 @@ public class MemberController {
         return memberService.listMembers(name, surname);
     }
 
-    //L�schen eines Mitglieds
+    //Loeschen eines Mitglieds
     @RequestMapping(value = "/member/{id}", method = RequestMethod.DELETE)
     public void deleteMember(@PathVariable Long id) throws Exception {
         memberService.deleteMember(id);

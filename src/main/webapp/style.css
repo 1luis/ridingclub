@@ -97,24 +97,12 @@ table tr:nth-child(even) {
 
 /* Für Druckansicht */
 
-@media screen {
-    #printSection {
-        display: none;
-    }
-}
-
 @media print {
-    body * {
-        visibility:hidden;
+    a button {
+        visibility: hidden;
     }
-
-    #printSection, #printSection * {
-        visibility:visible;
-    }
-    #printSection {
-        position:absolute;
-        left:0;
-        top:0;
+    form {
+        visibility: hidden;
     }
 }
 
