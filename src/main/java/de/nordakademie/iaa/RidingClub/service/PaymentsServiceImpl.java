@@ -61,7 +61,7 @@ public class PaymentsServiceImpl implements PaymentsService {
     }
 
     /**
-     * L�dt alle Zahlungen aus der Tabelle Payments
+     * Laedt alle Zahlungen aus der Tabelle Payments
      *
      * @param payment_id
      * @return
@@ -72,7 +72,7 @@ public class PaymentsServiceImpl implements PaymentsService {
     }
 
     /**
-     * L�scht eine ausgew�hlte Zalung nach seiner ID
+     * Loescht eine ausgewaehlte Zalung nach seiner ID
      *
      * @param payment_id
      * @throws EntityNotFoundException

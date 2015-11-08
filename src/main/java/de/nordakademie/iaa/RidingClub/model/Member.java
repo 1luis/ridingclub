@@ -51,17 +51,17 @@ public class Member implements  Serializable{
     private String iban;
 
     @Column( name = "entryDate")
-    //@Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.DATE)
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private Date entryDate;
 
     @Column( name = "exitDate")
-    //@Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.DATE)
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private Date exitDate;
 
     @Column( name = "noticeDate")
-    //@Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.DATE)
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private Date noticeDate;
 

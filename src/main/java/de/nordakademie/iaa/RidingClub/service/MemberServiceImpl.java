@@ -29,14 +29,18 @@ public class MemberServiceImpl implements MemberService {
 
       //TODO: Prüfung der Eingaben, ob leer
         if (member.getName() == null
-                || member.getName().isEmpty())
-/*                || member.getSurname().isEmpty()
+                || member.getMemberType().isEmpty()
+                || member.getName().isEmpty()
+                || member.getSurname().isEmpty()
                 || member.getAddress().isEmpty()
-                || member.getBirthday().isEmpty()
-                || member.getEntryDate().isEmpty())*/
+                || member.getCity().isEmpty()
+                || member.getZipcode().isEmpty()
+                || member.getBirthday().equals(null)
+                || member.getEntryDate().equals(null)
+                || member.getIban().equals(null))
 
         {
-            throw new ValidatorException("Der Vorname ist ungueltig.");
+            throw new ValidatorException("Bitte alle Felder ausfüllen!");
         }
 
 
@@ -66,9 +70,6 @@ public class MemberServiceImpl implements MemberService {
             if (member2.getFamilyMember() != member.getFamilyMember()){
                 payments.setAmount(familyMember(member.getFamilyMember(), member.getMemberType()));
             }
-
-
-
 
             paymentsService.savePayment(payments);
             memberDAO.save(member);
@@ -136,7 +137,7 @@ public class MemberServiceImpl implements MemberService {
                 break;
         }
 
-        if (familyMember = true){
+        if (familyMember == true){
             price = price - 3;
         }
         return price;
