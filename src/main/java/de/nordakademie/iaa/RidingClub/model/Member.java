@@ -1,7 +1,10 @@
 package de.nordakademie.iaa.RidingClub.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Date;
 import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -48,16 +51,24 @@ public class Member implements  Serializable{
     private String iban;
 
     @Column( name = "entryDate")
-    private String entryDate;
+    //@Temporal(TemporalType.DATE)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    private Date entryDate;
 
     @Column( name = "exitDate")
-    private String exitDate;
+    //@Temporal(TemporalType.DATE)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    private Date exitDate;
 
     @Column( name = "noticeDate")
-    private String noticeDate;
+    //@Temporal(TemporalType.DATE)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    private Date noticeDate;
 
     @Column( name = "birthday")
-    private String birthday;
+    @Temporal(TemporalType.DATE)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    private Date birthday;
 
     @Column( name = "memberType")
     private String memberType;
@@ -125,20 +136,21 @@ public class Member implements  Serializable{
     public void setIban(String iban) {
         this.iban = iban;
     }
-    public String getEntryDate() {
+
+    public Date getEntryDate() {
         return entryDate;
     }
 
-    public void setEntryDate(String entryDate) {
+    public void setEntryDate(Date entryDate) {
         this.entryDate = entryDate;
     }
 
     //@Column(nullable = true)
-    public String getBirthday() {
+    public Date getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(String Birthday) {
+    public void setBirthday(Date Birthday) {
         this.birthday = Birthday;
     }
 
@@ -158,19 +170,19 @@ public class Member implements  Serializable{
         this.zipcode = zipcode;
     }
 
-    public String getNoticeDate() {
+    public Date getNoticeDate() {
         return noticeDate;
     }
 
-    public void setNoticeDate(String noticeDate) {
+    public void setNoticeDate(Date noticeDate) {
         this.noticeDate = noticeDate;
     }
 
-    public String getExitDate() {
+    public Date getExitDate() {
         return exitDate;
     }
 
-    public void setExitDate(String exitDate) {
+    public void setExitDate(Date exitDate) {
         this.exitDate = exitDate;
     }
 

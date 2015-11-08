@@ -67,6 +67,9 @@ public class MemberServiceImpl implements MemberService {
                 payments.setAmount(familyMember(member.getFamilyMember(), member.getMemberType()));
             }
 
+
+
+
             paymentsService.savePayment(payments);
             memberDAO.save(member);
 
