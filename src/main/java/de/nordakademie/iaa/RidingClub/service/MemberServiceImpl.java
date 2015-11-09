@@ -19,13 +19,14 @@ public class MemberServiceImpl implements MemberService {
     @Inject
     private PaymentsService paymentsService;
 
+    //Neues oder Aktualisierung eines Members
     @Override
     public void saveMember(Member member) throws EntityAlreadyPresentException, ValidatorException {
 
         Payments payments = new Payments();
         int year = Calendar.getInstance().get(Calendar.YEAR);
 
-      //TODO: Prüfung der Eingaben, ob leer
+      //Prüfung der Eingaben, ob leer
         if (member.getName() == null
                 || member.getMemberType().isEmpty()
                 || member.getName().isEmpty()
@@ -41,7 +42,6 @@ public class MemberServiceImpl implements MemberService {
             throw new ValidatorException("Bitte alle Felder ausfüllen!");
         }
 
-
         // Wenn neues Mitglied, dann
         if (member.getMember_id() == null) {
 
@@ -50,17 +50,20 @@ public class MemberServiceImpl implements MemberService {
             //Set price
             payments.setAmount(familyMember(member.getFamilyMember(), member.getMemberType()));
 
-            //int year = Calendar.getInstance().get(Calendar.YEAR);
+            //set year, status und member in Payment:
             payments.setYear(year);
             payments.setStatus("offen");
             payments.setMember(member);
+
+            //Speichern beides:
             paymentsService.savePayment(payments);
             memberDAO.save(member);
 
         }
-        //TODO: Wenn kein neues Mitglied, dann Aktualisierung der Mitgliedsdaten
+        //Wenn kein neues Mitglied, dann Aktualisierung der Mitgliedsdaten
         else{
 
+            //Member die in DB ist zum vergleichen:
             Member member2 = loadMember(member.getMember_id());
             payments =  paymentsService.loadPayments(member.getMember_id());
 
@@ -69,8 +72,7 @@ public class MemberServiceImpl implements MemberService {
                 payments.setAmount(familyMember(member.getFamilyMember(), member.getMemberType()));
             }
 
-            //notice datum gegeben:
-
+            //notice datum gegeben: logik mit die noticedatum:
             if ( member2.getNoticeDate() == member.getNoticeDate() ) {
 
             }else{
@@ -80,30 +82,28 @@ public class MemberServiceImpl implements MemberService {
                 Calendar endYear = Calendar.getInstance();
 
                 endYear.set(year, 12, 31 );
-
                 Calendar noticeDate = Calendar.getInstance();
                 noticeDate.setTime(member.getNoticeDate());
-
                 noticeDate.add(Calendar.MONTH, 3);
 
+                //ist der noticeDate + 3 Monate kleiner als 31.12.aktuelleJahr
                 if(noticeDate.before(endYear)){
 
+                    //set in ExitDate die NoticeDate + dieses 3 Monate
                     member.setExitDate(noticeDate.getTime());
 
                 }else{
 
-                    //year = year + 1;
+                    //sonst: Ende nächstes Jahr
                     noticeDate.set(year, 12, 31);
                     member.setExitDate(noticeDate.getTime());
                 }
-
             }
 
+            //Speichern alle änderungen in Member bzw Payments die gegebene Member
             paymentsService.savePayment(payments);
             memberDAO.save(member);
-
         }
-
 
     }
 
@@ -112,21 +112,23 @@ public class MemberServiceImpl implements MemberService {
         return memberDAO.findAll();
     }
 
+    //Für die Suche wenn nur ein Name gegeben ist:
     @Override
     public List<Member> listMembersName(String name){
         return memberDAO.findName(name);
     }
 
+    //ür die Suche, wenn nur ein nachname gegeben ist
     @Override
     public List<Member> listMembersSurname(String surname){
         return memberDAO.findSurname(surname);
     }
 
+    //Fur die Suche, wenn ein Name und ein Nachname gegebne ist:
     @Override
     public List<Member> listMembers(String name, String surname) {
         return memberDAO.findAll(name, surname);
     }
-
 
 
     @Override
@@ -143,10 +145,12 @@ public class MemberServiceImpl implements MemberService {
         memberDAO.delete(member);
     }
 
+    //Methode: gibt ein price zuruck abhängig von der MemberType und der FamilyMember
     public int familyMember (boolean familyMember, String memberType){
 
         int price = 0;
 
+        //Unterschiedliche Typen von Mitglieder und prices:
         switch (memberType) {
             case "Vollmitglied":
                 price = 25;
@@ -165,6 +169,7 @@ public class MemberServiceImpl implements MemberService {
                 break;
         }
 
+        //Wenn ein Familienmitglieder ist, dann - Euro weniger price:
         if (familyMember == true){
             price = price - 3;
         }

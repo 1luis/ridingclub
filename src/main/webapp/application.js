@@ -6,6 +6,8 @@ var app = angular.module('ridingClub', ['ngRoute']);
 
 app.config(['$routeProvider', function ($routeProvider) {
 
+   /* Unterscheidliche routes: jeder eine funktionalität und ein HTML + controller zugeordnet*/
+
     $routeProvider.when('/members', {
         templateUrl: "members.html",
         controller: "MemberController"
@@ -285,8 +287,6 @@ app.controller("editMemberController", ["$scope", "$routeParams", "$http", funct
     }
 
 }]);
-
-
 
 
 /**

@@ -17,9 +17,7 @@ public interface PaymentsService{
 
     List<Payments> listPayments(Long member_id);
 
-
     Payments loadPayments(Long member_id);
-
 
     void deletePayments(Long member_id) throws EntityNotFoundException;
 

@@ -53,9 +53,7 @@ public class PaymentsServiceImpl implements PaymentsService {
 
         if (member == null) {
             return paymentsDAO.findAll();
-            //TODO: Wenn member_id NULL ist, dass lade alle Zahlungen (Marc: macht das Sinn hier?)
         }
-
 
         return paymentsDAO.findMember_id(member);
     }
