@@ -25,8 +25,6 @@ public class Member implements  Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    //@OneToMany
-    //@JoinColumn( name = "member_id")
     private Long member_id;
 
     @Column ( name = "active")

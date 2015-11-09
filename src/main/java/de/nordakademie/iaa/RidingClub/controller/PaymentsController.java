@@ -16,32 +16,30 @@ public class PaymentsController {
 
     @Inject
     private PaymentsService paymentService;
-
-    //Gibt zurück alle Payments
+    
+    //Aufruf aller Payments
     @RequestMapping(value = "/payments", method = RequestMethod.GET)
     public List<Payments> listPayments() {
         return paymentService.listPayments();
     }
 
-    //ändert die Status eines Payments
+    //Aufruf eines spezifischen Payments anhand seiner ID, um den Status zu �ndern
     @RequestMapping(value = "/payment/changeStatus/{payment_id}", method = RequestMethod.GET)
     public void changeStatusPayment(@PathVariable Long payment_id) throws Exception {
         paymentService.changeStatusPayments(payment_id);
     }
 
-    //Gibt zuruck payment von ein bestimmte Member
+    //Aufruf aller Zahlungen eines Mitglieds anhand der Mitglieds-ID
     @RequestMapping(value = "/payments/{member_id}", method = RequestMethod.GET)
     public List<Payments> listPayments(@PathVariable Long member_id) {
         return paymentService.listPayments(member_id);
     }
-
-    //Gibt nue ein Payment nach ein bestimmte pyment_id
+    //Aufruf eines spezifischen Payments anhand seiner ID
     @RequestMapping(value = "/payments/{payment_id}", method = RequestMethod.DELETE)
     public void deletePayment(@PathVariable Long payment_id) throws Exception {
         paymentService.deletePayments(payment_id);
     }
-
-    //Create neues Payment (ist aber nicht genutzt in der APP)
+    //Speichern einer neuen Zahlung (UNBENUTZT!)
     @RequestMapping(value = "/payments" , method = RequestMethod.PUT)
     public void savePayment(@RequestBody Payments payment) throws Exception{
         paymentService.savePayment(payment);

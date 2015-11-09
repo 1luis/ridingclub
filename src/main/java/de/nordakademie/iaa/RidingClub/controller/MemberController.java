@@ -7,7 +7,7 @@ import javax.inject.Inject;
 import java.util.List;
 
 /**
- * @author Marc & Luis
+ * @author Luis & Marc
  */
 
 @RestController
@@ -28,7 +28,7 @@ public class MemberController {
         return memberService.listMembersName(name);
     }
 
-    //Load nach ID
+    //Aufruf eines Mitglieds anhand seiner ID
     @RequestMapping(value = "/member/{member_id}", method = RequestMethod.GET)
     public Member listMembersName(@PathVariable Long member_id) {
         return memberService.loadMember(member_id);

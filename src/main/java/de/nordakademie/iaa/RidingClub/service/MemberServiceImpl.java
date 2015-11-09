@@ -9,7 +9,7 @@ import javax.inject.Inject;
 import java.util.regex.Pattern;
 
 /**
- * @author Marc & Luis
+ * @author Luis & Marc
  */
 
 public class MemberServiceImpl implements MemberService {
@@ -19,27 +19,23 @@ public class MemberServiceImpl implements MemberService {
     @Inject
     private PaymentsService paymentsService;
 
-    //Neues oder Aktualisierung eines Members
+    //Neues Mitglied oder Aktualisierung eines Members
     @Override
     public void saveMember(Member member) throws EntityAlreadyPresentException, ValidatorException {
 
         Payments payments = new Payments();
         int year = Calendar.getInstance().get(Calendar.YEAR);
 
-      //Prüfung der Eingaben, ob leer
+    //Prüfung der Pflicht-Eingabefelder, ob leer
         if (member.getName() == null
                 || member.getMemberType().isEmpty()
                 || member.getName().isEmpty()
                 || member.getSurname().isEmpty()
-                || member.getAddress().isEmpty()
-                || member.getCity().isEmpty()
-                || member.getZipcode().isEmpty()
                 || member.getBirthday().equals(null)
-                || member.getEntryDate().equals(null)
-                || member.getIban().equals(null))
+                || member.getEntryDate().equals(null))
 
         {
-            throw new ValidatorException("Bitte alle Felder ausfüllen!");
+            throw new ValidatorException("Bitte fuellen Sie alle Pflichtfelder (*) aus!");
         }
 
         // Wenn neues Mitglied, dann
@@ -47,7 +43,7 @@ public class MemberServiceImpl implements MemberService {
 
             payments.setMemberType(member.getMemberType());
 
-            //Set price
+            //Festlegen des Jahresbeitrages je Mitgliedsart
             payments.setAmount(familyMember(member.getFamilyMember(), member.getMemberType()));
 
             //set year, status und member in Payment:
@@ -60,6 +56,7 @@ public class MemberServiceImpl implements MemberService {
             memberDAO.save(member);
 
         }
+
         //Wenn kein neues Mitglied, dann Aktualisierung der Mitgliedsdaten
         else{
 
@@ -67,18 +64,20 @@ public class MemberServiceImpl implements MemberService {
             Member member2 = loadMember(member.getMember_id());
             payments =  paymentsService.loadPayments(member.getMember_id());
 
-            //änderung price falls FamilyMember geändert ist
+            //Änderung des Jahresbeitrages falls FamilyMember geändert wurde
             if (member2.getFamilyMember() != member.getFamilyMember()){
                 payments.setAmount(familyMember(member.getFamilyMember(), member.getMemberType()));
             }
 
-            //notice datum gegeben: logik mit die noticedatum:
+            //Kündigungsdatum gesetzt
+
+           
             if ( member2.getNoticeDate() == member.getNoticeDate() ) {
 
             }else{
-                //Set The exit Date:
+                //Austrittsdatum berechnen und setzen
 
-                //31.12.XXXX
+                //auf einen Zeitpunkt in 3 Monaten zum Jahresende
                 Calendar endYear = Calendar.getInstance();
 
                 endYear.set(year, 12, 31 );
@@ -98,12 +97,15 @@ public class MemberServiceImpl implements MemberService {
                     noticeDate.set(year, 12, 31);
                     member.setExitDate(noticeDate.getTime());
                 }
+
             }
 
             //Speichern alle änderungen in Member bzw Payments die gegebene Member
             paymentsService.savePayment(payments);
             memberDAO.save(member);
+
         }
+
 
     }
 

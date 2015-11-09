@@ -25,6 +25,7 @@
         <th>Betrag</th>
         <th>Mitgliedsart</th>
         <th>Zahlungsstatus</th>
+        <th>IBAN-Kontonummer</th>
     </tr>
     </thead>
     <tbody>
@@ -36,6 +37,7 @@
         <td>{{payments.amount}}</td>
         <td>{{payments.memberType}}</td>
         <td><button ng-click="changeStatus(payments.payment_id)">{{payments.status}}</button></td>
+        <td>{{payments.member.iban}}</td>
     </tr>
     </tbody>
 

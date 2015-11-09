@@ -39,9 +39,7 @@ public class Payments implements Serializable {
     private String status;
 
     @ManyToOne
-    //@ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name = "MEMBER_FK")
-    //@JoinColumn(foreignKey = @ForeignKey(name = "member_id"))
     private Member member;
 
     /**
@@ -86,16 +84,6 @@ public class Payments implements Serializable {
     public void setYear(int year) {
         this.year = year;
     }
-
-    //Member
-/*    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "Member", nullable = false)
-    public Member getMember(){
-        return this.member;
-    }
-    public void setMember(Member member) {
-        this.member = member;
-    }*/
 
     public Member getMember() {
         return this.member;

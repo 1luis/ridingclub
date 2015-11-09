@@ -8,7 +8,7 @@ import java.util.List;
 import javax.inject.Inject;
 
 /**
- * @author Marc & Luis
+ * @author Luis & Marc
  */
 
 public class PaymentsServiceImpl implements PaymentsService {
@@ -85,7 +85,7 @@ public class PaymentsServiceImpl implements PaymentsService {
     }
 
     /**
-     * Ehem. setRoomsDAO
+     * PaymentsDAO
      *
      * @param paymentDAO
      */

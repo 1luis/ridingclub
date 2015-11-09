@@ -1,5 +1,5 @@
 /**
- * @author Marc & Luis
+ * @author Luis & Marc
  */
 
 var app = angular.module('ridingClub', ['ngRoute']);
@@ -54,7 +54,7 @@ app.controller("MemberController", ["$scope", 'memberService', function ($scope,
             $scope.model.members = data;
         })
         .error(function () {
-            alert('Fehler beim Laden der Mitgliederliste')
+            alert("Fehler beim Laden der Mitgliederliste")
         });
 
 }]);
@@ -83,9 +83,6 @@ app.controller('NewMemberController', ['$scope', '$http', function ($scope, $htt
         iban: "",
         entryDate: "",
         familyMember: ""
-        //  noticeDate:"",
-        //  exitDate:""
-
     };
 
     $scope.anlegen = function () {
@@ -99,11 +96,11 @@ app.controller('NewMemberController', ['$scope', '$http', function ($scope, $htt
         var response = $http(config);
 
         response.success(function () {
-            alert("Mitglied erfolgreich angelegt:");
+            alert("Mitglied erfolgreich angelegt!");
         });
 
         response.error(function (data, status, headers, config) {
-            alert("Füllen Sie alle Felder aus");
+            alert("Bitte fuellen Sie alle Pflichtfelder (*) aus!");
         });
 
     };
@@ -149,7 +146,7 @@ app.controller("searchController", ["$scope", '$http', function ($scope, $http) 
             $scope.model.results = data;
         });
         response.error(function (data, status, headers, config) {
-            alert("Fehler bei Mitgliederersuche:" + status);
+            alert("Fehler bei Mitgliederersuche: " + status);
         });
 
     };
@@ -177,7 +174,7 @@ app.controller("paymentsController", ["$scope", "$routeParams", "$http", functio
         //zeigt die Zahlungen aller Mitglieder an, wenn keine member_id uebergeben wird
         var url;
 
-        if (0 === $scope.member_id.length) {
+        if (0 == $scope.member_id) {
             url = "rest/payments";
             $scope.member_id= "Alle Mitglieder";
         }else{
@@ -196,7 +193,7 @@ app.controller("paymentsController", ["$scope", "$routeParams", "$http", functio
         });
 
         response.error(function (data, status) {
-            alert("Fehler beim Anzeigen der Zahlungen. HTTP-Statuscode:" + status);
+            alert("Fehler beim Anzeigen der Zahlungen. HTTP-Statuscode: " + status);
         });
 
     };
@@ -204,7 +201,7 @@ app.controller("paymentsController", ["$scope", "$routeParams", "$http", functio
     getData();
 
     /**
-     * Veraenderung des Zahlungsstatus in der Zahlungs�bersicht
+     * Veraenderung des Zahlungsstatus in der Zahlungsuebersicht
      * @param payment_id
      */
     $scope.changeStatus = function (payment_id) {
@@ -277,11 +274,11 @@ app.controller("editMemberController", ["$scope", "$routeParams", "$http", funct
         var response = $http(config);
 
         response.success(function (data, status, headers, config) {
-            alert("Mitglied erfolgreich gespeichert:" + status);
+            alert("Mitglied erfolgreich gespeichert: " + status);
         });
 
         response.error(function (data, status, headers, config) {
-            alert("Fehler beim Speichern des Mitglieds:" + status);
+            alert("Fehler beim Speichern des Mitglieds: " + status);
         });
 
     }

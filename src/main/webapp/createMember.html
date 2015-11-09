@@ -11,7 +11,7 @@
     <form class="contact_form" action="#" id="contact_form" runat="server">
         <div>
             <ul>
-                <li><label for="memberType">Mitgliedsart:</label> <select id="memberType" name="memberType" type="checkbox"  required
+                <li><label for="memberType">Mitgliedsart*:</label> <select id="memberType" name="memberType" type="checkbox"  required
                                                                           ng-model="member.memberType">
                     <option value="">- Mitgliedsart wählen -</option>
                     <option value="Vollmitglied">Vollmitglied (25€)</option>
@@ -21,14 +21,14 @@
 
                 </select><br>
 
-                <li><label for="name">Vorname:</label> <input id="name"
+                <li><label for="name">Vorname*:</label> <input id="name"
                                                               name="name"
                                                               type="text"
                                                               placeholder="Maximilian"
                                                               required ng-model="member.name"/></li>
 
 
-                <li><label for="surname">Nachname:</label> <input id="surname"
+                <li><label for="surname">Nachname*:</label> <input id="surname"
                                                                   name="surname"
                                                                   type="text"
                                                                   placeholder="Mustermann"
@@ -40,7 +40,7 @@
                                                                                 name="familyMember"
                                                                                ng-model="member.familyMember"/></li>
 
-                <li><label for="birthday">Geburtsdatum:</label> <input id="birthday"
+                <li><label for="birthday">Geburtsdatum*:</label> <input id="birthday"
                                                                        name="birthday"
                                                                        type="date"
                                                                        required ng-model="member.birthday"/></li>
@@ -63,7 +63,7 @@
                                                              placeholder="20999"
                                                              required ng-model="member.zipcode"/></li>
 
-                <li><label for="entryDate">Eintrittsdatum:</label> <input id="entryDate"
+                <li><label for="entryDate">Eintrittsdatum*:</label> <input id="entryDate"
                                                                           name="entryDate"
                                                                           type="date"
                                                                           required ng-model="member.entryDate"/></li>
@@ -87,6 +87,7 @@
                                                                   required ng-model="member.iban"/></li>
 
             </ul>
+            <comment>Mit * markierte Felder müssen ausgefüllt sein!</comment>
         </div>
     </form>
 
