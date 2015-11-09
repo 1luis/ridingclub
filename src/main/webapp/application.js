@@ -96,12 +96,12 @@ app.controller('NewMemberController', ['$scope', '$http', function ($scope, $htt
 
         var response = $http(config);
 
-        response.success(function (data, status, headers, config) {
-            alert("Mitglied erfolgreich angelegt:" + status);
+        response.success(function () {
+            alert("Mitglied erfolgreich angelegt:");
         });
 
         response.error(function (data, status, headers, config) {
-            alert("Fehler:" + data.message);
+            alert("FÃ¼llen Sie alle Felder aus");
         });
 
     };
@@ -202,7 +202,7 @@ app.controller("paymentsController", ["$scope", "$routeParams", "$http", functio
     getData();
 
     /**
-     * Veraenderung des Zahlungsstatus in der Zahlungsübersicht
+     * Veraenderung des Zahlungsstatus in der Zahlungsï¿½bersicht
      * @param payment_id
      */
     $scope.changeStatus = function (payment_id) {

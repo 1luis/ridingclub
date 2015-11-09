@@ -4,11 +4,8 @@ import de.nordakademie.iaa.RidingClub.dao.MemberDAO;
 import de.nordakademie.iaa.RidingClub.model.Member;
 import de.nordakademie.iaa.RidingClub.model.Payments;
 
-import java.util.Calendar;
-import java.util.List;
+import java.util.*;
 import javax.inject.Inject;
-import java.util.HashSet;
-import java.util.Set;
 import java.util.regex.Pattern;
 
 /**
@@ -26,6 +23,7 @@ public class MemberServiceImpl implements MemberService {
     public void saveMember(Member member) throws EntityAlreadyPresentException, ValidatorException {
 
         Payments payments = new Payments();
+        int year = Calendar.getInstance().get(Calendar.YEAR);
 
       //TODO: Prüfung der Eingaben, ob leer
         if (member.getName() == null
@@ -52,7 +50,7 @@ public class MemberServiceImpl implements MemberService {
             //Set price
             payments.setAmount(familyMember(member.getFamilyMember(), member.getMemberType()));
 
-            int year = Calendar.getInstance().get(Calendar.YEAR);
+            //int year = Calendar.getInstance().get(Calendar.YEAR);
             payments.setYear(year);
             payments.setStatus("offen");
             payments.setMember(member);
@@ -69,6 +67,36 @@ public class MemberServiceImpl implements MemberService {
             //änderung price falls FamilyMember geändert ist
             if (member2.getFamilyMember() != member.getFamilyMember()){
                 payments.setAmount(familyMember(member.getFamilyMember(), member.getMemberType()));
+            }
+
+            //notice datum gegeben:
+
+            if ( member2.getNoticeDate() == member.getNoticeDate() ) {
+
+            }else{
+                //Set The exit Date:
+
+                //31.12.XXXX
+                Calendar endYear = Calendar.getInstance();
+
+                endYear.set(year, 12, 31 );
+
+                Calendar noticeDate = Calendar.getInstance();
+                noticeDate.setTime(member.getNoticeDate());
+
+                noticeDate.add(Calendar.MONTH, 3);
+
+                if(noticeDate.before(endYear)){
+
+                    member.setExitDate(noticeDate.getTime());
+
+                }else{
+
+                    //year = year + 1;
+                    noticeDate.set(year, 12, 31);
+                    member.setExitDate(noticeDate.getTime());
+                }
+
             }
 
             paymentsService.savePayment(payments);
